@@ -31,4 +31,4 @@ COPY --from=builder --chown=app:nodejs /app/build ./build
 
 EXPOSE 3000
 
-CMD ["node", "build/server.js"]
+CMD ["pnpm", "pm2"]

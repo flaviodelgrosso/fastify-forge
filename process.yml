@@ -1,4 +1,4 @@
 apps:
-  - script: server.js
+  - script: build/server.js
     instances: 4
     exec_mode: cluster
