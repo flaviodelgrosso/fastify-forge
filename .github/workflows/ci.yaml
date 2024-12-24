@@ -1,0 +1,38 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+
+
+jobs:
+  test:
+    name: Lint and test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+
+    - name: Enable pnpm
+      run: corepack enable pnpm
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Check
+      run: pnpm check
+
+    - name: Test
+      run: pnpm test
+      
