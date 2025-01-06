@@ -1,9 +1,10 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/server.ts'],
-  splitting: false,
-  bundle: true,
+  entry: ['src/**/*.ts'],
+  splitting: true,
+  treeshake: true,
+  bundle: false,
   outDir: './build',
   clean: true,
   minify: true,
