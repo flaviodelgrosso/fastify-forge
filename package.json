@@ -8,7 +8,7 @@
   "scripts": {
     "start": "pnpm build && cross-env NODE_ENV=production node build/server.js",
     "dev": "cross-env NODE_ENV=development tsx --watch src/server.ts | pino-pretty --colorize",
-    "build": "tsup",
+    "build": "rimraf build && tsup",
     "check": "pnpm biome check --write ./src/**/*.ts",
     "lint": "pnpm biome lint --write ./src/**/*.ts",
     "format": "pnpm biome format --write ./src/**/*.ts",
