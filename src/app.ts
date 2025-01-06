@@ -14,6 +14,10 @@ export function buildApp(options?: FastifyServerOptions) {
   server.register(Helmet);
 
   server.register(AutoLoad, {
+    dir: `${__dirname}/plugins`,
+  });
+
+  server.register(AutoLoad, {
     dir: `${__dirname}/routes`,
   });
 
