@@ -33,6 +33,10 @@ Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/)
 
 - [x] The project uses [biome](https://biomejs.dev/) to lint and format the codebase.
 
+## TypeScript config
+
+- [fastify/tsconfig](https://github.com/fastify/tsconfig) is used to provide a base TypeScript configuration for Fastify projects.
+
 ## How to use
 
 ### 1. Clone this repo & install dependencies
