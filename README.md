@@ -29,13 +29,24 @@ Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/)
 - [x] Environment variables with [dotenv](https://www.npmjs.com/package/dotenv)
 - [x] Environment variables validation with [joi](https://www.npmjs.com/package/joi)
 
-## Linting and Formatting
+## Configurations
 
-- [x] The project uses [biome](https://biomejs.dev/) to lint and format the codebase.
+### Linting and Formatting
 
-## TypeScript config
+- The project uses [biome](https://biomejs.dev/) to lint and format the codebase.
+- Enforce commit message conventions with [commitlint](https://www.npmjs.com/package/@commitlint/cli).
+
+### TypeScript
 
 - [fastify/tsconfig](https://github.com/fastify/tsconfig) is used to provide a base TypeScript configuration for Fastify projects.
+
+### Git Hooks
+
+- [husky](https://www.npmjs.com/package/husky) is used to manage git hooks.
+
+### PM2
+
+- [pm2](https://www.npmjs.com/package/pm2) is a process manager that provides a simple way to run the server in cluster mode with built-in load balancing feature. You can edit the `process.yml` file to customize the app configuration.
 
 ## How to use
 
