@@ -1,24 +1,34 @@
+import path from 'node:path';
+
+import Fastify, { type FastifyServerOptions } from 'fastify';
+
 import AutoLoad from '@fastify/autoload';
 import Cors from '@fastify/cors';
 import Helmet from '@fastify/helmet';
-import Swagger from '@fastify/swagger';
-import SwaggerUI from '@fastify/swagger-ui';
-import Fastify, { type FastifyServerOptions } from 'fastify';
 
 export function buildApp(options?: FastifyServerOptions) {
   const server = Fastify(options);
 
-  server.register(Swagger);
-  server.register(SwaggerUI);
-  server.register(Cors);
-  server.register(Helmet);
-
-  server.register(AutoLoad, {
-    dir: `${__dirname}/plugins`,
+  // Enables the use of CORS in a Fastify application.
+  server.register(Cors, {
+    origin: false,
   });
 
+  // Set default security headers.
+  server.register(Helmet, {
+    global: true,
+  });
+
+  // Auto-load plugins
   server.register(AutoLoad, {
-    dir: `${__dirname}/routes`,
+    dir: path.join(__dirname, 'plugins'),
+    dirNameRoutePrefix: false,
+  });
+
+  // Auto-load routes
+  server.register(AutoLoad, {
+    dir: path.join(__dirname, 'routes'),
+    dirNameRoutePrefix: false,
   });
 
   // Set error handler
