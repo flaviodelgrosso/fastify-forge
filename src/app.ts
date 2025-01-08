@@ -5,6 +5,7 @@ import Fastify, { type FastifyServerOptions } from 'fastify';
 import AutoLoad from '@fastify/autoload';
 import Cors from '@fastify/cors';
 import Helmet from '@fastify/helmet';
+import UnderPressure from '@fastify/under-pressure';
 
 export function buildApp(options?: FastifyServerOptions) {
   const server = Fastify(options);
@@ -30,6 +31,8 @@ export function buildApp(options?: FastifyServerOptions) {
     dir: path.join(__dirname, 'routes'),
     dirNameRoutePrefix: false,
   });
+
+  server.register(UnderPressure);
 
   // Set error handler
   server.setErrorHandler((error, _request, reply) => {

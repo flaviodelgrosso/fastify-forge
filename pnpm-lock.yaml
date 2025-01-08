@@ -26,6 +26,9 @@ importers:
       '@fastify/type-provider-typebox':
         specifier: ^5.1.0
         version: 5.1.0(@sinclair/typebox@0.34.13)
+      '@fastify/under-pressure':
+        specifier: ^9.0.2
+        version: 9.0.2
       '@sinclair/typebox':
         specifier: ^0.34.13
         version: 0.34.13
@@ -589,6 +592,9 @@ packages:
     resolution: {integrity: sha512-F1AQHeLiKp1hu6GMWm5W6fZ6zXQ0mTV+qHOzrptAie9AYewvFr5Q3blfy8Qmx9gUgwA3Yj+CWvQQJeTwDgTnIg==}
     peerDependencies:
       '@sinclair/typebox': '>=0.26 <=0.34'
+
+  '@fastify/under-pressure@9.0.2':
+    resolution: {integrity: sha512-zYTy8yYbU4+f//DMBFhbCmpGra3E1peEGcmmRLrwS6hnePJjXf2kNLULyh9y0qj4JldCxpdJBb7GB6jlFnN1kQ==}
 
   '@hutson/parse-repository-url@3.0.2':
     resolution: {integrity: sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==}
@@ -3233,6 +3239,11 @@ snapshots:
   '@fastify/type-provider-typebox@5.1.0(@sinclair/typebox@0.34.13)':
     dependencies:
       '@sinclair/typebox': 0.34.13
+
+  '@fastify/under-pressure@9.0.2':
+    dependencies:
+      '@fastify/error': 4.0.0
+      fastify-plugin: 5.0.1
 
   '@hutson/parse-repository-url@3.0.2': {}
 
