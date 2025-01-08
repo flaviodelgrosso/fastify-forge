@@ -35,6 +35,7 @@ export default {
   nodeEnv: env.NODE_ENV,
   isDev: env.NODE_ENV === NodeEnv.development,
   isProd: env.NODE_ENV === NodeEnv.production,
+  /* c8 ignore next */
   version: process.env.npm_package_version ?? '0.0.0',
   log: {
     level: env.LOG_LEVEL,
