@@ -59,6 +59,10 @@
     "tsx": "^4.19.2",
     "typescript": "5.7.2"
   },
+  "engines": {
+    "node": ">=22.11.0",
+    "pnpm": ">=9.0.0"
+  },
   "lint-staged": {
     "{src,test}/**/*.{ts,js,json}": "pnpm run check"
   }
