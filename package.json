@@ -33,10 +33,9 @@
     "@fastify/swagger-ui": "^5.2.0",
     "@fastify/type-provider-typebox": "^5.1.0",
     "@sinclair/typebox": "^0.34.13",
-    "dotenv": "^16.4.7",
+    "env-schema": "^6.0.1",
     "fastify": "^5.2.1",
     "fastify-plugin": "^5.0.1",
-    "joi": "^17.13.3",
     "pino": "^9.6.0",
     "pm2": "^5.4.3"
   },

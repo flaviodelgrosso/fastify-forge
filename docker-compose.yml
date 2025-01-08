@@ -6,7 +6,7 @@ services:
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=${POSTGRES_DB}
     volumes:
       - pg_data:/var/lib/postgresql
     networks:
@@ -19,7 +19,8 @@ services:
     ports:
       - 3000:3000
     env_file:
-      - .env.docker
+      - path: ./.env
+        required: true
     volumes:
       - ./:/app
       - /app/node_modules

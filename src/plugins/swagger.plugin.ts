@@ -2,6 +2,7 @@ import Swagger from '@fastify/swagger';
 import SwaggerUI from '@fastify/swagger-ui';
 import type { FastifyInstance } from 'fastify';
 import fp from 'fastify-plugin';
+import env from '../config/env.config';
 
 async function swaggerPlugin(fastify: FastifyInstance) {
   await fastify.register(Swagger, {
@@ -10,7 +11,7 @@ async function swaggerPlugin(fastify: FastifyInstance) {
       info: {
         title: 'fastify-forge',
         description: 'The Swagger API documentation.',
-        version: process.env.npm_package_version ?? '0.0.0',
+        version: env.version,
       },
     },
   });

@@ -1,14 +1,13 @@
 import { buildApp } from './app';
-import loadConfig from './config/env.config';
+import env from './config/env.config';
 
-loadConfig();
-
-const port = Number(process.env.API_PORT) || 3000;
-const host = String(process.env.API_HOST);
-
-const startServer = async () => {
+async function startServer() {
   const server = buildApp({
-    logger: true,
+    logger: {
+      level: env.log.level,
+      redact: ['headers.authorization'],
+    },
+    ignoreDuplicateSlashes: true,
   });
 
   // Graceful shutdown
@@ -28,15 +27,12 @@ const startServer = async () => {
 
   // Start server
   try {
-    await server.listen({
-      port,
-      host,
-    });
+    await server.listen({ host: env.server.host, port: env.server.port });
   } catch (err) {
     server.log.error(err);
     process.exit(1);
   }
-};
+}
 
 // Handle unhandled rejections
 process.on('unhandledRejection', (err) => {
