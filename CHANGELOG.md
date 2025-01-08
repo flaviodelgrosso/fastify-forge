@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.0.2...v1.1.0) (2025-01-08)
+
+
+### Features
+
+* add @fastify/under-pressure for enhanced server performance monitoring ([4d4093d](https://github.com/flaviodelgrosso/fastify-forge/commit/4d4093d4edc0704ee702d82b041bb9f37a8f23ba))
+* add close-with-grace for graceful server shutdown ([3079d6d](https://github.com/flaviodelgrosso/fastify-forge/commit/3079d6d10730bf3f4ae7ebb282d01e1d2d16bc07))
+
 ### [1.0.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.0.1...v1.0.2) (2025-01-06)
 
 
