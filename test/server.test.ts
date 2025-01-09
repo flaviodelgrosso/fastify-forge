@@ -47,6 +47,9 @@ test('should handle errors correctly', async () => {
     url: '/error',
   });
 
-  strictEqual(res.statusCode, 500);
-  deepStrictEqual(res.json(), { error: 'Something went wrong' });
+  deepStrictEqual(res.json(), {
+    statusCode: 500,
+    error: 'Internal Server Error',
+    message: 'Test error',
+  });
 });

@@ -37,7 +37,7 @@ export function buildApp(options?: FastifyServerOptions) {
   // Set error handler
   server.setErrorHandler((error, _request, reply) => {
     server.log.error(error);
-    reply.status(500).send({ error: 'Something went wrong' });
+    reply.status(500).send(error);
   });
 
   return server;
