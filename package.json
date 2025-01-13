@@ -32,7 +32,7 @@
     "@fastify/swagger": "^9.4.0",
     "@fastify/swagger-ui": "^5.2.0",
     "@fastify/type-provider-typebox": "^5.1.0",
-    "@fastify/under-pressure": "^9.0.2",
+    "@fastify/under-pressure": "^9.0.3",
     "@sinclair/typebox": "^0.34.13",
     "close-with-grace": "^2.1.0",
     "env-schema": "^6.0.1",
