@@ -21,8 +21,8 @@ importers:
         specifier: ^9.4.0
         version: 9.4.0
       '@fastify/swagger-ui':
-        specifier: ^5.2.0
-        version: 5.2.0
+        specifier: ^5.2.1
+        version: 5.2.1
       '@fastify/type-provider-typebox':
         specifier: ^5.1.0
         version: 5.1.0(@sinclair/typebox@0.34.13)
@@ -582,8 +582,8 @@ packages:
   '@fastify/static@8.0.3':
     resolution: {integrity: sha512-GHSoOVDIxEYEeVR5l044bRCuAKDErD/+9VE+Z9fnaTRr+DDz0Avrm4kKai1mHbPx6C0U7BVNthjd/gcMquZZUA==}
 
-  '@fastify/swagger-ui@5.2.0':
-    resolution: {integrity: sha512-oxL9bcL/ad8J1zXAvG2kMmj9d9mHQSM7Mx92yUk90IhvsTns9xy+GK2wXaNyv8/DFg6HpJOL2NrBAzuUt80j8g==}
+  '@fastify/swagger-ui@5.2.1':
+    resolution: {integrity: sha512-R78kXg5Ss2/x2v6/N4oYMUEynzRyqJAiylPFoz1MOD01k+LZCrAyCstLuOc4aUwo6R8P2FlYiDdbneAixQK3WA==}
 
   '@fastify/swagger@9.4.0':
     resolution: {integrity: sha512-3hF7asqyNfu41aeDA/ATlIG0RY4XizgaDqPR0nc1Unt3EiXWjkVMiELLaH5WZKNvB4BA/5Wovxdin7N4ii7YHw==}
@@ -3217,7 +3217,7 @@ snapshots:
       fastq: 1.18.0
       glob: 11.0.0
 
-  '@fastify/swagger-ui@5.2.0':
+  '@fastify/swagger-ui@5.2.1':
     dependencies:
       '@fastify/static': 8.0.3
       fastify-plugin: 5.0.1
