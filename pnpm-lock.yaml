@@ -33,8 +33,8 @@ importers:
         specifier: ^0.34.14
         version: 0.34.14
       close-with-grace:
-        specifier: ^2.1.0
-        version: 2.1.0
+        specifier: ^2.2.0
+        version: 2.2.0
       env-schema:
         specifier: ^6.0.1
         version: 6.0.1
@@ -983,8 +983,8 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
-  close-with-grace@2.1.0:
-    resolution: {integrity: sha512-rME1AtzKc9dfpLr8XBVhXqhVZDvtaIA7FIpjPaO+DmDsomaTNtuEBZMoNDgIvjHYK5q8/Afxy34YTXInUBsT1A==}
+  close-with-grace@2.2.0:
+    resolution: {integrity: sha512-OdcFxnxTm/AMLPHA4Aq3J1BLpkojXP7I4G5QBQLN5TT55ED/rk04rAoDbtfNnfZ988kGXPxh1bdRLeIU9bz/lA==}
 
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -3624,7 +3624,7 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
-  close-with-grace@2.1.0: {}
+  close-with-grace@2.2.0: {}
 
   color-convert@1.9.3:
     dependencies:
