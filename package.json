@@ -4,7 +4,7 @@
   "author": "Flavio Del Grosso",
   "license": "MIT",
   "description": "Armored Template for Fastify Projects using TypeScript",
-  "packageManager": "pnpm@9.14.4",
+  "packageManager": "pnpm@10.2.0",
   "scripts": {
     "start": "pnpm build && cross-env NODE_ENV=production node build/server.js",
     "dev": "cross-env NODE_ENV=development tsx --watch src/server.ts | pino-pretty --colorize",
