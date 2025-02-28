@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fastify/autoload':
-        specifier: ^6.0.3
-        version: 6.0.3
+        specifier: ^6.1.0
+        version: 6.1.0
       '@fastify/cors':
         specifier: ^10.0.2
         version: 10.0.2
@@ -548,8 +548,8 @@ packages:
   '@fastify/ajv-compiler@4.0.1':
     resolution: {integrity: sha512-DxrBdgsjNLP0YM6W5Hd6/Fmj43S8zMKiFJYgi+Ri3htTGAowPVG/tG1wpnWLMjufEnehRivUCKZ1pLDIoZdTuw==}
 
-  '@fastify/autoload@6.0.3':
-    resolution: {integrity: sha512-/wM2pmI7jP2fGah3YuP14i9vuaijpD4gQYLiyd+eD7gUxpA3B4R6/0QIXQS2eJaYD9aIX4ZFRzPmrZsaetfcWw==}
+  '@fastify/autoload@6.1.0':
+    resolution: {integrity: sha512-ltFiI5u5KETSqVXq9AIYtiTqrQn4fvuiETR8N78L119JMLJUqHZ6EqZw77syrMf1N9OMCK8z7YktntK9LaD7Pw==}
 
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
@@ -3177,7 +3177,7 @@ snapshots:
       ajv-formats: 3.0.1(ajv@8.17.1)
       fast-uri: 3.0.3
 
-  '@fastify/autoload@6.0.3': {}
+  '@fastify/autoload@6.1.0': {}
 
   '@fastify/busboy@2.1.1': {}
 
