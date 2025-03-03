@@ -25,13 +25,13 @@ importers:
         version: 5.2.1
       '@fastify/type-provider-typebox':
         specifier: ^5.1.0
-        version: 5.1.0(@sinclair/typebox@0.34.25)
+        version: 5.1.0(@sinclair/typebox@0.34.28)
       '@fastify/under-pressure':
         specifier: ^9.0.3
         version: 9.0.3
       '@sinclair/typebox':
-        specifier: ^0.34.25
-        version: 0.34.25
+        specifier: ^0.34.28
+        version: 0.34.28
       close-with-grace:
         specifier: ^2.2.0
         version: 2.2.0
@@ -749,8 +749,8 @@ packages:
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
 
-  '@sinclair/typebox@0.34.25':
-    resolution: {integrity: sha512-gu+tdy9WZIRulrR4CAcGXZAAixwakKszkUXudMJ4EhtNflBEify5Pm5vnVEVqdmMkxnT4tcdfJps5XYqaNeF9Q==}
+  '@sinclair/typebox@0.34.28':
+    resolution: {integrity: sha512-e2B9vmvaa5ym5hWgCHw5CstP54au6AOLXrhZErLsOyyRzuWJtXl/8TszKtc5x8rw/b+oY7HKS9m9iRI53RK0WQ==}
 
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
@@ -2633,9 +2633,6 @@ packages:
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
 
-  tinyexec@0.3.1:
-    resolution: {integrity: sha512-WiCJLEECkO18gwqIp6+hJg0//p23HXp4S+gGtAKu3mI2F2/sXC4FvHvXvB0zJVVaTPhx1/tOwdbRsa1sOBIKqQ==}
-
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
 
@@ -3248,9 +3245,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@fastify/type-provider-typebox@5.1.0(@sinclair/typebox@0.34.25)':
+  '@fastify/type-provider-typebox@5.1.0(@sinclair/typebox@0.34.28)':
     dependencies:
-      '@sinclair/typebox': 0.34.25
+      '@sinclair/typebox': 0.34.28
 
   '@fastify/under-pressure@9.0.3':
     dependencies:
@@ -3407,7 +3404,7 @@ snapshots:
 
   '@sec-ant/readable-stream@0.4.1': {}
 
-  '@sinclair/typebox@0.34.25': {}
+  '@sinclair/typebox@0.34.28': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
@@ -5362,8 +5359,6 @@ snapshots:
       readable-stream: 3.6.2
 
   through@2.3.8: {}
-
-  tinyexec@0.3.1: {}
 
   tinyexec@0.3.2: {}
 
