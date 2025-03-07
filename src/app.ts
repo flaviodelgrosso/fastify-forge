@@ -1,4 +1,5 @@
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import Fastify, { type FastifyServerOptions } from 'fastify';
 
@@ -6,6 +7,8 @@ import AutoLoad from '@fastify/autoload';
 import Cors from '@fastify/cors';
 import Helmet from '@fastify/helmet';
 import UnderPressure from '@fastify/under-pressure';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export function buildApp(options?: FastifyServerOptions) {
   const server = Fastify(options);
@@ -18,6 +21,11 @@ export function buildApp(options?: FastifyServerOptions) {
   // Set default security headers.
   server.register(Helmet, {
     global: true,
+    contentSecurityPolicy: {
+      directives: {
+        'script-src': ["'self'", 'cdn.jsdelivr.net/npm/@scalar/api-reference', "'unsafe-inline'"],
+      },
+    },
   });
 
   // Auto-load plugins
@@ -29,7 +37,9 @@ export function buildApp(options?: FastifyServerOptions) {
   // Auto-load routes
   server.register(AutoLoad, {
     dir: path.join(__dirname, 'routes'),
-    dirNameRoutePrefix: false,
+    autoHooks: true,
+    autoHooksPattern: /\.hook.ts$/i,
+    cascadeHooks: true,
   });
 
   server.register(UnderPressure);

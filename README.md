@@ -12,11 +12,13 @@ Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/)
 - [x] Security headers with [@fastify/helmet](https://www.npmjs.com/package/@fastify/helmet)
 - [x] CORS with [@fastify/cors](https://www.npmjs.com/package/@fastify/cors)
 - [x] Process load measuring with [@fastify/under-pressure](https://www.npmjs.com/package/@fastify/under-pressure)
-
+- [x] Fastify multipart for file uploads with [@fastify/multipart](https://www.npmjs.com/package/@fastify/multipart)
+- [x] [fastify-better-auth](https://www.npmjs.com/package/fastify-better-auth) plugin for seamless authentication implementation using [better-auth](https://www.npmjs.com/package/better-auth)
+  
 ### Swagger
 
 - [x] Swagger with [@fastify/swagger](https://www.npmjs.com/package/@fastify/swagger)
-- [x] Swagger UI with [@fastify/swagger-ui](https://www.npmjs.com/package/@fastify/swagger-ui)
+- [x] Beautiful OpenAPI UI with [@scalar/fastify-api-reference](https://www.npmjs.com/package/@scalar/fastify-api-reference)
 
 ### Type Safety and Schemas
 
@@ -36,10 +38,6 @@ Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/)
 - The project uses [biome](https://biomejs.dev/) to lint and format the codebase.
 - Enforce commit message conventions with [commitlint](https://www.npmjs.com/package/@commitlint/cli).
 
-#### TypeScript
-
-- [fastify/tsconfig](https://github.com/fastify/tsconfig) is used to provide a base TypeScript configuration for Fastify projects.
-
 #### Git Hooks
 
 - [husky](https://www.npmjs.com/package/husky) is used to manage git hooks.
@@ -58,7 +56,7 @@ Install Node dependencies:
 
 ### 2. Start the Fastify server
 
-Running development server is pretty straightforward. It uses [tsx](https://www.npmjs.com/package/tsx), the easiest way to run Typescript in Node.js. Just run the following command in watch mode:
+Running development server is pretty straightforward. It uses just Node.js with the latest TypeScript configuration support. You need Node v23.x, check `tsconfig.json` for details. Just run the following command in watch mode:
 
 ```sh
 pnpm dev
@@ -74,7 +72,7 @@ pnpm build
 
 ## 🧪 Testing
 
-To run tests, the project uses [borp](https://www.npmjs.com/package/borp) that is a typescript-aware test runner for Node.js built-in testing library. It also supports `c8` coverage. Borp is very usefull if you want avoid struggling with loaders and false positives uncovered code.
+To run tests, use the following command. It will produce a coverage report as well using `c8`.
 
 ```sh
 pnpm test

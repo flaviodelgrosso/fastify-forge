@@ -1,19 +1,19 @@
 import { type Static, Type } from '@sinclair/typebox';
 import envSchema from 'env-schema';
 
-enum NodeEnv {
-  development = 'development',
-  production = 'production',
-  test = 'test',
-}
+const NodeEnv = {
+  development: 'development',
+  production: 'production',
+  test: 'test',
+} as const;
 
-export enum LogLevel {
-  trace = 'trace',
-  debug = 'debug',
-  info = 'info',
-  warn = 'warn',
-  error = 'error',
-}
+export const LogLevel = {
+  trace: 'trace',
+  debug: 'debug',
+  info: 'info',
+  warn: 'warn',
+  error: 'error',
+} as const;
 
 const schema = Type.Object({
   POSTGRES_URL: Type.String(),

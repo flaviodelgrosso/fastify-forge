@@ -1,7 +1,8 @@
 import closeWithGrace from 'close-with-grace';
 
-import { buildApp } from './app';
-import env from './config/env.config';
+import { ajvFilePlugin } from '@fastify/multipart';
+import { buildApp } from './app.ts';
+import env from './config/env.config.ts';
 
 async function startServer() {
   const app = buildApp({
@@ -10,6 +11,10 @@ async function startServer() {
       redact: ['headers.authorization'],
     },
     ignoreDuplicateSlashes: true,
+    ajv: {
+      // Adds the file plugin to help @fastify/swagger schema generation
+      plugins: [ajvFilePlugin],
+    },
   });
 
   closeWithGrace(async ({ signal, err }) => {

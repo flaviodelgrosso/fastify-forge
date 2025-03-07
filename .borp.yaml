@@ -1,5 +1,0 @@
-files:
-  - "test/*.test.ts"
-
-reporters:
-  - spec
