@@ -1,3 +1,4 @@
+
 # 🛡️ Fastify Forge 🛡️
 
 [![CI](https://github.com/flaviodelgrosso/fastify-forge/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/flaviodelgrosso/fastify-forge/actions/workflows/ci.yaml)
@@ -20,12 +21,12 @@ Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/)
 - [x] Swagger with [@fastify/swagger](https://www.npmjs.com/package/@fastify/swagger)
 - [x] Beautiful OpenAPI UI with [@scalar/fastify-api-reference](https://www.npmjs.com/package/@scalar/fastify-api-reference)
 
+![Swagger](https://github.com/user-attachments/assets/0a7a7225-1914-4b53-b199-3b10c91ef65a)
+
 ### Type Safety and Schemas
 
 - [x] JSON Schema builder with [TypeBox](https://www.npmjs.com/package/@sinclair/typebox)
 - [x] Enhanced support for TypeBox with [@fastify/type-provider-typebox](https://www.npmjs.com/package/@fastify/type-provider-typebox)
-
-![swagger-ui](https://github.com/user-attachments/assets/18f84260-358d-4f80-ac71-34c0c124908a)
 
 ### Environment
 
