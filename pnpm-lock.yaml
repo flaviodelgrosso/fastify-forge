@@ -28,7 +28,7 @@ importers:
         version: 5.2.2
       '@fastify/type-provider-typebox':
         specifier: ^5.1.0
-        version: 5.1.0(@sinclair/typebox@0.34.28)
+        version: 5.1.0(@sinclair/typebox@0.34.29)
       '@fastify/under-pressure':
         specifier: ^9.0.3
         version: 9.0.3
@@ -36,8 +36,8 @@ importers:
         specifier: ^1.26.0
         version: 1.26.0
       '@sinclair/typebox':
-        specifier: ^0.34.28
-        version: 0.34.28
+        specifier: ^0.34.29
+        version: 0.34.29
       better-auth:
         specifier: ^1.2.3
         version: 1.2.3(typescript@5.8.2)
@@ -962,8 +962,8 @@ packages:
     resolution: {integrity: sha512-1hsLpRHfSuMB9ee2aAdh0Htza/X3f4djhYISrggqGe3xopNjOcePiSDkDDoPzDYaaMCrbqGP1H2TYU7bgL9PmA==}
     engines: {node: '>=20.0.0'}
 
-  '@sinclair/typebox@0.34.28':
-    resolution: {integrity: sha512-e2B9vmvaa5ym5hWgCHw5CstP54au6AOLXrhZErLsOyyRzuWJtXl/8TszKtc5x8rw/b+oY7HKS9m9iRI53RK0WQ==}
+  '@sinclair/typebox@0.34.29':
+    resolution: {integrity: sha512-xTzI0LlHZ0eahKuN+2R+yJbEIUyV/ZSdtqvR3sHukgN56nvCW1tz+Yr6fQ6/7+WJ34AhaU9ZmYcHXv8xgj2Lvg==}
 
   '@sinonjs/commons@3.0.1':
     resolution: {integrity: sha512-K3mCHKQ9sVh8o1C9cxkwxaOmXoAMlDxC1mYyHrjqOWEcBjYr76t96zL2zlj5dUGZ3HSw240X1qgH3Mjf1yJWpQ==}
@@ -3716,9 +3716,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@fastify/type-provider-typebox@5.1.0(@sinclair/typebox@0.34.28)':
+  '@fastify/type-provider-typebox@5.1.0(@sinclair/typebox@0.34.29)':
     dependencies:
-      '@sinclair/typebox': 0.34.28
+      '@sinclair/typebox': 0.34.29
 
   '@fastify/under-pressure@9.0.3':
     dependencies:
@@ -3953,7 +3953,7 @@ snapshots:
       '@peculiar/asn1-schema': 2.3.15
       '@peculiar/asn1-x509': 2.3.15
 
-  '@sinclair/typebox@0.34.28': {}
+  '@sinclair/typebox@0.34.29': {}
 
   '@sinonjs/commons@3.0.1':
     dependencies:
