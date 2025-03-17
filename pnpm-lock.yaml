@@ -33,8 +33,8 @@ importers:
         specifier: ^9.0.3
         version: 9.0.3
       '@scalar/fastify-api-reference':
-        specifier: ^1.26.0
-        version: 1.26.0
+        specifier: ^1.28.5
+        version: 1.28.5
       '@sinclair/typebox':
         specifier: ^0.34.29
         version: 0.34.29
@@ -931,24 +931,24 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/core@0.1.0':
-    resolution: {integrity: sha512-LnszTA7JmdtmEX1qqhkIKTKFQiFstRYiDs0NrXdYtMk/WB55Bnoz0Lk8BWw1qC1NhMpP5It+PRYZke727Gxrbw==}
+  '@scalar/core@0.2.1':
+    resolution: {integrity: sha512-3/K8EsnNcDtwGZwPFycIi0fXfCa3nW3Yapjjw1tRWXUs61tQkIyxNa8/L35zXxt+HcOxjXJMERe/TedhAWYHIg==}
     engines: {node: '>=18'}
 
-  '@scalar/fastify-api-reference@1.26.0':
-    resolution: {integrity: sha512-Mi0WOCTze4MPs70Fs0WkPADoloiOpdGm8OaCov0Zvqa1WfzaYtTPWPwd0eVaQKe7Efji7kZCfd3ja7Nhnj6vHA==}
+  '@scalar/fastify-api-reference@1.28.5':
+    resolution: {integrity: sha512-jX9j6J8V16mgReSOCx4drQ8pjlNg+SircrkKUXKdOEGY3IiaLC8aRuf61TWcSamq+i+EbAU5WNnNbQ0f8aHDmg==}
     engines: {node: '>=18'}
 
-  '@scalar/openapi-parser@0.10.9':
-    resolution: {integrity: sha512-wsKZtL4B3Fmbv24B1zzeWdsEr6F60fLmToOFLA1b9QGQ6TAtIvLgKQWQ65eh5Vfx93nQb/iekamfErqHRHtEhA==}
+  '@scalar/openapi-parser@0.10.10':
+    resolution: {integrity: sha512-6MSgvpNKu/anZy96dn8tXQZo1PuDCoeB4m2ZLLDS4vC2zaTnuNBvvQHx+gjwXNKWhTbIVy8bQpYBzlMAYnFNcQ==}
     engines: {node: '>=18'}
 
   '@scalar/openapi-types@0.1.9':
     resolution: {integrity: sha512-HQQudOSQBU7ewzfnBW9LhDmBE2XOJgSfwrh5PlUB7zJup/kaRkBGNgV2wMjNz9Af/uztiU/xNrO179FysmUT+g==}
     engines: {node: '>=18'}
 
-  '@scalar/types@0.0.39':
-    resolution: {integrity: sha512-oAMBWC5B0I8IViCuaV1ydoUAm7KJSwHZfCuLMea15tSKh0/wj9H1KQvDJF8gE/cUVwjQvj4q94GB22kBT4XGNQ==}
+  '@scalar/types@0.1.1':
+    resolution: {integrity: sha512-LlUX6AmOOGoRqOMoO835V2FezM1KiO5UlvQC3poT/s7oqD6ranqwRNFxyrPz/IxClPYR+SV1yBUSNKely4ZQhQ==}
     engines: {node: '>=18'}
 
   '@simplewebauthn/browser@13.1.0':
@@ -2340,8 +2340,8 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nanoid@3.3.9:
-    resolution: {integrity: sha512-SppoicMGpZvbF1l3z4x7No3OlIjP7QJvC9XR7AhZr1kL133KHnKPztkKDc+Ir4aJ/1VhTySrtKhrsycmrMQfvg==}
+  nanoid@3.3.10:
+    resolution: {integrity: sha512-vSJJTG+t/dIKAUhUDw/dLdZ9s//5OxcHqLaDWWrW4Cdq7o6tdLIczUkMXt2MBNmk6sJRZBZRXVixs7URY1CmIg==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -3902,20 +3902,20 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.34.9':
     optional: true
 
-  '@scalar/core@0.1.0':
+  '@scalar/core@0.2.1':
     dependencies:
-      '@scalar/types': 0.0.39
+      '@scalar/types': 0.1.1
 
-  '@scalar/fastify-api-reference@1.26.0':
+  '@scalar/fastify-api-reference@1.28.5':
     dependencies:
-      '@scalar/core': 0.1.0
-      '@scalar/openapi-parser': 0.10.9
+      '@scalar/core': 0.2.1
+      '@scalar/openapi-parser': 0.10.10
       '@scalar/openapi-types': 0.1.9
-      '@scalar/types': 0.0.39
+      '@scalar/types': 0.1.1
       fastify-plugin: 4.5.1
       github-slugger: 2.0.0
 
-  '@scalar/openapi-parser@0.10.9':
+  '@scalar/openapi-parser@0.10.10':
     dependencies:
       ajv: 8.17.1
       ajv-draft-04: 1.0.0(ajv@8.17.1)
@@ -3926,7 +3926,7 @@ snapshots:
 
   '@scalar/openapi-types@0.1.9': {}
 
-  '@scalar/types@0.0.39':
+  '@scalar/types@0.1.1':
     dependencies:
       '@scalar/openapi-types': 0.1.9
       '@unhead/schema': 1.11.20
@@ -5285,7 +5285,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nanoid@3.3.9:
+  nanoid@3.3.10:
     optional: true
 
   nanostores@0.11.4: {}
@@ -5603,7 +5603,7 @@ snapshots:
 
   postcss@8.5.3:
     dependencies:
-      nanoid: 3.3.9
+      nanoid: 3.3.10
       picocolors: 1.1.1
       source-map-js: 1.2.1
     optional: true
