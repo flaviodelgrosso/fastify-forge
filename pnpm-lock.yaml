@@ -39,8 +39,8 @@ importers:
         specifier: ^0.34.29
         version: 0.34.29
       better-auth:
-        specifier: ^1.2.3
-        version: 1.2.3(typescript@5.8.2)
+        specifier: ^1.2.4
+        version: 1.2.4(typescript@5.8.2)
       close-with-grace:
         specifier: ^2.2.0
         version: 2.2.0
@@ -55,7 +55,7 @@ importers:
         version: 5.2.1
       fastify-better-auth:
         specifier: ^1.0.1
-        version: 1.0.1(better-auth@1.2.3(typescript@5.8.2))(fastify@5.2.1)
+        version: 1.0.1(better-auth@1.2.4(typescript@5.8.2))(fastify@5.2.1)
       fastify-plugin:
         specifier: ^5.0.1
         version: 5.0.1
@@ -1118,8 +1118,8 @@ packages:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
 
-  better-auth@1.2.3:
-    resolution: {integrity: sha512-y97/ah2SOWaW81IRg36m7xMSMVl7ATaHie/nhQ0in/reVlEX/6juVPszNqq0gcTwQtFsB8oe15wQKgdf4yHP9Q==}
+  better-auth@1.2.4:
+    resolution: {integrity: sha512-/ZK2jbUjm8JwdeCLFrUWUBmexPyI9PkaLVXWLWtN60sMDHTY8B5G72wcHglo1QMFBaw4G0qFkP5ayl9k6XfDaA==}
 
   better-call@1.0.4:
     resolution: {integrity: sha512-NdAihYdkS0IOz1mtz8mw1gWacCxR9r921U8YqB+VB6++rt8edMG13vVL16Y4TBL4XkjMK/DUewEsOOFkw9LJYQ==}
@@ -2340,8 +2340,8 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nanoid@3.3.9:
-    resolution: {integrity: sha512-SppoicMGpZvbF1l3z4x7No3OlIjP7QJvC9XR7AhZr1kL133KHnKPztkKDc+Ir4aJ/1VhTySrtKhrsycmrMQfvg==}
+  nanoid@3.3.10:
+    resolution: {integrity: sha512-vSJJTG+t/dIKAUhUDw/dLdZ9s//5OxcHqLaDWWrW4Cdq7o6tdLIczUkMXt2MBNmk6sJRZBZRXVixs7URY1CmIg==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -4085,7 +4085,7 @@ snapshots:
 
   basic-ftp@5.0.5: {}
 
-  better-auth@1.2.3(typescript@5.8.2):
+  better-auth@1.2.4(typescript@5.8.2):
     dependencies:
       '@better-auth/utils': 0.2.3
       '@better-fetch/fetch': 1.1.15
@@ -4696,9 +4696,9 @@ snapshots:
 
   fast-uri@3.0.6: {}
 
-  fastify-better-auth@1.0.1(better-auth@1.2.3(typescript@5.8.2))(fastify@5.2.1):
+  fastify-better-auth@1.0.1(better-auth@1.2.4(typescript@5.8.2))(fastify@5.2.1):
     dependencies:
-      better-auth: 1.2.3(typescript@5.8.2)
+      better-auth: 1.2.4(typescript@5.8.2)
       fastify: 5.2.1
       fastify-plugin: 5.0.1
 
@@ -5285,7 +5285,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nanoid@3.3.9:
+  nanoid@3.3.10:
     optional: true
 
   nanostores@0.11.4: {}
@@ -5603,7 +5603,7 @@ snapshots:
 
   postcss@8.5.3:
     dependencies:
-      nanoid: 3.3.9
+      nanoid: 3.3.10
       picocolors: 1.1.1
       source-map-js: 1.2.1
     optional: true
