@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.1.0...v1.1.1) (2025-03-19)
+
+
+### Features
+
+* add rate limiting with @fastify/rate-limit and update error handling ([1dea33b](https://github.com/flaviodelgrosso/fastify-forge/commit/1dea33b040e135971559c8e776a75314e4d8331d))
+* authentication with better-auth, drizzle ORM and scalar openapi swagger ([06c74a0](https://github.com/flaviodelgrosso/fastify-forge/commit/06c74a0055a7f6de6deaf2087de977aa63e6724a))
+
+
+### Bug Fixes
+
+* send full details of error in server error handler ([1a9bfbf](https://github.com/flaviodelgrosso/fastify-forge/commit/1a9bfbf5d4adafc286cc03a7b693f56373e29ad4))
+
 ## [1.1.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.0.2...v1.1.0) (2025-01-08)
 
 
