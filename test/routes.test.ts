@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import { buildApp } from '../src/app.ts';
 
 test('should return 200 for /GET route', async () => {
-  const fastify = buildApp();
+  const fastify = await buildApp();
 
   const res = await fastify.inject({
     method: 'GET',
@@ -14,7 +14,7 @@ test('should return 200 for /GET route', async () => {
 });
 
 test('should return 200 for /POST route', async () => {
-  const fastify = buildApp();
+  const fastify = await buildApp();
 
   const res = await fastify.inject({
     method: 'POST',
@@ -30,7 +30,7 @@ test('should return 200 for /POST route', async () => {
 });
 
 test('should return 200 for /health route', async () => {
-  const fastify = buildApp();
+  const fastify = await buildApp();
 
   const res = await fastify.inject({
     method: 'GET',
@@ -42,7 +42,7 @@ test('should return 200 for /health route', async () => {
 });
 
 test('should handle errors correctly', async () => {
-  const fastify = buildApp();
+  const fastify = await buildApp();
 
   fastify.get('/error', async () => {
     throw new Error('Test error');
@@ -53,9 +53,16 @@ test('should handle errors correctly', async () => {
     url: '/error',
   });
 
-  deepStrictEqual(res.json(), {
-    statusCode: 500,
-    error: 'Internal Server Error',
-    message: 'Test error',
+  strictEqual(res.statusCode, 500);
+});
+
+test('should return 404 for unknown routes', async () => {
+  const fastify = await buildApp();
+
+  const res = await fastify.inject({
+    method: 'GET',
+    url: '/unknown',
   });
+
+  strictEqual(res.statusCode, 404);
 });

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import { buildApp } from '../src/app.ts';
 
 test("should return 401 for /api/v1 protected route when user isn't logged in", async () => {
-  const fastify = buildApp();
+  const fastify = await buildApp();
 
   const res = await fastify.inject({
     method: 'GET',
@@ -16,7 +16,7 @@ test("should return 401 for /api/v1 protected route when user isn't logged in", 
 });
 
 test('should return 200 for /api/v1 protected route when user is logged in', async () => {
-  const fastify = buildApp();
+  const fastify = await buildApp();
 
   await fastify.ready();
 

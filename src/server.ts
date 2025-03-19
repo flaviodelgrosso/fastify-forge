@@ -5,7 +5,7 @@ import { buildApp } from './app.ts';
 import env from './config/env.config.ts';
 
 async function startServer() {
-  const app = buildApp({
+  const app = await buildApp({
     logger: {
       level: env.log.level,
       redact: ['headers.authorization'],

@@ -10,7 +10,7 @@ import UnderPressure from '@fastify/under-pressure';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export function buildApp(options?: FastifyServerOptions) {
+export async function buildApp(options?: FastifyServerOptions) {
   const server = Fastify(options);
 
   // Enables the use of CORS in a Fastify application.
@@ -29,7 +29,7 @@ export function buildApp(options?: FastifyServerOptions) {
   });
 
   // Auto-load plugins
-  server.register(AutoLoad, {
+  await server.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
     dirNameRoutePrefix: false,
   });
@@ -45,10 +45,56 @@ export function buildApp(options?: FastifyServerOptions) {
   server.register(UnderPressure);
 
   // Set error handler
-  server.setErrorHandler((error, _request, reply) => {
-    server.log.error(error);
-    reply.status(500).send(error);
+  server.setErrorHandler((err, request, reply) => {
+    server.log.error(
+      {
+        err,
+        request: {
+          method: request.method,
+          url: request.url,
+          query: request.query,
+          params: request.params,
+        },
+      },
+      'Unhandled error occurred',
+    );
+
+    reply.code(err.statusCode ?? 500);
+
+    let message = 'Internal Server Error';
+    if (err.statusCode && err.statusCode < 500) {
+      message = err.message;
+    }
+
+    return { message };
   });
+
+  // This is used to avoid attacks to find valid routes
+  server.setNotFoundHandler(
+    {
+      preHandler: server.rateLimit({
+        max: 4,
+        timeWindow: 500,
+      }),
+    },
+    (request, reply) => {
+      request.log.warn(
+        {
+          request: {
+            method: request.method,
+            url: request.url,
+            query: request.query,
+            params: request.params,
+          },
+        },
+        'Resource not found',
+      );
+
+      reply.code(404);
+
+      return { message: 'Not Found' };
+    },
+  );
 
   return server;
 }

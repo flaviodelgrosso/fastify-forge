@@ -5,7 +5,7 @@ import { buildApp } from '../src/app.ts';
 import { client } from '../src/db/index.ts';
 
 test('should call client.end() on server close', async () => {
-  const app = buildApp();
+  const app = await buildApp();
   await app.ready();
 
   const clientEndStub = sinon.stub(client, 'end').resolves();
