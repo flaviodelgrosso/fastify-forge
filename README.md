@@ -12,6 +12,7 @@ Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/)
 - [x] Autoload fastify plugins with [@fastify/autoload](https://www.npmjs.com/package/@fastify/autoload)
 - [x] Security headers with [@fastify/helmet](https://www.npmjs.com/package/@fastify/helmet)
 - [x] CORS with [@fastify/cors](https://www.npmjs.com/package/@fastify/cors)
+- [x] [@fastify/rate-limit](https://www.npmjs.com/package/@fastify/rate-limit) for rate limiting requests and preventing attackers to search for valid URLs.
 - [x] Process load measuring with [@fastify/under-pressure](https://www.npmjs.com/package/@fastify/under-pressure)
 - [x] Fastify multipart for file uploads with [@fastify/multipart](https://www.npmjs.com/package/@fastify/multipart)
 - [x] [fastify-better-auth](https://www.npmjs.com/package/fastify-better-auth) plugin for seamless authentication implementation using [better-auth](https://www.npmjs.com/package/better-auth)
