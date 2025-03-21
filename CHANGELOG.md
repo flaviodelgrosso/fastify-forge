@@ -4,21 +4,20 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.1.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.1.1...v1.1.2) (2025-03-21)
 
-### [1.1.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.1.0...v1.1.1) (2025-03-19)
+* refactor: use `tsc` instead of `tsup`. update ts configurations
 
+### [1.1.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.1.0...v1.1.1) (2025-03-19)
 
 ### Features
 
 * add rate limiting with @fastify/rate-limit and update error handling ([1dea33b](https://github.com/flaviodelgrosso/fastify-forge/commit/1dea33b040e135971559c8e776a75314e4d8331d))
 * authentication with better-auth, drizzle ORM and scalar openapi swagger ([06c74a0](https://github.com/flaviodelgrosso/fastify-forge/commit/06c74a0055a7f6de6deaf2087de977aa63e6724a))
 
-
 ### Bug Fixes
 
 * send full details of error in server error handler ([1a9bfbf](https://github.com/flaviodelgrosso/fastify-forge/commit/1a9bfbf5d4adafc286cc03a7b693f56373e29ad4))
 
 ## [1.1.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.0.2...v1.1.0) (2025-01-08)
-
 
 ### Features
 
@@ -27,7 +26,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.0.1...v1.0.2) (2025-01-06)
 
-
 ### Bug Fixes
 
 * change log level from error to info on server close ([b8419dc](https://github.com/flaviodelgrosso/fastify-forge/commit/b8419dcaaed713ce95e9ce05028bd127eb3ff201))
@@ -35,11 +33,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.0.0...v1.0.1) (2025-01-06)
 
-
 ### Features
 
 * register AutoLoad for plugins directory in app initialization ([a076acf](https://github.com/flaviodelgrosso/fastify-forge/commit/a076acfeaeef64937804c8f755be000fe8cfeacc))
-
 
 ### Bug Fixes
 
