@@ -1,4 +1,4 @@
-FROM node:22-alpine AS base
+FROM node:23-alpine AS base
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
@@ -27,7 +27,7 @@ USER app
 
 COPY --from=builder --chown=app:nodejs /app/package.json ./package.json
 COPY --from=builder --chown=app:nodejs /app/node_modules ./node_modules
-COPY --from=builder --chown=app:nodejs /app/build ./build
+COPY --from=builder --chown=app:nodejs /app/dist ./dist
 
 EXPOSE 3000
 
