@@ -7,9 +7,9 @@
   "packageManager": "pnpm@10.2.0",
   "type": "module",
   "scripts": {
-    "start": "pnpm build && cross-env NODE_ENV=production node build/server.js",
+    "start": "pnpm build && cross-env NODE_ENV=production node dist/server.js",
     "dev": "cross-env NODE_ENV=development node --watch src/server.ts | pino-pretty --colorize",
-    "build": "rimraf build && tsup",
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
     "check": "pnpm biome check --write ./src/**/*.ts",
     "lint": "pnpm biome lint --write ./src/**/*.ts",
     "format": "pnpm biome format --write ./src/**/*.ts",
@@ -23,7 +23,7 @@
     "patch": "pnpm run release --release-as patch",
     "push-release": "git push --follow-tags origin master",
     "pull": "git rebase origin master -i",
-    "clean": "rimraf node_modules build pnpm-lock.yaml"
+    "clean": "rimraf node_modules dist pnpm-lock.yaml"
   },
   "dependencies": {
     "@fastify/autoload": "^6.2.0",
@@ -64,7 +64,6 @@
     "rimraf": "^6.0.1",
     "sinon": "^19.0.2",
     "standard-version": "^9.5.0",
-    "tsup": "^8.4.0",
     "typescript": "5.8.2"
   },
   "engines": {
