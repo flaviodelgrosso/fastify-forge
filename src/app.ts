@@ -38,7 +38,7 @@ export async function buildApp(options?: FastifyServerOptions) {
   server.register(AutoLoad, {
     dir: path.join(__dirname, 'routes'),
     autoHooks: true,
-    autoHooksPattern: /\.hook.ts$/i,
+    autoHooksPattern: /\.hook(?:\.ts|\.js|\.cjs|\.mjs)$/i,
     cascadeHooks: true,
   });
 
