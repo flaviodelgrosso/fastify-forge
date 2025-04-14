@@ -42,8 +42,8 @@ importers:
         specifier: ^0.34.33
         version: 0.34.33
       better-auth:
-        specifier: ^1.2.5
-        version: 1.2.5(typescript@5.8.3)
+        specifier: ^1.2.7
+        version: 1.2.7
       close-with-grace:
         specifier: ^2.2.0
         version: 2.2.0
@@ -58,7 +58,7 @@ importers:
         version: 5.2.2
       fastify-better-auth:
         specifier: ^1.0.1
-        version: 1.0.1(better-auth@1.2.5(typescript@5.8.3))(fastify@5.2.2)
+        version: 1.0.1(better-auth@1.2.7)(fastify@5.2.2)
       fastify-plugin:
         specifier: ^5.0.1
         version: 5.0.1
@@ -641,8 +641,8 @@ packages:
   '@noble/ciphers@0.6.0':
     resolution: {integrity: sha512-mIbq/R9QXk5/cTfESb1OKtyFnk7oc1Om/8onA1158K9/OZUQFDEVy55jVTato+xmp3XX6F6Qh0zz0Nc1AxAlRQ==}
 
-  '@noble/hashes@1.7.1':
-    resolution: {integrity: sha512-B8XBPsn4vT/KJAGqDzbwztd+6Yte3P4V7iafm24bxgDe/mlRuK6xmWPuCNrKt2vDafZ8MfJLlchDG/vYafQEjQ==}
+  '@noble/hashes@1.7.2':
+    resolution: {integrity: sha512-biZ0NUSxyjLLqo6KxEJ1b+C2NAx0wtDoFvCaXHGgUkeHzf3Xc1xKumFKREuT7f7DARNZ/slvYUwFG6B0f2b6hQ==}
     engines: {node: ^14.21.3 || >=16}
 
   '@peculiar/asn1-android@2.3.16':
@@ -859,11 +859,11 @@ packages:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
 
-  better-auth@1.2.5:
-    resolution: {integrity: sha512-Tz2aKImkvaT7P9qHQ67Vhw/Slo6zpvE0jG7GoDQM+dd5tWuC3lP0OGjjWkNCZdToVlWB193i5nSHeZT90sFqEw==}
+  better-auth@1.2.7:
+    resolution: {integrity: sha512-2hCB263GSrgetsMUZw8vv9O1e4S4AlYJW3P4e8bX9u3Q3idv4u9BzDFCblpTLuL4YjYovghMCN0vurAsctXOAQ==}
 
-  better-call@1.0.5:
-    resolution: {integrity: sha512-rAT73GWIJ8LbSP8Y3BdJnY1hwAiQPRRmUJ4R3YVhcVGS927l3eTXG5o5TD6Bv6je6ygjdx6iVq3/BU49eGUCHg==}
+  better-call@1.0.8:
+    resolution: {integrity: sha512-/PV8JLqDRUN7JyBPbklVsS/8E4SO3pnf8hbpa8B7xrBrr+BBYpeOAxoqtnsyk/pRs35vNB4MZx8cn9dBuNlLDA==}
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -2704,14 +2704,6 @@ packages:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
 
-  valibot@1.0.0-beta.15:
-    resolution: {integrity: sha512-BKy8XosZkDHWmYC+cJG74LBzP++Gfntwi33pP3D3RKztz2XV9jmFWnkOi21GoqARP8wAWARwhV6eTr1JcWzjGw==}
-    peerDependencies:
-      typescript: '>=5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
@@ -3250,7 +3242,7 @@ snapshots:
 
   '@noble/ciphers@0.6.0': {}
 
-  '@noble/hashes@1.7.1': {}
+  '@noble/hashes@1.7.2': {}
 
   '@peculiar/asn1-android@2.3.16':
     dependencies:
@@ -3521,25 +3513,22 @@ snapshots:
 
   basic-ftp@5.0.5: {}
 
-  better-auth@1.2.5(typescript@5.8.3):
+  better-auth@1.2.7:
     dependencies:
       '@better-auth/utils': 0.2.4
       '@better-fetch/fetch': 1.1.18
       '@noble/ciphers': 0.6.0
-      '@noble/hashes': 1.7.1
+      '@noble/hashes': 1.7.2
       '@simplewebauthn/browser': 13.1.0
       '@simplewebauthn/server': 13.1.1
-      better-call: 1.0.5
+      better-call: 1.0.8
       defu: 6.1.4
       jose: 5.10.0
       kysely: 0.27.6
       nanostores: 0.11.4
-      valibot: 1.0.0-beta.15(typescript@5.8.3)
       zod: 3.24.2
-    transitivePeerDependencies:
-      - typescript
 
-  better-call@1.0.5:
+  better-call@1.0.8:
     dependencies:
       '@better-fetch/fetch': 1.1.18
       rou3: 0.5.1
@@ -4087,9 +4076,9 @@ snapshots:
 
   fast-uri@3.0.6: {}
 
-  fastify-better-auth@1.0.1(better-auth@1.2.5(typescript@5.8.3))(fastify@5.2.2):
+  fastify-better-auth@1.0.1(better-auth@1.2.7)(fastify@5.2.2):
     dependencies:
-      better-auth: 1.2.5(typescript@5.8.3)
+      better-auth: 1.2.7
       fastify: 5.2.2
       fastify-plugin: 5.0.1
 
@@ -5357,10 +5346,6 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.25
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
-
-  valibot@1.0.0-beta.15(typescript@5.8.3):
-    optionalDependencies:
-      typescript: 5.8.3
 
   validate-npm-package-license@3.0.4:
     dependencies:
