@@ -5,6 +5,14 @@
 
 Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/) framework.
 
+## Installation
+
+Clone the repo using:
+
+```sh
+npx fastify-forge
+```
+
 ## Features
 
 ### Plugins
