@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.2.0...v1.2.1) (2025-04-26)
+
+
+### Features
+
+* **cli:** add prepareEnv function and update create workflow ([d420f16](https://github.com/flaviodelgrosso/fastify-forge/commit/d420f1699f6f034575c25deb2fd1c8dea9d49b25))
+
 ## [1.2.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.1.3...v1.2.0) (2025-04-26)
 
 
