@@ -13,7 +13,7 @@ Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/)
 Clone the repo using:
 
 ```sh
-npx fastify-forge
+npx fastify-forge@latest
 ```
 
 ## Features
