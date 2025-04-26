@@ -1,6 +1,9 @@
 
 # 🛡️ Fastify Forge 🛡️
 
+[![downloads](https://img.shields.io/npm/dt/fastify-forge)](https://www.npmjs.com/package/fastify-forge)
+[![npm](https://img.shields.io/npm/v/fastify-forge)](https://www.npmjs.com/package/fastify-forge)
+[![license](https://img.shields.io/github/license/flaviodelgrosso/fastify-forge)](https://img.shields.io/github/license/flaviodelgrosso/fastify-forge)
 [![CI](https://github.com/flaviodelgrosso/fastify-forge/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/flaviodelgrosso/fastify-forge/actions/workflows/ci.yaml)
 
 Typescript based REST API lite boilerplate using [Fastify](https://fastify.dev/) framework.

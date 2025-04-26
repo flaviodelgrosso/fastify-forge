@@ -6,6 +6,7 @@
   "description": "Armored Template for Fastify Projects using TypeScript",
   "packageManager": "pnpm@10.2.0",
   "type": "module",
+  "homepage": "https://www.npmjs.com/package/fastify-forge",
   "bin": {
     "fastify-forge": "cli/index.js"
   },
