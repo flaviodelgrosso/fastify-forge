@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.1.3...v1.2.0) (2025-04-26)
+
+
+### Features
+
+* **cli:** add create command for initializing new fastify-forge projects ([f357d3c](https://github.com/flaviodelgrosso/fastify-forge/commit/f357d3cda606e47a1ae28cfb0404781fcc3f78a0))
+
 ### [1.1.3](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.1.2...v1.1.3) (2025-04-04)
 
 
