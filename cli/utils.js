@@ -1,19 +1,17 @@
 import { exec } from 'node:child_process';
-import { readFile, rm, unlink, writeFile } from 'node:fs/promises';
+import { copyFile, readFile, rm, unlink, writeFile } from 'node:fs/promises';
 import { join, posix } from 'node:path';
 import { promisify } from 'node:util';
 
-import { cancel, isCancel, select, text } from '@clack/prompts';
+import { cancel, isCancel, text } from '@clack/prompts';
 
 const execAsync = promisify(exec);
-
-export const supportedPackageManagers = ['npm', 'yarn', 'pnpm', 'bun'];
+const execOptions = { stdio: 'ignore' };
 
 export async function cloneRepo(name) {
   const repoUrl = 'https://github.com/flaviodelgrosso/fastify-forge.git';
   const cloneCommand = `git clone --depth=1 --branch=master ${repoUrl} ${name}`;
-  const opts = { stdio: 'ignore' };
-  await execAsync(cloneCommand, opts);
+  await execAsync(cloneCommand, execOptions);
 }
 
 export async function getName() {
@@ -35,34 +33,13 @@ export async function getName() {
   return value.toString();
 }
 
-export async function getPackageManager() {
-  const value = await select({
-    initialValue: 'pnpm',
-    message: 'Which package manager would you like to use?',
-    options: supportedPackageManagers.map((choice) => ({
-      value: choice,
-      label: choice,
-    })),
-  });
-
-  if (isCancel(value)) {
-    cancel('Cancelled.');
-    process.exit(0);
-  }
-
-  return value.toString();
-}
-
 export async function initializeGit() {
-  const opts = { stdio: 'ignore' };
-  await execAsync('git init', opts);
-  await execAsync('git add .', opts);
-  await execAsync('git commit -m "✨ Initial commit"', opts);
+  await execAsync('git init', execOptions);
+  await execAsync('git add .', execOptions);
+  await execAsync('git commit -m "✨ Initial commit"', execOptions);
 }
 
 export async function cleanUpRepo(projectDir) {
-  await rm(join(projectDir, '.git'), { recursive: true, force: true });
-
   const packageJson = await getPackageJson(projectDir);
   packageJson.name = projectDir.split(posix.sep).pop();
   packageJson.bin = undefined;
@@ -84,9 +61,15 @@ export async function cleanUpRepo(projectDir) {
     unlink(join(projectDir, 'LICENSE')),
     unlink(join(projectDir, 'README.md')),
     unlink(join(projectDir, 'CHANGELOG.md')),
+    rm(join(projectDir, '.git'), { recursive: true, force: true }),
     rm(join(projectDir, 'cli'), { recursive: true, force: true }),
     writeFile(packageJsonPath, `${newPackageJson}\n`),
   ]);
+}
+
+export async function prepareEnv(projectDir) {
+  const envPath = join(projectDir, '.env.example');
+  await copyFile(envPath, join(projectDir, '.env'));
 }
 
 async function getPackageJson(projectDir) {
@@ -96,5 +79,5 @@ async function getPackageJson(projectDir) {
 }
 
 export async function installDependencies() {
-  await execAsync('pnpm install', { stdio: 'ignore' });
+  await execAsync('pnpm install', execOptions);
 }

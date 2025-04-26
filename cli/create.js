@@ -1,7 +1,14 @@
 import { join } from 'node:path';
 
 import { intro, log, outro, spinner } from '@clack/prompts';
-import { cleanUpRepo, cloneRepo, getName, initializeGit, installDependencies } from './utils.js';
+import {
+  cleanUpRepo,
+  cloneRepo,
+  getName,
+  initializeGit,
+  installDependencies,
+  prepareEnv,
+} from './utils.js';
 
 export async function create(options) {
   try {
@@ -21,6 +28,9 @@ export async function create(options) {
 
     s.message('Cleaning up repository...');
     await cleanUpRepo(projectDir);
+
+    s.message('Prepare environment...');
+    await prepareEnv(projectDir);
 
     if (!options.disableGit) {
       s.message('Initializing Git repository...');
