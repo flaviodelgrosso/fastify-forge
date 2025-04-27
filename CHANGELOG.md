@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.3.0...v1.3.1) (2025-04-27)
+
+
+### Bug Fixes
+
+* update fastify-better-auth to version 1.0.2 and improve type definitions for AuthOptions ([86fa266](https://github.com/flaviodelgrosso/fastify-forge/commit/86fa2665b8b3155405bcacd054ea2e85f3211b2c))
+
 ## [1.3.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.2.1...v1.3.0) (2025-04-27)
 
 
