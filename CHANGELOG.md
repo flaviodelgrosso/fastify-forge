@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.2.1...v1.3.0) (2025-04-27)
+
+
+### Features
+
+* add @fastify/sensible dependency and remove errors module ([ef597aa](https://github.com/flaviodelgrosso/fastify-forge/commit/ef597aa93e6da3bec47db7f864d6d08389374876))
+* **cli:** enhance project creation flow with dependency installation prompt ([b9772df](https://github.com/flaviodelgrosso/fastify-forge/commit/b9772dfa627386f145b8c94e22f08b0d1968cc72))
+
 ### [1.2.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.2.0...v1.2.1) (2025-04-26)
 
 
