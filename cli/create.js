@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 
-import { intro, log, outro, spinner } from '@clack/prompts';
+import { confirm, intro, log, outro, spinner } from '@clack/prompts';
 import {
   cleanUpRepo,
   cloneRepo,
@@ -22,25 +22,39 @@ export async function create(options) {
 
     s.start('Cloning fastify-forge...');
     await cloneRepo(name);
+    s.stop('Clone complete!');
 
-    s.message('Moving into repository...');
     process.chdir(projectDir);
 
-    s.message('Cleaning up repository...');
+    s.start('Cleaning up repository...');
     await cleanUpRepo(projectDir);
+    s.stop('Cleanup complete!');
 
-    s.message('Prepare environment...');
+    s.start('Prepare environment...');
     await prepareEnv(projectDir);
+    s.stop('Environment prepared!');
 
     if (!options.disableGit) {
-      s.message('Initializing Git repository...');
+      s.start('Initializing Git repository...');
       await initializeGit();
+      s.stop('Git initialized!');
     }
 
-    s.message('Installing dependencies...');
-    await installDependencies();
+    // ask if user wants to install dependencies
+    const install = await confirm({
+      message: 'Do you want to install dependencies?',
+      initialValue: true,
+    });
 
-    s.stop('Done!');
+    if (!install) {
+      log.info('Skipping dependency installation.');
+    }
+
+    if (install) {
+      s.start('Installing dependencies, please wait...');
+      await installDependencies();
+      s.stop('Dependencies installed!');
+    }
 
     outro('Your project is ready! You can now run pnpm dev to start the development server.');
   } catch (error) {
