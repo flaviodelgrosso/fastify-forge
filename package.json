@@ -1,6 +1,6 @@
 {
   "name": "fastify-forge",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "author": "Flavio Del Grosso",
   "license": "MIT",
   "description": "Armored Template for Fastify Projects using TypeScript",
@@ -10,8 +10,16 @@
   "bin": {
     "fastify-forge": "cli/index.js"
   },
-  "files": ["cli"],
-  "keywords": ["fastify", "typescript", "template", "api", "server"],
+  "files": [
+    "cli"
+  ],
+  "keywords": [
+    "fastify",
+    "typescript",
+    "template",
+    "api",
+    "server"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flaviodelgrosso/fastify-forge.git"
