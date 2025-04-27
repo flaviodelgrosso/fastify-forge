@@ -1,6 +1,6 @@
 import type { FastifyInstance } from 'fastify';
 import fp from 'fastify-plugin';
-import { client, db } from '../db/index.ts';
+import { client, db } from '../../db/index.ts';
 
 declare module 'fastify' {
   interface FastifyInstance {

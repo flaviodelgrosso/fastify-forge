@@ -1,32 +1,13 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import Fastify, { type FastifyServerOptions } from 'fastify';
-
 import AutoLoad from '@fastify/autoload';
-import Cors from '@fastify/cors';
-import Helmet from '@fastify/helmet';
-import UnderPressure from '@fastify/under-pressure';
+import Fastify, { type FastifyServerOptions } from 'fastify';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export async function buildApp(options?: FastifyServerOptions) {
   const server = Fastify(options);
-
-  // Enables the use of CORS in a Fastify application.
-  server.register(Cors, {
-    origin: false,
-  });
-
-  // Set default security headers.
-  server.register(Helmet, {
-    global: true,
-    contentSecurityPolicy: {
-      directives: {
-        'script-src': ["'self'", 'cdn.jsdelivr.net/npm/@scalar/api-reference', "'unsafe-inline'"],
-      },
-    },
-  });
 
   // Auto-load plugins
   await server.register(AutoLoad, {
@@ -41,8 +22,6 @@ export async function buildApp(options?: FastifyServerOptions) {
     autoHooksPattern: /\.hook(?:\.ts|\.js|\.cjs|\.mjs)$/i,
     cascadeHooks: true,
   });
-
-  server.register(UnderPressure);
 
   // Set error handler
   server.setErrorHandler((err, request, reply) => {

@@ -2,7 +2,7 @@ import Swagger from '@fastify/swagger';
 import ScalarApiReference from '@scalar/fastify-api-reference';
 import type { FastifyInstance } from 'fastify';
 import fp from 'fastify-plugin';
-import packageJson from '../../package.json' with { type: 'json' };
+import packageJson from '../../../package.json' with { type: 'json' };
 
 async function swaggerPlugin(fastify: FastifyInstance) {
   await fastify.register(Swagger, {
@@ -17,10 +17,10 @@ async function swaggerPlugin(fastify: FastifyInstance) {
   });
 
   await fastify.register(ScalarApiReference, {
-    routePrefix: '/docs',
+    routePrefix: '/api/docs',
   });
 
-  fastify.log.info('API Reference is available at /docs');
+  fastify.log.info('API Reference is available at /api/docs');
 }
 
 export default fp(swaggerPlugin, {
