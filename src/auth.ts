@@ -1,6 +1,6 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
-import { openAPI } from 'better-auth/plugins';
+import { admin, openAPI } from 'better-auth/plugins';
 import { db } from './db/index.ts';
 
 const auth = betterAuth({
@@ -9,6 +9,7 @@ const auth = betterAuth({
     usePlural: true,
   }),
   plugins: [
+    admin(),
     openAPI({
       path: '/docs',
     }),
