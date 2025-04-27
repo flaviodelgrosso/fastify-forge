@@ -47,6 +47,7 @@ export async function cleanUpRepo(projectDir) {
   packageJson.license = undefined;
   packageJson.description = undefined;
   packageJson.homepage = undefined;
+  packageJson.repository = undefined;
   packageJson.version = '0.1.0';
   packageJson.dependencies = {
     ...packageJson.dependencies,

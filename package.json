@@ -10,6 +10,10 @@
   "bin": {
     "fastify-forge": "cli/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaviodelgrosso/fastify-forge.git"
+  },
   "scripts": {
     "start": "pnpm build && cross-env NODE_ENV=production node dist/server.js",
     "dev": "cross-env NODE_ENV=development node --watch src/server.ts | pino-pretty --colorize",
