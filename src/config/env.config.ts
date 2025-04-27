@@ -1,12 +1,6 @@
 import { type Static, Type } from '@sinclair/typebox';
 import envSchema from 'env-schema';
 
-const NodeEnv = {
-  development: 'development',
-  production: 'production',
-  test: 'test',
-} as const;
-
 export const LogLevel = {
   trace: 'trace',
   debug: 'debug',
@@ -22,7 +16,6 @@ const schema = Type.Object({
   POSTGRES_DB: Type.String(),
   POSTGRES_PORT: Type.Number({ default: 5432 }),
   LOG_LEVEL: Type.Enum(LogLevel),
-  NODE_ENV: Type.Enum(NodeEnv),
   HOST: Type.String({ default: 'localhost' }),
   PORT: Type.Number({ default: 3000 }),
 });
@@ -33,9 +26,6 @@ const env = envSchema<Static<typeof schema>>({
 });
 
 export default {
-  nodeEnv: env.NODE_ENV,
-  isDev: env.NODE_ENV === NodeEnv.development,
-  isProd: env.NODE_ENV === NodeEnv.production,
   /* c8 ignore next */
   version: process.env.npm_package_version ?? '0.0.0',
   log: {
