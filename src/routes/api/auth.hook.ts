@@ -1,7 +1,6 @@
 import { fromNodeHeaders } from 'better-auth/node';
 import type { FastifyInstance } from 'fastify';
 import type { Session } from '../../auth.ts';
-import { UnauthorizedError } from '../../errors/http-error.ts';
 
 declare module 'fastify' {
   interface FastifyRequest {
@@ -18,7 +17,7 @@ async function authHook(fastify: FastifyInstance) {
     });
 
     if (!session?.user) {
-      return res.send(new UnauthorizedError('You must be logged in to access this resource.'));
+      return res.unauthorized('You must be logged in to access this resource.');
     }
 
     req.session = session;
