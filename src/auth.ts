@@ -27,7 +27,9 @@ const auth = betterAuth({
   },
   advanced: {
     cookiePrefix: 'fastify-forge',
-    generateId: false,
+    database: {
+      generateId: false,
+    },
   },
 });
 
