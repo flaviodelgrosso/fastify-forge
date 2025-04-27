@@ -66,8 +66,8 @@ importers:
         specifier: ^5.3.2
         version: 5.3.2
       fastify-better-auth:
-        specifier: ^1.0.1
-        version: 1.0.1(better-auth@1.2.7)(fastify@5.3.2)
+        specifier: ^1.0.2
+        version: 1.0.2(better-auth@1.2.7)(fastify@5.3.2)
       fastify-plugin:
         specifier: ^5.0.1
         version: 5.0.1
@@ -1467,8 +1467,8 @@ packages:
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
 
-  fastify-better-auth@1.0.1:
-    resolution: {integrity: sha512-MCDUKa9TeVH/k8/bjz0xYhYTZCWmq8K1zkywetGXqRr0aW0u0VCoCaWqtOKF1+QvgLeE4X6rs9G2EQ906wY/Ag==}
+  fastify-better-auth@1.0.2:
+    resolution: {integrity: sha512-4KNG3h41Yq6+ktVowZL2/axmYu/M1LaWCsMiF/+CsPh/oXtakcsxL7fSGWbeR3nu4BznxoR5WCb1l+BbhCxrfg==}
     engines: {node: '>= 22'}
     peerDependencies:
       better-auth: 1.x
@@ -4221,7 +4221,7 @@ snapshots:
 
   fast-uri@3.0.6: {}
 
-  fastify-better-auth@1.0.1(better-auth@1.2.7)(fastify@5.3.2):
+  fastify-better-auth@1.0.2(better-auth@1.2.7)(fastify@5.3.2):
     dependencies:
       better-auth: 1.2.7
       fastify: 5.3.2

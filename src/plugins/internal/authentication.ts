@@ -1,8 +1,7 @@
 import FastifyBetterAuth, { type FastifyBetterAuthOptions } from 'fastify-better-auth';
+import auth, { type AuthOptions } from '../../auth.ts';
 
-import auth from '../../auth.ts';
-
-export const autoConfig: FastifyBetterAuthOptions = {
+export const autoConfig: FastifyBetterAuthOptions<AuthOptions> = {
   auth,
 };
 
