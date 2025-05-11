@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.3.2...v1.3.3) (2025-05-11)
+
+
+### Bug Fixes
+
+* **auth:** nest database configuration under advanced settings ([71adb40](https://github.com/flaviodelgrosso/fastify-forge/commit/71adb40a96dd7614a2d8b04a1430906db165e9c5))
+
 ### [1.3.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.3.1...v1.3.2) (2025-04-27)
 
 ### [1.3.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.3.0...v1.3.1) (2025-04-27)
