@@ -39,6 +39,7 @@ test('should return 200 for /api/v1 protected route when user is logged in', asy
       emailVerified: true,
       createdAt: new Date(),
       updatedAt: new Date(),
+      banned: false,
     },
   };
 

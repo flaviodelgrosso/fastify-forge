@@ -10,16 +10,8 @@
   "bin": {
     "fastify-forge": "cli/index.js"
   },
-  "files": [
-    "cli"
-  ],
-  "keywords": [
-    "fastify",
-    "typescript",
-    "template",
-    "api",
-    "server"
-  ],
+  "files": ["cli"],
+  "keywords": ["fastify", "typescript", "template", "api", "server"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flaviodelgrosso/fastify-forge.git"
