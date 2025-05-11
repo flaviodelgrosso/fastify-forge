@@ -1,14 +1,20 @@
 import { fromNodeHeaders } from 'better-auth/node';
 import type { FastifyInstance } from 'fastify';
+import auth from '../../auth.ts';
 import type { Session } from '../../auth.ts';
 
 declare module 'fastify' {
+  interface FastifyInstance {
+    auth: typeof auth;
+  }
+
   interface FastifyRequest {
     session: Session;
   }
 }
 
 async function authHook(fastify: FastifyInstance) {
+  fastify.decorate('auth', auth);
   fastify.decorateRequest('session');
 
   fastify.addHook('preHandler', async (req, res) => {
