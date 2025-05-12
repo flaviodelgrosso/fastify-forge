@@ -31,7 +31,7 @@ importers:
         version: 6.0.3
       '@fastify/swagger':
         specifier: ^9.5.0
-        version: 9.5.0
+        version: 9.5.1
       '@fastify/swagger-ui':
         specifier: ^5.2.2
         version: 5.2.2
@@ -628,8 +628,8 @@ packages:
   '@fastify/swagger-ui@5.2.2':
     resolution: {integrity: sha512-jf8xe+D8Xjc8TqrZhtlJImOWihd8iYFu8dhM01mGg+F04CKUM0zGB9aADE9nxzRUszyWp3wn+uWk89nbAoBMCw==}
 
-  '@fastify/swagger@9.5.0':
-    resolution: {integrity: sha512-6WiwB1Nh+GHqm4wsDGH/ym6ming3DyH9cuAkIwGN9nhbyrCoNSZ+l9h3TAsksffbNEI/RHCiw2BH2LeGNRrOoQ==}
+  '@fastify/swagger@9.5.1':
+    resolution: {integrity: sha512-EGjYLA7vDmCPK7XViAYMF6y4+K3XUy5soVTVxsyXolNe/Svb4nFQxvtuQvvoQb2Gzc9pxiF3+ZQN/iZDHhKtTg==}
 
   '@fastify/type-provider-typebox@5.1.0':
     resolution: {integrity: sha512-F1AQHeLiKp1hu6GMWm5W6fZ6zXQ0mTV+qHOzrptAie9AYewvFr5Q3blfy8Qmx9gUgwA3Yj+CWvQQJeTwDgTnIg==}
@@ -3325,7 +3325,7 @@ snapshots:
       rfdc: 1.4.1
       yaml: 2.7.1
 
-  '@fastify/swagger@9.5.0':
+  '@fastify/swagger@9.5.1':
     dependencies:
       fastify-plugin: 5.0.1
       json-schema-resolver: 3.0.0
