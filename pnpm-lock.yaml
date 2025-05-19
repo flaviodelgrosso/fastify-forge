@@ -58,7 +58,7 @@ importers:
         version: 13.1.0
       drizzle-orm:
         specifier: ^0.43.1
-        version: 0.43.1(@types/pg@8.15.1)(kysely@0.27.6)(pg@8.16.0)
+        version: 0.43.1(@types/pg@8.15.2)(kysely@0.27.6)(pg@8.16.0)
       env-schema:
         specifier: ^6.0.1
         version: 6.0.1
@@ -98,7 +98,7 @@ importers:
         version: 22.15.19
       '@types/pg':
         specifier: ^8.11.14
-        version: 8.15.1
+        version: 8.15.2
       '@types/sinon':
         specifier: ^17.0.4
         version: 17.0.4
@@ -775,8 +775,8 @@ packages:
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
-  '@types/pg@8.15.1':
-    resolution: {integrity: sha512-YKHrkGWBX5+ivzvOQ66I0fdqsQTsvxqM0AGP2i0XrVZ9DP5VA/deEbTf7VuLPGpY7fJB9uGbkZ6KjVhuHcrTkQ==}
+  '@types/pg@8.15.2':
+    resolution: {integrity: sha512-+BKxo5mM6+/A1soSHBI7ufUglqYXntChLDyTbvcAn1Lawi9J7J9Ok3jt6w7I0+T/UDJ4CyhHk66+GZbwmkYxSg==}
 
   '@types/sinon@17.0.4':
     resolution: {integrity: sha512-RHnIrhfPO3+tJT0s7cFaXGZvsL4bbR3/k7z3P312qMS4JaS2Tk+KiwiLx1S0rQ56ERj00u1/BtdyVd0FY+Pdew==}
@@ -3519,7 +3519,7 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
-  '@types/pg@8.15.1':
+  '@types/pg@8.15.2':
     dependencies:
       '@types/node': 22.15.19
       pg-protocol: 1.10.0
@@ -4014,9 +4014,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.43.1(@types/pg@8.15.1)(kysely@0.27.6)(pg@8.16.0):
+  drizzle-orm@0.43.1(@types/pg@8.15.2)(kysely@0.27.6)(pg@8.16.0):
     optionalDependencies:
-      '@types/pg': 8.15.1
+      '@types/pg': 8.15.2
       kysely: 0.27.6
       pg: 8.16.0
 
