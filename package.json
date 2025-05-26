@@ -48,7 +48,7 @@
     "db:drop": "drizzle-kit drop"
   },
   "dependencies": {
-    "@clack/prompts": "^0.10.1",
+    "@clack/prompts": "^0.11.0",
     "@fastify/autoload": "^6.3.0",
     "@fastify/cors": "^11.0.1",
     "@fastify/helmet": "^13.0.1",
