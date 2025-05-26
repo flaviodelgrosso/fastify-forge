@@ -1,6 +1,6 @@
 {
   "name": "fastify-forge",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "author": "Flavio Del Grosso",
   "license": "MIT",
   "description": "Armored Template for Fastify Projects using TypeScript",
