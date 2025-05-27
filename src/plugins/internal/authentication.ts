@@ -1,13 +1,8 @@
-import type { FastifyInstance } from 'fastify';
-import FastifyBetterAuth from 'fastify-better-auth';
-import fp from 'fastify-plugin';
+import FastifyBetterAuth, { type FastifyBetterAuthOptions } from 'fastify-better-auth';
 import auth from '../../auth.ts';
 
-async function authPlugin(fastify: FastifyInstance) {
-  fastify.decorate('auth', auth);
-  await fastify.register(FastifyBetterAuth, { auth });
-}
+export const autoConfig: FastifyBetterAuthOptions = {
+  auth,
+};
 
-export default fp(authPlugin, {
-  name: 'auth-plugin',
-});
+export default FastifyBetterAuth;

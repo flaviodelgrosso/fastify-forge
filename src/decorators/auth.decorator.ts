@@ -1,6 +1,7 @@
 import type { FastifyInstance } from 'fastify';
+import { getAuthDecorator } from 'fastify-better-auth';
 import type auth from '../auth.ts';
 
-export function getAuthDecorator(fastify: FastifyInstance) {
-  return fastify.getDecorator<typeof auth>('auth');
+export function getAuthInstance(fastify: FastifyInstance) {
+  return getAuthDecorator<typeof auth.options>(fastify);
 }
