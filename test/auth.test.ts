@@ -1,5 +1,6 @@
 import { strictEqual } from 'node:assert';
 import { test } from 'node:test';
+import { getAuthDecorator } from 'fastify-better-auth';
 import sinon from 'sinon';
 import { buildApp } from '../src/app.ts';
 
@@ -43,7 +44,8 @@ test('should return 200 for /api/v1 protected route when user is logged in', asy
     },
   };
 
-  const getSessionStub = sinon.stub(fastify.auth.api, 'getSession').resolves(mockSession);
+  const authInstance = getAuthDecorator(fastify);
+  const getSessionStub = sinon.stub(authInstance.api, 'getSession').resolves(mockSession);
 
   const res = await fastify.inject({
     method: 'GET',
