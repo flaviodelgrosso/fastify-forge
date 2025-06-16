@@ -49,7 +49,7 @@ importers:
         version: 0.34.33
       better-auth:
         specifier: ^1.2.7
-        version: 1.2.8
+        version: 1.2.9
       close-with-grace:
         specifier: ^2.2.0
         version: 2.2.0
@@ -67,7 +67,7 @@ importers:
         version: 5.3.3
       fastify-better-auth:
         specifier: ^1.1.0
-        version: 1.1.0(better-auth@1.2.8)(fastify@5.3.3)
+        version: 1.1.0(better-auth@1.2.9)(fastify@5.3.3)
       fastify-plugin:
         specifier: ^5.0.1
         version: 5.0.1
@@ -893,8 +893,8 @@ packages:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
 
-  better-auth@1.2.8:
-    resolution: {integrity: sha512-y8ry7ZW3/3ZIr82Eo1zUDtMzdoQlFnwNuZ0+b0RxoNZgqmvgTIc/0tCDC7NDJerqSu4UCzer0dvYxBsv3WMIGg==}
+  better-auth@1.2.9:
+    resolution: {integrity: sha512-WLqBXDzuaCQetQctLGC5oTfGmL32zUvxnM4Y+LZkhwseMaZWq5EKI+c/ZATgz2YkFt7726q659PF8CfB9P1VuA==}
 
   better-call@1.0.9:
     resolution: {integrity: sha512-Qfm0gjk0XQz0oI7qvTK1hbqTsBY4xV2hsHAxF8LZfUYl3RaECCIifXuVqtPpZJWvlCCMlQSvkvhhyuApGUba6g==}
@@ -2856,8 +2856,8 @@ packages:
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
 
-  zod@3.25.3:
-    resolution: {integrity: sha512-VGZqnyYNrl8JpEJRZaFPqeVNIuqgXNu4cXZ5cOb6zEUO1OxKbRnWB4UdDIXMmiERWncs0yDQukssHov8JUxykQ==}
+  zod@3.25.64:
+    resolution: {integrity: sha512-hbP9FpSZf7pkS7hRVUrOjhwKJNyampPgtXKc3AN6DsWtoHsg2Sb4SQaS4Tcay380zSwd2VPo9G9180emBACp5g==}
 
 snapshots:
 
@@ -3596,7 +3596,7 @@ snapshots:
 
   basic-ftp@5.0.5: {}
 
-  better-auth@1.2.8:
+  better-auth@1.2.9:
     dependencies:
       '@better-auth/utils': 0.2.5
       '@better-fetch/fetch': 1.1.18
@@ -3609,7 +3609,7 @@ snapshots:
       jose: 5.10.0
       kysely: 0.28.2
       nanostores: 0.11.4
-      zod: 3.25.3
+      zod: 3.25.64
 
   better-call@1.0.9:
     dependencies:
@@ -4146,9 +4146,9 @@ snapshots:
 
   fast-uri@3.0.6: {}
 
-  fastify-better-auth@1.1.0(better-auth@1.2.8)(fastify@5.3.3):
+  fastify-better-auth@1.1.0(better-auth@1.2.9)(fastify@5.3.3):
     dependencies:
-      better-auth: 1.2.8
+      better-auth: 1.2.9
       fastify: 5.3.3
       fastify-plugin: 5.0.1
 
@@ -5526,4 +5526,4 @@ snapshots:
 
   zod@3.24.1: {}
 
-  zod@3.25.3: {}
+  zod@3.25.64: {}
