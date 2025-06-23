@@ -43,7 +43,7 @@ importers:
         version: 9.0.3
       '@scalar/fastify-api-reference':
         specifier: ^1.28.23
-        version: 1.31.11
+        version: 1.31.18
       '@sinclair/typebox':
         specifier: ^0.34.33
         version: 0.34.35
@@ -714,24 +714,24 @@ packages:
   '@pm2/pm2-version-check@1.0.4':
     resolution: {integrity: sha512-SXsM27SGH3yTWKc2fKR4SYNxsmnvuBQ9dd6QHtEWmiZ/VqaOYPAIlS8+vMcn27YLtAEBGvNRSh3TPNvtjZgfqA==}
 
-  '@scalar/core@0.3.3':
-    resolution: {integrity: sha512-OedH8YQriBsE7JnCN2ly4p3u7iobjzAoDkxD/o1hiF55m6WRicvtklEdByHlceu9UnJ/znikZ50ymo98uG3aqA==}
+  '@scalar/core@0.3.4':
+    resolution: {integrity: sha512-5MHmi7TbMXBlR2TcrGh7SIxNzGABf5IxiV7R8h4kyaSwlvc+tg8uo/qwDdTK/psql764VieRHaH7gdL9tu+8+w==}
     engines: {node: '>=20'}
 
-  '@scalar/fastify-api-reference@1.31.11':
-    resolution: {integrity: sha512-76COUiN3j9TOKRDBJd3XahTqcPgWOw4ZIyNVggb5YFtZKICv1IKqXRhqobp9IK5EtJP3nm8lrT7t2icVIzqQbw==}
+  '@scalar/fastify-api-reference@1.31.18':
+    resolution: {integrity: sha512-YOjmY4VOBn8IeMCqxxXEGn/vhwrb9TrKydQwaLGUXyNfxAl7bZyKjJalrMBO/nFCvdmPMnRpDBYFAEWeV480xA==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.17.0':
-    resolution: {integrity: sha512-W1E5uTbbD+43vxBki7mIoAsoLsWzgVIfYSawPGCaBzr0+g2DHQWGLZXB12bgX3SnOtNEl986NiX1ruiCk8RUAw==}
+  '@scalar/openapi-parser@0.18.0':
+    resolution: {integrity: sha512-qAWEfJR5f/LwSFULFeSkD56LHgU9ovyj+e1uqy9XaW9Hb9P0ewIGKi+Gd4wTyxfFkdPLXTFYXApjviP6jV+new==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.3.3':
     resolution: {integrity: sha512-mr3OvbCyvuzSDgv9gR9D3pJAsl82BRNBp1P8ldgRgKF4Wiswfa7nQeKibpX0kHSGXLgiyvxWJULUFwgdWMXNNA==}
     engines: {node: '>=20'}
 
-  '@scalar/types@0.2.3':
-    resolution: {integrity: sha512-K1/Vp5xaQ8TEGDYwHg88OBuQWJRWrE3ToZ0Z2LJwskcY1Eg+uDiRQXKF4QPngZzu5rrWgRErAq4yte4Y7omqgA==}
+  '@scalar/types@0.2.4':
+    resolution: {integrity: sha512-OpsNJN0r3hVVR8mF1YDO+YioeRmva/7pPravDh3GsWNQOSBOaFzLac8IkRLI+gBMpsIcJq1s+lisqPg+GHNiaA==}
     engines: {node: '>=20'}
 
   '@simplewebauthn/browser@13.1.0':
@@ -3419,19 +3419,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@scalar/core@0.3.3':
+  '@scalar/core@0.3.4':
     dependencies:
-      '@scalar/types': 0.2.3
+      '@scalar/types': 0.2.4
 
-  '@scalar/fastify-api-reference@1.31.11':
+  '@scalar/fastify-api-reference@1.31.18':
     dependencies:
-      '@scalar/core': 0.3.3
-      '@scalar/openapi-parser': 0.17.0
+      '@scalar/core': 0.3.4
+      '@scalar/openapi-parser': 0.18.0
       '@scalar/openapi-types': 0.3.3
       fastify-plugin: 4.5.1
       github-slugger: 2.0.0
 
-  '@scalar/openapi-parser@0.17.0':
+  '@scalar/openapi-parser@0.18.0':
     dependencies:
       ajv: 8.17.1
       ajv-draft-04: 1.0.0(ajv@8.17.1)
@@ -3444,7 +3444,7 @@ snapshots:
     dependencies:
       zod: 3.24.1
 
-  '@scalar/types@0.2.3':
+  '@scalar/types@0.2.4':
     dependencies:
       '@scalar/openapi-types': 0.3.3
       nanoid: 5.1.5
