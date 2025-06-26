@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.0...v1.4.1) (2025-06-26)
+
+
+### Features
+
+* enhance environment configuration and logging setup ([afa9db3](https://github.com/flaviodelgrosso/fastify-forge/commit/afa9db3ac12c255ab41e73a906f5a475562c46ae))
+
+
+### Bug Fixes
+
+* update fastify autoload dir to use import.meta.dirname ([0069d6e](https://github.com/flaviodelgrosso/fastify-forge/commit/0069d6ed7aede6b1a54ba8a3a12c7018eccfae52))
+
 ## [1.4.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.3.4...v1.4.0) (2025-05-27)
 
 
