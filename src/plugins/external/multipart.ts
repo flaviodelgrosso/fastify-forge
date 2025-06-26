@@ -7,8 +7,8 @@ export const autoConfig: FastifyMultipartOptions = {
     fields: 10,
     fileSize: 1 * 1024 * 1024,
     files: 1,
-    parts: 1000,
-  },
+    parts: 1000
+  }
 };
 
 export default FastifyMultipart;

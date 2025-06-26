@@ -2,7 +2,7 @@ import FastifyRateLimit, { type FastifyRateLimitOptions } from '@fastify/rate-li
 
 export const autoConfig: FastifyRateLimitOptions = {
   max: 4,
-  timeWindow: '1 minute',
+  timeWindow: '1 minute'
 };
 
 export default FastifyRateLimit;

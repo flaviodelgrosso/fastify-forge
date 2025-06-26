@@ -49,7 +49,7 @@ npx fastify-forge@latest
 
 #### Linting and Formatting
 
-- The project uses [biome](https://biomejs.dev/) to lint and format the codebase.
+- The project uses [ESLint](https://www.npmjs.com/package/eslint) and [Neostandard](https://www.npmjs.com/package/neostandard) for linting.
 - Enforce commit message conventions with [commitlint](https://www.npmjs.com/package/@commitlint/cli).
 
 #### Git Hooks

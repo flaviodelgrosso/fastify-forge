@@ -6,13 +6,13 @@ import Fastify, { type FastifyServerOptions } from 'fastify';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export async function buildApp(options?: FastifyServerOptions) {
+export async function buildApp (options?: FastifyServerOptions) {
   const server = Fastify(options);
 
   // Auto-load plugins
   await server.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
-    dirNameRoutePrefix: false,
+    dirNameRoutePrefix: false
   });
 
   // Auto-load routes
@@ -20,7 +20,7 @@ export async function buildApp(options?: FastifyServerOptions) {
     dir: path.join(__dirname, 'routes'),
     autoHooks: true,
     autoHooksPattern: /\.hook(?:\.ts|\.js|\.cjs|\.mjs)$/i,
-    cascadeHooks: true,
+    cascadeHooks: true
   });
 
   // Set error handler
@@ -32,10 +32,10 @@ export async function buildApp(options?: FastifyServerOptions) {
           method: request.method,
           url: request.url,
           query: request.query,
-          params: request.params,
-        },
+          params: request.params
+        }
       },
-      'Unhandled error occurred',
+      'Unhandled error occurred'
     );
 
     reply.code(err.statusCode ?? 500);
@@ -53,8 +53,8 @@ export async function buildApp(options?: FastifyServerOptions) {
     {
       preHandler: server.rateLimit({
         max: 4,
-        timeWindow: 500,
-      }),
+        timeWindow: 500
+      })
     },
     (request, reply) => {
       request.log.warn(
@@ -63,16 +63,16 @@ export async function buildApp(options?: FastifyServerOptions) {
             method: request.method,
             url: request.url,
             query: request.query,
-            params: request.params,
-          },
+            params: request.params
+          }
         },
-        'Resource not found',
+        'Resource not found'
       );
 
       reply.code(404);
 
       return { message: 'Not Found' };
-    },
+    }
   );
 
   return server;

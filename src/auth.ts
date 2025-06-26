@@ -1,36 +1,37 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { admin, openAPI } from 'better-auth/plugins';
+
 import { db } from './db/index.ts';
 
 const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: 'pg',
-    usePlural: true,
+    usePlural: true
   }),
   plugins: [
     admin(),
     openAPI({
-      path: '/docs',
-    }),
+      path: '/docs'
+    })
   ],
   session: {
     expiresIn: 60 * 60 * 24 * 7, // 1 week
     updateAge: 60 * 60 * 24, // 1 day
     cookieCache: {
       enabled: true,
-      maxAge: 5 * 60, // Cache duration in seconds
-    },
+      maxAge: 5 * 60 // Cache duration in seconds
+    }
   },
   emailAndPassword: {
-    enabled: true,
+    enabled: true
   },
   advanced: {
     cookiePrefix: 'fastify-forge',
     database: {
-      generateId: false,
-    },
-  },
+      generateId: false
+    }
+  }
 });
 
 export type User = typeof auth.$Infer.Session.user;

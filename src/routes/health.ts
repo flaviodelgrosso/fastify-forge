@@ -5,11 +5,11 @@ const healthRoute: FastifyPluginAsyncTypebox = async (app) => {
     url: '/health',
     method: 'GET',
     schema: {
-      tags: ['Health'],
+      tags: ['Health']
     },
     handler: async () => {
       return { status: 'ok' };
-    },
+    }
   });
 };
 

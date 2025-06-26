@@ -1,16 +1,17 @@
 import { join } from 'node:path';
 
 import { confirm, intro, log, outro, spinner } from '@clack/prompts';
+
 import {
   cleanUpRepo,
   cloneRepo,
   getName,
   initializeGit,
   installDependencies,
-  prepareEnv,
+  prepareEnv
 } from './utils.js';
 
-export async function create(options) {
+export async function create (options) {
   try {
     intro('Welcome to Fastify Forge!');
 
@@ -43,7 +44,7 @@ export async function create(options) {
     // ask if user wants to install dependencies
     const install = await confirm({
       message: 'Do you want to install dependencies?',
-      initialValue: true,
+      initialValue: true
     });
 
     if (!install) {

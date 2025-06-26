@@ -5,11 +5,11 @@ const healthRoute: FastifyPluginAsyncTypebox = async (app) => {
     url: '/protected',
     method: 'GET',
     schema: {
-      tags: ['Protected'],
+      tags: ['Protected']
     },
     handler: async (_req, res) => {
       res.send({ message: 'Protected route' });
-    },
+    }
   });
 };
 

@@ -1,20 +1,20 @@
+import { ajvFilePlugin } from '@fastify/multipart';
 import closeWithGrace from 'close-with-grace';
 
-import { ajvFilePlugin } from '@fastify/multipart';
 import { buildApp } from './app.ts';
 import env from './config/env.config.ts';
 
-async function startServer() {
+async function startServer () {
   const app = await buildApp({
     logger: {
       level: env.log.level,
-      redact: ['headers.authorization'],
+      redact: ['headers.authorization']
     },
     ignoreDuplicateSlashes: true,
     ajv: {
       // Adds the file plugin to help @fastify/swagger schema generation
-      plugins: [ajvFilePlugin],
-    },
+      plugins: [ajvFilePlugin]
+    }
   });
 
   closeWithGrace(async ({ signal, err }) => {

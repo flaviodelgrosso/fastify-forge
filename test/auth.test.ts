@@ -1,7 +1,9 @@
 import { strictEqual } from 'node:assert';
 import { test } from 'node:test';
+
 import { getAuthDecorator } from 'fastify-better-auth';
 import sinon from 'sinon';
+
 import { buildApp } from '../src/app.ts';
 
 test("should return 401 for /api/v1 protected route when user isn't logged in", async () => {
@@ -9,7 +11,7 @@ test("should return 401 for /api/v1 protected route when user isn't logged in", 
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/api/v1/protected',
+    url: '/api/v1/protected'
   });
 
   strictEqual(res.statusCode, 401);
@@ -31,7 +33,7 @@ test('should return 200 for /api/v1 protected route when user is logged in', asy
       expiresAt: new Date(Date.now() + 1000 * 60 * 60),
       token: 'test-token',
       ipAddress: '127.0.0.1',
-      userAgent: 'test-agent',
+      userAgent: 'test-agent'
     },
     user: {
       id: '1',
@@ -40,8 +42,8 @@ test('should return 200 for /api/v1 protected route when user is logged in', asy
       emailVerified: true,
       createdAt: new Date(),
       updatedAt: new Date(),
-      banned: false,
-    },
+      banned: false
+    }
   };
 
   const authInstance = getAuthDecorator(fastify);
@@ -51,8 +53,8 @@ test('should return 200 for /api/v1 protected route when user is logged in', asy
     method: 'GET',
     url: '/api/v1/protected',
     headers: {
-      Authorization: 'Bearer test',
-    },
+      Authorization: 'Bearer test'
+    }
   });
 
   strictEqual(res.statusCode, 200);

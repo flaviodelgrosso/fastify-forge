@@ -7,19 +7,19 @@ const rootRoute: FastifyPluginAsyncTypebox = async (fastify) => {
     {
       schema: {
         querystring: Type.Object({
-          name: Type.String({ default: 'world' }),
+          name: Type.String({ default: 'world' })
         }),
         response: {
           200: Type.Object({
-            hello: Type.String(),
-          }),
-        },
-      },
+            hello: Type.String()
+          })
+        }
+      }
     },
     (req) => {
       const { name } = req.query;
       return { hello: name };
-    },
+    }
   );
 
   fastify.post(
@@ -27,19 +27,19 @@ const rootRoute: FastifyPluginAsyncTypebox = async (fastify) => {
     {
       schema: {
         body: Type.Object({
-          name: Type.String(),
+          name: Type.String()
         }),
         response: {
           200: Type.Object({
-            hello: Type.String(),
-          }),
-        },
-      },
+            hello: Type.String()
+          })
+        }
+      }
     },
     async (request) => {
       const { name } = request.body;
       return { hello: name };
-    },
+    }
   );
 };
 

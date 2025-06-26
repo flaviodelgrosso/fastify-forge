@@ -1,13 +1,14 @@
 import { fromNodeHeaders } from 'better-auth/node';
 import type { FastifyInstance } from 'fastify';
+
 import { getAuthInstance } from '../../decorators/auth.decorator.ts';
 
-async function authHook(fastify: FastifyInstance) {
+async function authHook (fastify: FastifyInstance) {
   fastify.decorateRequest('session');
 
   fastify.addHook('preHandler', async (req, res) => {
     const session = await getAuthInstance(fastify).api.getSession({
-      headers: fromNodeHeaders(req.headers),
+      headers: fromNodeHeaders(req.headers)
     });
 
     if (!session?.user) {

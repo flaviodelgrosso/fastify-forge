@@ -1,5 +1,6 @@
 import { deepStrictEqual, strictEqual } from 'node:assert';
 import { test } from 'node:test';
+
 import { buildApp } from '../src/app.ts';
 
 test('should return 200 for /GET route', async () => {
@@ -7,7 +8,7 @@ test('should return 200 for /GET route', async () => {
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/',
+    url: '/'
   });
 
   strictEqual(res.statusCode, 200);
@@ -21,8 +22,8 @@ test('should return 200 for /POST route', async () => {
     url: '/',
     payload: JSON.stringify({ name: 'world' }),
     headers: {
-      'Content-Type': 'application/json',
-    },
+      'Content-Type': 'application/json'
+    }
   });
 
   strictEqual(res.statusCode, 200);
@@ -34,7 +35,7 @@ test('should return 200 for /health route', async () => {
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/health',
+    url: '/health'
   });
 
   strictEqual(res.statusCode, 200);
@@ -50,7 +51,7 @@ test('should handle errors correctly', async () => {
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/error',
+    url: '/error'
   });
 
   strictEqual(res.statusCode, 500);
@@ -61,7 +62,7 @@ test('should return 404 for unknown routes', async () => {
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/unknown',
+    url: '/unknown'
   });
 
   strictEqual(res.statusCode, 404);
