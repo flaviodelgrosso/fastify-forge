@@ -2,8 +2,9 @@ name: Publish to NPM
 
 on:
   workflow_dispatch:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   publish:
@@ -11,11 +12,12 @@ jobs:
     permissions:
       contents: read
       id-token: write
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '23.x'
+          node-version: '24'
           registry-url: 'https://registry.npmjs.org'
       - run: corepack enable
       - run: pnpm install
