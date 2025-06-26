@@ -1,23 +1,20 @@
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-import AutoLoad from '@fastify/autoload';
+import FastifyAutoLoad from '@fastify/autoload';
 import Fastify, { type FastifyServerOptions } from 'fastify';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export async function buildApp (options?: FastifyServerOptions) {
   const server = Fastify(options);
 
   // Auto-load plugins
-  await server.register(AutoLoad, {
-    dir: path.join(__dirname, 'plugins'),
+  await server.register(FastifyAutoLoad, {
+    dir: path.join(import.meta.dirname, 'plugins'),
     dirNameRoutePrefix: false
   });
 
   // Auto-load routes
-  server.register(AutoLoad, {
-    dir: path.join(__dirname, 'routes'),
+  server.register(FastifyAutoLoad, {
+    dir: path.join(import.meta.dirname, 'routes'),
     autoHooks: true,
     autoHooksPattern: /\.hook(?:\.ts|\.js|\.cjs|\.mjs)$/i,
     cascadeHooks: true
