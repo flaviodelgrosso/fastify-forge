@@ -9,6 +9,12 @@ export const LogLevel = {
   error: 'error'
 } as const;
 
+const NodeEnv = {
+  production: 'production',
+  test: 'test',
+  development: 'development'
+} as const;
+
 const schema = Type.Object({
   POSTGRES_HOST: Type.String(),
   POSTGRES_USER: Type.String(),
@@ -17,7 +23,8 @@ const schema = Type.Object({
   POSTGRES_PORT: Type.Number({ default: 5432 }),
   LOG_LEVEL: Type.Enum(LogLevel),
   HOST: Type.String({ default: 'localhost' }),
-  PORT: Type.Number({ default: 3000 })
+  PORT: Type.Number({ default: 3000 }),
+  NODE_ENV: Type.Enum(NodeEnv, { default: NodeEnv.development })
 });
 
 const env = envSchema<Static<typeof schema>>({
@@ -35,6 +42,7 @@ export default {
     host: env.HOST,
     port: env.PORT
   },
+  nodeEnv: env.NODE_ENV,
   db: {
     url: `postgres://${env.POSTGRES_USER}:${env.POSTGRES_PASSWORD}@${env.POSTGRES_HOST}:${env.POSTGRES_PORT}/${env.POSTGRES_DB}?sslmode=disable`
   }

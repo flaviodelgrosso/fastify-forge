@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "pnpm build && cross-env NODE_ENV=production node dist/server.js",
-    "dev": "cross-env NODE_ENV=development node --watch src/server.ts | pino-pretty --colorize",
+    "dev": "cross-env NODE_ENV=development node --watch src/server.ts",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "lint": "eslint --fix",
     "test": "c8 --100 node --test test/**/*.test.ts",
