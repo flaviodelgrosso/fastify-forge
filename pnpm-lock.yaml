@@ -49,7 +49,7 @@ importers:
         version: 0.34.37
       better-auth:
         specifier: ^1.2.10
-        version: 1.2.10
+        version: 1.2.12
       close-with-grace:
         specifier: ^2.2.0
         version: 2.2.0
@@ -67,7 +67,7 @@ importers:
         version: 5.4.0
       fastify-better-auth:
         specifier: ^1.1.0
-        version: 1.1.0(better-auth@1.2.10)(fastify@5.4.0)
+        version: 1.1.0(better-auth@1.2.12)(fastify@5.4.0)
       fastify-plugin:
         specifier: ^5.0.1
         version: 5.0.1
@@ -1157,8 +1157,8 @@ packages:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
 
-  better-auth@1.2.10:
-    resolution: {integrity: sha512-nEj1RG4DdLUuJiV5CR93ORyPCptGRBwksaPPCkUtGo9ka+UIlTpaiKoTaTqVLLYlqwX4bOj9tJ32oBNdf2G3Kg==}
+  better-auth@1.2.12:
+    resolution: {integrity: sha512-YicCyjQ+lxb7YnnaCewrVOjj3nPVa0xcfrOJK7k5MLMX9Mt9UnJ8GYaVQNHOHLyVxl92qc3C758X1ihqAUzm4w==}
 
   better-call@1.0.9:
     resolution: {integrity: sha512-Qfm0gjk0XQz0oI7qvTK1hbqTsBY4xV2hsHAxF8LZfUYl3RaECCIifXuVqtPpZJWvlCCMlQSvkvhhyuApGUba6g==}
@@ -2444,8 +2444,8 @@ packages:
     resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
     hasBin: true
 
-  jose@5.10.0:
-    resolution: {integrity: sha512-s+3Al/p9g32Iq+oqXxkW//7jk2Vig6FF1CFqzVXoTUXt2qz89YWbL+OwS17NFYEvxC35n0FKeGO2LGYSxeM2Gg==}
+  jose@6.0.11:
+    resolution: {integrity: sha512-QxG7EaliDARm1O1S8BGakqncGT9s25bKL1WSf6/oa17Tkqwi8D2ZNglqCF+DsYF88/rV66Q/Q2mFAy697E1DUg==}
 
   joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
@@ -4844,7 +4844,7 @@ snapshots:
 
   basic-ftp@5.0.5: {}
 
-  better-auth@1.2.10:
+  better-auth@1.2.12:
     dependencies:
       '@better-auth/utils': 0.2.5
       '@better-fetch/fetch': 1.1.18
@@ -4854,7 +4854,7 @@ snapshots:
       '@simplewebauthn/server': 13.1.1
       better-call: 1.0.9
       defu: 6.1.4
-      jose: 5.10.0
+      jose: 6.0.11
       kysely: 0.28.2
       nanostores: 0.11.4
       zod: 3.25.67
@@ -5738,9 +5738,9 @@ snapshots:
 
   fast-uri@3.0.6: {}
 
-  fastify-better-auth@1.1.0(better-auth@1.2.10)(fastify@5.4.0):
+  fastify-better-auth@1.1.0(better-auth@1.2.12)(fastify@5.4.0):
     dependencies:
-      better-auth: 1.2.10
+      better-auth: 1.2.12
       fastify: 5.4.0
       fastify-plugin: 5.0.1
 
@@ -6270,7 +6270,7 @@ snapshots:
 
   jiti@2.4.2: {}
 
-  jose@5.10.0: {}
+  jose@6.0.11: {}
 
   joycon@3.1.1: {}
 
