@@ -48,6 +48,8 @@ export async function cleanUpRepo (projectDir) {
   packageJson.description = undefined;
   packageJson.homepage = undefined;
   packageJson.repository = undefined;
+  packageJson.files = undefined;
+  packageJson.keywords = undefined;
   packageJson.version = '0.1.0';
   packageJson.dependencies = {
     ...packageJson.dependencies,
