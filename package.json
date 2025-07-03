@@ -94,8 +94,5 @@
   "engines": {
     "node": ">=23.6.0",
     "pnpm": ">=10.2.0"
-  },
-  "lint-staged": {
-    "{src,test}/**/*.{ts,js,json}": "pnpm run check"
   }
 }
