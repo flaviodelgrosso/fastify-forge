@@ -37,7 +37,7 @@ importers:
         version: 5.2.3
       '@fastify/type-provider-typebox':
         specifier: ^5.1.0
-        version: 5.1.0(@sinclair/typebox@0.34.37)
+        version: 5.2.0(@sinclair/typebox@0.34.37)
       '@fastify/under-pressure':
         specifier: ^9.0.3
         version: 9.0.3
@@ -635,8 +635,8 @@ packages:
   '@fastify/swagger@9.5.1':
     resolution: {integrity: sha512-EGjYLA7vDmCPK7XViAYMF6y4+K3XUy5soVTVxsyXolNe/Svb4nFQxvtuQvvoQb2Gzc9pxiF3+ZQN/iZDHhKtTg==}
 
-  '@fastify/type-provider-typebox@5.1.0':
-    resolution: {integrity: sha512-F1AQHeLiKp1hu6GMWm5W6fZ6zXQ0mTV+qHOzrptAie9AYewvFr5Q3blfy8Qmx9gUgwA3Yj+CWvQQJeTwDgTnIg==}
+  '@fastify/type-provider-typebox@5.2.0':
+    resolution: {integrity: sha512-RoUFTQNYlaVM/gXosFqlrUAD/JHC+OXLcj4DxNoMOag2GI7OydfCt+3vdT+6D2daJwhGAdkpxB0wLNqS7gf4CQ==}
     peerDependencies:
       '@sinclair/typebox': '>=0.26 <=0.34'
 
@@ -4256,7 +4256,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@fastify/type-provider-typebox@5.1.0(@sinclair/typebox@0.34.37)':
+  '@fastify/type-provider-typebox@5.2.0(@sinclair/typebox@0.34.37)':
     dependencies:
       '@sinclair/typebox': 0.34.37
 
