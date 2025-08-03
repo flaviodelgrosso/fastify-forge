@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.4](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.3...v1.4.4) (2025-08-03)
+
+
+### Bug Fixes
+
+* **security:** use onRequest instead of preHandler request hook in authentication ([55f5000](https://github.com/flaviodelgrosso/fastify-forge/commit/55f5000742d34a2532b1c9635f79d3da505e2563))
+
 ### [1.4.3](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.2...v1.4.3) (2025-07-03)
 
 ### [1.4.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.1...v1.4.2) (2025-06-26)
