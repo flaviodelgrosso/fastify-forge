@@ -6,7 +6,7 @@ import { getAuthInstance } from '../../decorators/auth.decorator.ts';
 async function authHook (fastify: FastifyInstance) {
   fastify.decorateRequest('session');
 
-  fastify.addHook('preHandler', async (req, res) => {
+  fastify.addHook('onRequest', async (req, res) => {
     const session = await getAuthInstance(fastify).api.getSession({
       headers: fromNodeHeaders(req.headers)
     });
