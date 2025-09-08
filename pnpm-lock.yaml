@@ -79,7 +79,7 @@ importers:
         version: 9.9.4
       pm2:
         specifier: ^6.0.8
-        version: 6.0.9
+        version: 6.0.10
     devDependencies:
       '@commitlint/cli':
         specifier: 19.8.1
@@ -1127,6 +1127,10 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  ansi-styles@6.2.3:
+    resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
+    engines: {node: '>=12'}
 
   ansi-styles@6.2.3:
     resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
@@ -3119,8 +3123,8 @@ packages:
   pm2-sysmonit@1.2.8:
     resolution: {integrity: sha512-ACOhlONEXdCTVwKieBIQLSi2tQZ8eKinhcr9JpZSUAL8Qy0ajIgRtsLxG/lwPOW3JEKqPyw/UaHmTWhUzpP4kA==}
 
-  pm2@6.0.9:
-    resolution: {integrity: sha512-OyXwuqOjH4LpaA7mQtqCgAp1fWrnjL7Qwz3NjBJEnc9UMXUEoUrv447X8XoFiyw1JUJfM6IqXSSy2MlIxISvTg==}
+  pm2@6.0.10:
+    resolution: {integrity: sha512-sbk4HsnhtJMx1wJlhFQhYfDRzHtVK+cvdrIezbjM9WjSyc7kLtQ4nZ5K7JLOdLe3AevytmRcTiOa3VvAQrve2A==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -4927,6 +4931,8 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  ansi-styles@6.2.3: {}
 
   ansi-styles@6.2.3: {}
 
@@ -7083,7 +7089,7 @@ snapshots:
       - supports-color
     optional: true
 
-  pm2@6.0.9:
+  pm2@6.0.10:
     dependencies:
       '@pm2/agent': 2.1.1
       '@pm2/io': 6.1.0
