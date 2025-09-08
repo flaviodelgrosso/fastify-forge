@@ -79,7 +79,7 @@ importers:
         version: 9.9.0
       pm2:
         specifier: ^6.0.8
-        version: 6.0.9
+        version: 6.0.10
     devDependencies:
       '@commitlint/cli':
         specifier: 19.8.1
@@ -1134,6 +1134,10 @@ packages:
 
   ansi-styles@6.2.1:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
+    engines: {node: '>=12'}
+
+  ansi-styles@6.2.3:
+    resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
     engines: {node: '>=12'}
 
   ansis@4.0.0-node10:
@@ -3120,8 +3124,8 @@ packages:
   pm2-sysmonit@1.2.8:
     resolution: {integrity: sha512-ACOhlONEXdCTVwKieBIQLSi2tQZ8eKinhcr9JpZSUAL8Qy0ajIgRtsLxG/lwPOW3JEKqPyw/UaHmTWhUzpP4kA==}
 
-  pm2@6.0.9:
-    resolution: {integrity: sha512-OyXwuqOjH4LpaA7mQtqCgAp1fWrnjL7Qwz3NjBJEnc9UMXUEoUrv447X8XoFiyw1JUJfM6IqXSSy2MlIxISvTg==}
+  pm2@6.0.10:
+    resolution: {integrity: sha512-sbk4HsnhtJMx1wJlhFQhYfDRzHtVK+cvdrIezbjM9WjSyc7kLtQ4nZ5K7JLOdLe3AevytmRcTiOa3VvAQrve2A==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -4935,6 +4939,8 @@ snapshots:
       color-convert: 2.0.1
 
   ansi-styles@6.2.1: {}
+
+  ansi-styles@6.2.3: {}
 
   ansis@4.0.0-node10: {}
 
@@ -7087,7 +7093,7 @@ snapshots:
       - supports-color
     optional: true
 
-  pm2@6.0.9:
+  pm2@6.0.10:
     dependencies:
       '@pm2/agent': 2.1.1
       '@pm2/io': 6.1.0
@@ -7455,12 +7461,12 @@ snapshots:
 
   slice-ansi@5.0.0:
     dependencies:
-      ansi-styles: 6.2.1
+      ansi-styles: 6.2.3
       is-fullwidth-code-point: 4.0.0
 
   slice-ansi@7.1.0:
     dependencies:
-      ansi-styles: 6.2.1
+      ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
   smart-buffer@4.2.0: {}
@@ -7913,7 +7919,7 @@ snapshots:
 
   wrap-ansi@8.1.0:
     dependencies:
-      ansi-styles: 6.2.1
+      ansi-styles: 6.2.3
       string-width: 5.1.2
       strip-ansi: 7.1.0
 
