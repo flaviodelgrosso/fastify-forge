@@ -2,14 +2,7 @@ import { join } from 'node:path';
 
 import { confirm, intro, log, outro, spinner } from '@clack/prompts';
 
-import {
-  cleanUpRepo,
-  cloneRepo,
-  getName,
-  initializeGit,
-  installDependencies,
-  prepareEnv
-} from './utils.js';
+import { cleanUpRepo, cloneRepo, getName, initializeGit, installDependencies, prepareEnv } from './utils.js';
 
 export async function create (options) {
   try {
@@ -59,8 +52,7 @@ export async function create (options) {
 
     outro('Your project is ready! You can now run pnpm dev to start the development server.');
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : `Failed to initialize project: ${error}`;
+    const message = error instanceof Error ? error.message : `Failed to initialize project: ${error}`;
 
     log.error(message);
     process.exit(1);

@@ -1,4 +1,3 @@
-
 # ⚡ Fastify Forge ⚡
 
 [![downloads](https://img.shields.io/npm/dt/fastify-forge)](https://www.npmjs.com/package/fastify-forge)
@@ -6,7 +5,7 @@
 [![license](https://img.shields.io/github/license/flaviodelgrosso/fastify-forge)](https://img.shields.io/github/license/flaviodelgrosso/fastify-forge)
 [![CI](https://github.com/flaviodelgrosso/fastify-forge/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/flaviodelgrosso/fastify-forge/actions/workflows/ci.yaml)
 
-*Fastify Forge* empowers developers to build **lightning-fast**, **enterprise-grade** REST APIs with zero configuration overhead. Powered by [Fastify](https://fastify.dev/), the best framework in the town for Node.js, TypeScript and battle-tested plugins, this isn't just another boilerplate—it's your secret weapon for backend development.
+_Fastify Forge_ empowers developers to build **lightning-fast**, **enterprise-grade** REST APIs with zero configuration overhead. Powered by [Fastify](https://fastify.dev/), the best framework in the town for Node.js, TypeScript and battle-tested plugins, this isn't just another boilerplate—it's your secret weapon for backend development.
 
 **Quick Navigation:** [🚀 Quick Start](#quick-start) • [📖 Features](#what-makes-fastify-forge-special) • [🛠️ Development Guide](#development-guide) • [🎯 Examples](#real-world-examples)
 
@@ -111,18 +110,22 @@ const UserSchema = Type.Object({
   name: Type.String({ minLength: 1 })
 });
 
-app.post('/users', {
-  schema: {
-    body: UserSchema,
-    response: {
-      201: UserSchema
+app.post(
+  '/users',
+  {
+    schema: {
+      body: UserSchema,
+      response: {
+        201: UserSchema
+      }
     }
+  },
+  async (request, reply) => {
+    // request.body is fully typed!
+    const user = await createUser(request.body);
+    return reply.code(201).send(user);
   }
-}, async (request, reply) => {
-  // request.body is fully typed!
-  const user = await createUser(request.body);
-  return reply.code(201).send(user);
-});
+);
 ```
 
 ### 📚 Auto-Generated Documentation
@@ -182,7 +185,7 @@ fastify-forge/
    POSTGRES_PASSWORD=your_password
    POSTGRES_DB=your_database
    POSTGRES_PORT=5432
-   
+
    # Server
    HOST=localhost
    PORT=3000
@@ -222,9 +225,7 @@ const usersRoute: FastifyPluginAsyncTypebox = async (app) => {
       }
     },
     handler: async () => {
-      return [
-        { id: '1', name: 'John Doe', email: 'john@example.com' }
-      ];
+      return [{ id: '1', name: 'John Doe', email: 'john@example.com' }];
     }
   });
 };
@@ -277,7 +278,7 @@ const getUserById = async (id: string) => {
 const protectedRoute: FastifyPluginAsyncTypebox = async (app) => {
   // Apply authentication hook to all routes in this plugin
   app.addHook('preHandler', app.authenticate);
-  
+
   app.route({
     url: '/profile',
     method: 'GET',
@@ -306,11 +307,11 @@ const uploadRoute: FastifyPluginAsyncTypebox = async (app) => {
     },
     handler: async (request, reply) => {
       const data = await request.file();
-      
+
       if (!data) {
         return reply.badRequest('No file uploaded');
       }
-      
+
       // Process the file...
       return { filename: data.filename, size: data.file.readableLength };
     }
@@ -342,13 +343,16 @@ const postsRoute: FastifyPluginAsyncTypebox = async (app) => {
     },
     handler: async (request, reply) => {
       const { title, content } = request.body;
-      
-      const [post] = await app.db.insert(posts).values({
-        title,
-        content,
-        authorId: request.user.id
-      }).returning();
-      
+
+      const [post] = await app.db
+        .insert(posts)
+        .values({
+          title,
+          content,
+          authorId: request.user.id
+        })
+        .returning();
+
       return reply.code(201).send(post);
     }
   });
@@ -475,10 +479,13 @@ await app.register(rateLimit, {
 const server = Fastify({
   logger: {
     level: env.LOG_LEVEL,
-    transport: env.NODE_ENV === 'development' ? {
-      target: 'pino-pretty',
-      options: { colorize: true }
-    } : undefined
+    transport:
+      env.NODE_ENV === 'development'
+        ? {
+            target: 'pino-pretty',
+            options: { colorize: true }
+          }
+        : undefined
   }
 });
 ```

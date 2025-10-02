@@ -1,7 +1,8 @@
-import type { FastifyInstance } from 'fastify';
+import { db } from '#src/db/index';
+
 import fp from 'fastify-plugin';
 
-import { db } from '../../db/index.ts';
+import type { FastifyInstance } from 'fastify';
 
 async function dbPlugin (fastify: FastifyInstance) {
   fastify.decorate('db', db);

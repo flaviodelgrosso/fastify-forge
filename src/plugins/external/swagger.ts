@@ -1,9 +1,10 @@
 import Swagger from '@fastify/swagger';
 import ScalarApiReference from '@scalar/fastify-api-reference';
-import type { FastifyInstance } from 'fastify';
 import fp from 'fastify-plugin';
 
 import packageJson from '../../../package.json' with { type: 'json' };
+
+import type { FastifyInstance } from 'fastify';
 
 async function swaggerPlugin (fastify: FastifyInstance) {
   await fastify.register(Swagger, {

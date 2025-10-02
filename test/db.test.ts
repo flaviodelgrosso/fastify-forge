@@ -1,10 +1,10 @@
 import { strictEqual } from 'node:assert';
 import { test } from 'node:test';
 
-import sinon from 'sinon';
+import { buildApp } from '#src/app';
+import { db } from '#src/db/index';
 
-import { buildApp } from '../src/app.ts';
-import { db } from '../src/db/index.ts';
+import sinon from 'sinon';
 
 test('should call client.end() on server close', async () => {
   const app = await buildApp();

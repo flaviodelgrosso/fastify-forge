@@ -1,41 +1,31 @@
 /* c8 ignore start */
-import type { InferSelectModel } from 'drizzle-orm';
 import { boolean, pgEnum, pgTable, text, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
+
+import type { InferSelectModel } from 'drizzle-orm';
 
 export type User = InferSelectModel<typeof users>;
 
 export const UserRoleEnum = pgEnum('UserRole', ['admin', 'user']);
 
 export const users = pgTable('users', {
-  id: uuid().primaryKey()
-    .notNull()
-    .defaultRandom(),
-  email: varchar({ length: 50 }).notNull()
-    .unique(),
-  emailVerified: boolean('email_verified').notNull()
-    .default(false),
+  id: uuid().primaryKey().notNull().defaultRandom(),
+  email: varchar({ length: 50 }).notNull().unique(),
+  emailVerified: boolean('email_verified').notNull().default(false),
   name: varchar('name', { length: 50 }).notNull(),
-  role: UserRoleEnum('role').notNull()
-    .default('user'),
+  role: UserRoleEnum('role').notNull().default('user'),
   image: text('image'),
-  createdAt: timestamp('created_at').defaultNow()
-    .notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').notNull(),
-  banned: boolean().notNull()
-    .default(false),
+  banned: boolean().notNull().default(false),
   banReason: text('ban_reason'),
   banExpires: timestamp('ban_expires')
 });
 
 export const sessions = pgTable('sessions', {
-  id: uuid().primaryKey()
-    .notNull()
-    .defaultRandom(),
+  id: uuid().primaryKey().notNull().defaultRandom(),
   expiresAt: timestamp('expires_at').notNull(),
-  token: text('token').notNull()
-    .unique(),
-  createdAt: timestamp('created_at').defaultNow()
-    .notNull(),
+  token: text('token').notNull().unique(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').notNull(),
   ipAddress: text('ip_address'),
   userAgent: text('user_agent'),
@@ -46,9 +36,7 @@ export const sessions = pgTable('sessions', {
 });
 
 export const accounts = pgTable('accounts', {
-  id: uuid().primaryKey()
-    .notNull()
-    .defaultRandom(),
+  id: uuid().primaryKey().notNull().defaultRandom(),
   accountId: text('account_id').notNull(),
   providerId: text('provider_id').notNull(),
   userId: uuid('user_id')

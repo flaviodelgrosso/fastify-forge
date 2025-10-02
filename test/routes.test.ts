@@ -1,7 +1,7 @@
 import { deepStrictEqual, strictEqual } from 'node:assert';
 import { test } from 'node:test';
 
-import { buildApp } from '../src/app.ts';
+import { buildApp } from '#src/app';
 
 test('should return 200 for /GET route', async () => {
   const fastify = await buildApp();

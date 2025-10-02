@@ -1,10 +1,10 @@
 import { strictEqual } from 'node:assert';
 import { test } from 'node:test';
 
+import { buildApp } from '#src/app';
+
 import { getAuthDecorator } from 'fastify-better-auth';
 import sinon from 'sinon';
-
-import { buildApp } from '../src/app.ts';
 
 test("should return 401 for /api/v1 protected route when user isn't logged in", async () => {
   const fastify = await buildApp();

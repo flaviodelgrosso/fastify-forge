@@ -1,9 +1,10 @@
+import { buildApp } from '#src/app';
+import env from '#src/config/env.config';
+
 import { ajvFilePlugin } from '@fastify/multipart';
 import closeWithGrace from 'close-with-grace';
-import type { FastifyServerOptions } from 'fastify';
 
-import { buildApp } from './app.ts';
-import env from './config/env.config.ts';
+import type { FastifyServerOptions } from 'fastify';
 
 async function startServer () {
   const envToLogger: Record<typeof env.nodeEnv, FastifyServerOptions['logger']> = {
@@ -22,7 +23,6 @@ async function startServer () {
 
   const app = await buildApp({
     logger: envToLogger[env.nodeEnv],
-    ignoreDuplicateSlashes: true,
     ajv: {
       // Adds the file plugin to help @fastify/swagger schema generation
       plugins: [ajvFilePlugin]
@@ -37,6 +37,8 @@ async function startServer () {
     }
     await app.close();
   });
+
+  await app.ready();
 
   // Start server
   try {

@@ -12,29 +12,28 @@ on:
       - 'docs/**'
       - '*.md'
 
-
 jobs:
   test:
     name: Lint and test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
-    - name: Setup node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version-file: '.nvmrc'
+      - uses: actions/checkout@v5
+      - name: Setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
 
-    - name: Enable pnpm
-      run: npm i -g corepack@latest && corepack enable pnpm
+      - name: Enable pnpm
+        run: npm i -g corepack@latest && corepack enable pnpm
 
-    - name: Install dependencies
-      run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
 
-    - name: Create .env file
-      run: cp .env.example .env
+      - name: Create .env file
+        run: cp .env.example .env
 
-    - name: Lint
-      run: pnpm lint
+      - name: Lint
+        run: pnpm lint
 
-    - name: Test
-      run: pnpm test
+      - name: Test
+        run: pnpm test
