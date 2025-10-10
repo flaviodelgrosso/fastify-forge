@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.5...v2.0.0) (2025-10-10)
+
+
+### Features
+
+* convert to monorepo with Turborepo ([f634989](https://github.com/flaviodelgrosso/fastify-forge/commit/f6349894c2a8ee8cbca781512de841c4087516d0))
+
+
+### Bug Fixes
+
+* update prepareEnv function to correctly reference the .env.example path ([93aa382](https://github.com/flaviodelgrosso/fastify-forge/commit/93aa38224c6b6c23f7793d292fd8482dc4354ea4))
+
 ### [1.4.5](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.4...v1.4.5) (2025-10-02)
 
 ### [1.4.4](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.3...v1.4.4) (2025-08-03)
