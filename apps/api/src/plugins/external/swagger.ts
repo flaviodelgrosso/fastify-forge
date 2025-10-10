@@ -2,8 +2,6 @@ import Swagger from '@fastify/swagger';
 import ScalarApiReference from '@scalar/fastify-api-reference';
 import fp from 'fastify-plugin';
 
-import packageJson from '../../../package.json' with { type: 'json' };
-
 import type { FastifyInstance } from 'fastify';
 
 async function swaggerPlugin (fastify: FastifyInstance) {
@@ -11,9 +9,9 @@ async function swaggerPlugin (fastify: FastifyInstance) {
     openapi: {
       openapi: '3.1.1',
       info: {
-        title: 'Swagger Fastify Forge - OpenAPI 3.1',
+        title: 'Fastify Forge API',
         description: 'API Documentation for Fastify Forge',
-        version: packageJson.version
+        version: '1.0.0'
       }
     }
   });
