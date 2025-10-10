@@ -26,6 +26,9 @@ jobs:
       - name: Enable pnpm
         run: npm i -g corepack@latest && corepack enable pnpm
 
+      - name: Prepare env
+        run: cp apps/api/.env.example apps/api/.env
+
       - name: Install dependencies
         run: pnpm install
 
