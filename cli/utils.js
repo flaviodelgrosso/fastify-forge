@@ -67,8 +67,8 @@ export async function cleanUpRepo (projectDir) {
 }
 
 export async function prepareEnv (projectDir) {
-  const envPath = join(projectDir, '.env.example');
-  await copyFile(envPath, join(projectDir, '.env'));
+  const envPath = join(projectDir, "apps", "api", '.env.example');
+  await copyFile(envPath, join(projectDir, "apps", "api", '.env'));
 }
 
 async function getPackageJson (projectDir) {
