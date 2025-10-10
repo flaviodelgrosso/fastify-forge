@@ -1,0 +1,4 @@
+if git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -q "pnpm-lock.yaml"; then
+    echo "📦 Detected pnpm-lock.yaml change, updating dependencies..."
+    pnpm install
+fi

@@ -1,0 +1,29 @@
+{
+  "name": "@workspace/env",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "git clean -xdf dist .turbo node_modules",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.41",
+    "env-schema": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  }
+}

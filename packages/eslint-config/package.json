@@ -1,0 +1,14 @@
+{
+  "name": "@workspace/eslint-config",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./neo": "./neo.js"
+  },
+  "devDependencies": {
+    "eslint": "catalog:",
+    "neostandard": "^0.12.2",
+    "typescript": "catalog:"
+  }
+}

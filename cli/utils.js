@@ -51,11 +51,7 @@ export async function cleanUpRepo (projectDir) {
   packageJson.files = undefined;
   packageJson.keywords = undefined;
   packageJson.version = '0.1.0';
-  packageJson.dependencies = {
-    ...packageJson.dependencies,
-    '@clack/prompts': undefined,
-    commander: undefined
-  };
+  packageJson.dependencies = undefined;
 
   const newPackageJson = JSON.stringify(packageJson, null, 2);
   const packageJsonPath = join(projectDir, 'package.json');
