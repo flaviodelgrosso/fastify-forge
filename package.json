@@ -35,12 +35,8 @@
     "format": "turbo format -- --ignore-path .gitignore",
     "test": "turbo test",
     "clean": "turbo clean && rimraf node_modules .turbo pnpm-lock.yaml",
-    "release": "standard-version",
-    "major": "pnpm run release --release-as major",
-    "minor": "pnpm run release --release-as minor",
-    "patch": "pnpm run release --release-as patch",
-    "push-release": "git push --follow-tags origin master",
-    "pull": "git rebase origin master -i",
+    "version": "changeset version",
+    "release": "changeset release",
     "prepare": "node .husky/install.mjs",
     "syncpack:list": "npx syncpack list-mismatches",
     "syncpack:fix": "npx syncpack fix-mismatches"
@@ -50,8 +46,9 @@
     "commander": "^14.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
+    "@changesets/cli": "^2.29.7",
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
     "@workspace/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "husky": "^9.1.7",
@@ -59,7 +56,6 @@
     "prettier": "^3.6.2",
     "prettier-plugin-space-before-function-paren": "^0.0.8",
     "rimraf": "^6.0.1",
-    "standard-version": "9.5.0",
     "turbo": "^2.5.6",
     "typescript": "catalog:"
   }
