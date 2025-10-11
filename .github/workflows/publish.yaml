@@ -2,25 +2,23 @@ name: Publish to NPM
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [created]
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
-          registry-url: 'https://registry.npmjs.org'
+          node-version-file: '.nvmrc'
+
       - run: corepack enable
       - run: pnpm install
-      - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish
