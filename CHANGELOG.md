@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.0.0...v2.1.0) (2025-10-12)
+
+
+### Features
+
+* add timeouts options ([86b5afa](https://github.com/flaviodelgrosso/fastify-forge/commit/86b5afabe4b1a0e11451f4126c3ca154ebee059d))
+
+
+### Bug Fixes
+
+* swagger plugin ([cca35d6](https://github.com/flaviodelgrosso/fastify-forge/commit/cca35d69eb032d29c1aaa703b522574aa34dce05))
+
+
+### Documentation
+
+* update README.md ([7779b47](https://github.com/flaviodelgrosso/fastify-forge/commit/7779b47beed9e081d250d0134fc722412f312735))
+
 ## [2.0.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.5...v2.0.0) (2025-10-10)
 
 
