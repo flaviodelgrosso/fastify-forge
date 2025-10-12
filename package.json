@@ -35,8 +35,6 @@
     "format": "turbo format -- --ignore-path .gitignore",
     "test": "turbo test",
     "clean": "turbo clean && rimraf node_modules .turbo pnpm-lock.yaml",
-    "version": "changeset version",
-    "release": "changeset release",
     "prepare": "node .husky/install.mjs",
     "syncpack:list": "npx syncpack list-mismatches",
     "syncpack:fix": "npx syncpack fix-mismatches"
@@ -46,7 +44,6 @@
     "commander": "^14.0.1"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.7",
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@workspace/typescript-config": "workspace:*",
