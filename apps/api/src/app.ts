@@ -1,9 +1,9 @@
 import path from 'node:path';
 
 import FastifyAutoLoad from '@fastify/autoload';
-import Fastify, { type FastifyServerOptions } from 'fastify';
+import Fastify, { type FastifyHttpOptions, type RawServerDefault } from 'fastify';
 
-export async function buildApp (options?: FastifyServerOptions) {
+export async function buildApp<S extends RawServerDefault> (options?: FastifyHttpOptions<S>) {
   const server = Fastify(options);
 
   // Auto-load plugins

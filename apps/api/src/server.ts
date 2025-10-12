@@ -7,6 +7,15 @@ import closeWithGrace from 'close-with-grace';
 
 async function startServer () {
   const app = await buildApp({
+    connectionTimeout: 120_000,
+    // 1 minute: suitable for most payloads, including moderate file uploads
+    requestTimeout: 60_000,
+    // 10 seconds: ensures efficient resource usage for idle connections
+    keepAliveTimeout: 10_000,
+    http: {
+      // 15 seconds: prevents slow clients from holding connections too long
+      headersTimeout: 15_000
+    },
     loggerInstance: logger,
     ajv: {
       // Adds the file plugin to help @fastify/swagger schema generation
