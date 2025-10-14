@@ -29,7 +29,7 @@
     "dev": "turbo dev",
     "start": "turbo start",
     "lint": "turbo lint --",
-    "format": "turbo format -- --ignore-path .gitignore",
+    "format": "prettier --write '**/*.{ts,js}'",
     "test": "turbo test",
     "clean": "turbo clean && rimraf node_modules .turbo pnpm-lock.yaml",
     "prepare": "node .husky/install.mjs",
