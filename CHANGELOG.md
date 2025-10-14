@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.0...v2.2.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* add node conditions flag in dev script for correct resolution ([015d6cd](https://github.com/flaviodelgrosso/fastify-forge/commit/015d6cd6d6c42033e766588b4bf77059e0fe5d0b))
+
 ## [2.2.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.1.0...v2.2.0) (2025-10-14)
 
 
