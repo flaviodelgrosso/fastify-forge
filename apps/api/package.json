@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "main": "./src/server.ts",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node --env-file .env --watch src/server.ts",
+    "dev": "cross-env NODE_ENV=development node --conditions source --env-file .env --watch src/server.ts",
     "start": "cross-env NODE_ENV=production node --env-file .env dist/server.js",
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint . --max-warnings 0",
@@ -14,6 +15,7 @@
   },
   "imports": {
     "#src/*": {
+      "source": "./src/*.ts",
       "types": "./src/*.ts",
       "default": "./dist/*.js"
     }
