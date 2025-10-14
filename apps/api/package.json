@@ -30,7 +30,7 @@
     "@fastify/swagger-ui": "^5.2.3",
     "@fastify/type-provider-typebox": "^6.0.0",
     "@fastify/under-pressure": "^9.0.3",
-    "@scalar/fastify-api-reference": "^1.36.2",
+    "@scalar/fastify-api-reference": "^1.38.1",
     "@sinclair/typebox": "^0.34.41",
     "@workspace/db": "workspace:",
     "@workspace/logger": "workspace:",
