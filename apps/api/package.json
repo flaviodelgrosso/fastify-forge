@@ -8,8 +8,8 @@
     "start": "cross-env NODE_ENV=production node --env-file .env dist/server.js",
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint . --max-warnings 0",
-    "test": "c8 --100 node --test test/**/*.test.ts",
-    "test:lcov": "c8 --100 --reporter=lcov node --test test/**/*.test.ts",
+    "test": "cross-env NODE_ENV=test c8 --100 node --test test/**/*.test.ts",
+    "test:lcov": "cross-env NODE_ENV=test c8 --100 --reporter=lcov node --test test/**/*.test.ts",
     "clean": "git clean -xdf dist .turbo node_modules"
   },
   "imports": {

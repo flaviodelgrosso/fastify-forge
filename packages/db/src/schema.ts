@@ -1,4 +1,3 @@
-/* c8 ignore start */
 import { boolean, pgEnum, pgTable, text, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
 
 import type { InferSelectModel } from 'drizzle-orm';
