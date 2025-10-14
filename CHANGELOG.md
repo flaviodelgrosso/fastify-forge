@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.1.0...v2.2.0) (2025-10-14)
+
+
+### Features
+
+* add @fastify/env plugin ([2283e54](https://github.com/flaviodelgrosso/fastify-forge/commit/2283e545cad0137b73b53560637abfef72063f89))
+
+
+### Bug Fixes
+
+* imports fields in api and root package.json files ([d15bfbc](https://github.com/flaviodelgrosso/fastify-forge/commit/d15bfbcb23b706a7fb9ee2cd8c30a14da79c2c4d))
+
 ## [2.1.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.0.0...v2.1.0) (2025-10-12)
 
 

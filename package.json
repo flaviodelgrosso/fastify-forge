@@ -1,6 +1,6 @@
 {
   "name": "fastify-forge",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "Flavio Del Grosso",
   "license": "MIT",
   "description": "🚀 Fastify monorepo template for building scalable, high-performance Node.js web applications with ease",
