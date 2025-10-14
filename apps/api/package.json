@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node --watch src/server.ts",
-    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "dev": "cross-env NODE_ENV=development node --env-file .env --watch src/server.ts",
+    "start": "cross-env NODE_ENV=production node --env-file .env dist/server.js",
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint . --max-warnings 0",
     "test": "c8 --100 node --test test/**/*.test.ts",
@@ -21,6 +21,7 @@
   "dependencies": {
     "@fastify/autoload": "^6.3.1",
     "@fastify/cors": "^11.1.0",
+    "@fastify/env": "^5.0.3",
     "@fastify/helmet": "^13.0.2",
     "@fastify/multipart": "^9.2.1",
     "@fastify/rate-limit": "^10.3.0",
@@ -32,7 +33,6 @@
     "@scalar/fastify-api-reference": "^1.36.2",
     "@sinclair/typebox": "^0.34.41",
     "@workspace/db": "workspace:",
-    "@workspace/env": "workspace:",
     "@workspace/logger": "workspace:",
     "better-auth": "catalog:",
     "close-with-grace": "^2.2.0",

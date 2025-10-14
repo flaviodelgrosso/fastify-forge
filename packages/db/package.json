@@ -22,7 +22,6 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@workspace/env": "workspace:*",
     "drizzle-orm": "catalog:",
     "pg": "^8.16.3"
   },

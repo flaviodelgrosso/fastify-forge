@@ -1,5 +1,21 @@
-import { type Static, Type } from '@sinclair/typebox';
-import envSchema from 'env-schema';
+import FastifyEnv, { type FastifyEnvOptions } from '@fastify/env';
+import { Type } from '@sinclair/typebox';
+
+declare module 'fastify' {
+  interface FastifyInstance {
+    config: {
+      POSTGRES_HOST: string;
+      POSTGRES_USER: string;
+      POSTGRES_PASSWORD: string;
+      POSTGRES_DB: string;
+      POSTGRES_PORT: number;
+      LOG_LEVEL: (typeof LogLevel)[keyof typeof LogLevel];
+      HOST: string;
+      PORT: number;
+      NODE_ENV: (typeof NodeEnv)[keyof typeof NodeEnv];
+    };
+  }
+}
 
 export const LogLevel = {
   trace: 'trace',
@@ -27,7 +43,8 @@ const schema = Type.Object({
   NODE_ENV: Type.Enum(NodeEnv, { default: NodeEnv.development })
 });
 
-export default envSchema<Static<typeof schema>>({
-  dotenv: true,
+export const autoConfig: FastifyEnvOptions = {
   schema
-});
+};
+
+export default FastifyEnv;

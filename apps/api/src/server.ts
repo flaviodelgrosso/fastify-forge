@@ -1,7 +1,6 @@
 import { buildApp } from '#src/app';
 
 import { ajvFilePlugin } from '@fastify/multipart';
-import env from '@workspace/env';
 import { logger } from '@workspace/logger';
 import closeWithGrace from 'close-with-grace';
 
@@ -36,7 +35,7 @@ async function startServer () {
 
   // Start server
   try {
-    await app.listen({ host: env.HOST, port: env.PORT });
+    await app.listen({ host: app.config.HOST, port: app.config.PORT });
   } catch (err) {
     app.log.error(err);
     process.exit(1);

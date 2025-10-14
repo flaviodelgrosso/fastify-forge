@@ -44,6 +44,7 @@
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@workspace/typescript-config": "workspace:*",
+    "dotenv-cli": "^10.0.0",
     "eslint": "catalog:",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
