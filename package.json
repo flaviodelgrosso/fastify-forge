@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "author": "Flavio Del Grosso",
   "license": "MIT",
-  "description": "Armored Template for Fastify Projects using TypeScript",
+  "description": "🚀 Fastify monorepo template for building scalable, high-performance Node.js web applications with ease",
   "packageManager": "pnpm@10.2.0",
   "type": "module",
   "homepage": "https://github.com/flaviodelgrosso/fastify-forge#readme",
