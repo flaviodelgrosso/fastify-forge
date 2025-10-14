@@ -20,9 +20,6 @@
     "api",
     "server"
   ],
-  "imports": {
-    "#src/*": "./src/*.ts"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flaviodelgrosso/fastify-forge.git"
@@ -55,5 +52,9 @@
     "rimraf": "^6.0.1",
     "turbo": "^2.5.6",
     "typescript": "catalog:"
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
   }
 }
