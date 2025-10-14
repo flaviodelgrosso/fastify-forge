@@ -2,22 +2,15 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "allowImportingTsExtensions": true,
-    "allowJs": true,
     "erasableSyntaxOnly": true,
-    "isolatedModules": true,
     "lib": [
       "ESNext"
     ],
     "module": "NodeNext",
-    "noEmit": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "removeComments": true,
+    "moduleResolution": "NodeNext",
     "rewriteRelativeImportExtensions": true,
     "sourceMap": true,
-    "target": "ESNext",
+    "target": "ES2022",
     "verbatimModuleSyntax": true
   },
   "display": "Node",
