@@ -18,7 +18,9 @@
     "typescript",
     "template",
     "api",
-    "server"
+    "server",
+    "turborepo",
+    "monorepo"
   ],
   "repository": {
     "type": "git",
