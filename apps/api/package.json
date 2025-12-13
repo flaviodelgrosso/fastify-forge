@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@fastify/autoload": "^6.3.1",
-    "@fastify/cors": "^11.1.0",
+    "@fastify/cors": "^11.2.0",
     "@fastify/env": "^5.0.3",
     "@fastify/helmet": "^13.0.2",
     "@fastify/multipart": "^9.2.1",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "@types/sinon": "^17.0.4",
+    "@types/sinon": "^21.0.0",
     "@workspace/eslint-config": "workspace:",
     "@workspace/typescript-config": "workspace:",
     "c8": "^10.1.3",

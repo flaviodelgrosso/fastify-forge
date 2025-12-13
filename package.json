@@ -43,17 +43,17 @@
     "commander": "^14.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.1.0",
-    "@commitlint/config-conventional": "20.0.0",
+    "@commitlint/cli": "20.2.0",
+    "@commitlint/config-conventional": "20.2.0",
     "@workspace/typescript-config": "workspace:*",
-    "dotenv-cli": "^10.0.0",
+    "dotenv-cli": "^11.0.0",
     "eslint": "catalog:",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.4",
-    "prettier": "^3.6.2",
-    "prettier-plugin-space-before-function-paren": "^0.0.9",
+    "prettier": "^3.7.4",
+    "prettier-plugin-space-before-function-paren": "^0.0.10",
     "rimraf": "^6.0.1",
-    "turbo": "^2.5.6",
+    "turbo": "^2.6.3",
     "typescript": "catalog:"
   },
   "engines": {

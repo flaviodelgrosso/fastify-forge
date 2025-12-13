@@ -1,7 +1,7 @@
 import path from 'node:path';
 
 import FastifyAutoLoad from '@fastify/autoload';
-import Fastify, { type FastifyHttpOptions, type RawServerDefault } from 'fastify';
+import Fastify, { type FastifyError, type FastifyHttpOptions, type RawServerDefault } from 'fastify';
 
 export async function buildApp<S extends RawServerDefault> (options?: FastifyHttpOptions<S>) {
   const server = Fastify(options);
@@ -21,7 +21,7 @@ export async function buildApp<S extends RawServerDefault> (options?: FastifyHtt
   });
 
   // Set error handler
-  server.setErrorHandler((err, request, reply) => {
+  server.setErrorHandler((err: FastifyError, request, reply) => {
     server.log.error(
       {
         err,
