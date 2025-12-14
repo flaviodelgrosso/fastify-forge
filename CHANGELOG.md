@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.3](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.2...v2.2.3) (2025-12-14)
+
+
+### Bug Fixes
+
+* improve error handler check on FST_ERR_BAD_STATUS_CODE instance ([9e731b0](https://github.com/flaviodelgrosso/fastify-forge/commit/9e731b0f74a66c2219bb6caad1a69436625516eb))
+
 ### [2.2.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.1...v2.2.2) (2025-12-13)
 
 ### [2.2.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.0...v2.2.1) (2025-10-14)
