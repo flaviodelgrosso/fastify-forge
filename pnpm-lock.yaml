@@ -125,7 +125,7 @@ importers:
         version: 1.40.9
       '@sinclair/typebox':
         specifier: ^0.34.41
-        version: 0.34.45
+        version: 0.34.46
       '@workspace/db':
         specifier: 'workspace:'
         version: link:../../packages/db
@@ -876,8 +876,8 @@ packages:
     resolution: {integrity: sha512-5FNQH/zx3tnERzxfpErscPHfRxLCuhncmhFYiaSz196Xi2iG1YI08BtxTV2slfT6of52epJ/MrKerarplKf9eg==}
     engines: {node: '>=20'}
 
-  '@sinclair/typebox@0.34.45':
-    resolution: {integrity: sha512-qJcFVfCa5jxBFSuv7S5WYbA8XdeCPmhnaVVfX/2Y6L8WYg8sk3XY2+6W0zH+3mq1Cz+YC7Ki66HfqX6IHAwnkg==}
+  '@sinclair/typebox@0.34.46':
+    resolution: {integrity: sha512-kiW7CtS/NkdvTUjkjUJo7d5JsFfbJ14YjdhDk9KoEgK6nFjKNXZPrX0jfLA8ZlET4cFLHxOZ/0vFKOP+bOxIOQ==}
 
   '@sinonjs/commons@3.0.1':
     resolution: {integrity: sha512-K3mCHKQ9sVh8o1C9cxkwxaOmXoAMlDxC1mYyHrjqOWEcBjYr76t96zL2zlj5dUGZ3HSw240X1qgH3Mjf1yJWpQ==}
@@ -3711,7 +3711,7 @@ snapshots:
       type-fest: 5.0.0
       zod: 4.2.1
 
-  '@sinclair/typebox@0.34.45': {}
+  '@sinclair/typebox@0.34.46': {}
 
   '@sinonjs/commons@3.0.1':
     dependencies:
