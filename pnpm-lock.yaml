@@ -122,7 +122,7 @@ importers:
         version: 9.0.3
       '@scalar/fastify-api-reference':
         specifier: ^1.38.1
-        version: 1.43.14
+        version: 1.43.15
       '@sinclair/typebox':
         specifier: ^0.34.41
         version: 0.34.48
@@ -844,24 +844,24 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@scalar/core@0.3.33':
-    resolution: {integrity: sha512-eEnj3Xl66VhD5h+Py+r3k3C5GuXucfUNc9o6XfGU/lKJTN9foEa9wgwyH2Lr6IHCtn+SoIgCn3ZS9g1REcXeZQ==}
+  '@scalar/core@0.3.34':
+    resolution: {integrity: sha512-dZnpkrnjiPvPLa/sIdjoaxdVoYowWUqC5nCCXJI+29laMIII6dCze8ThxLPGN1b9gJ8cYcQwBrwr+RNCjqJgdQ==}
     engines: {node: '>=20'}
 
-  '@scalar/fastify-api-reference@1.43.14':
-    resolution: {integrity: sha512-HxtHNtG4+3/TligE8PV71shz/upbpRiG7cL+Hlq+jYZFhR3Ce+EdlBDzzes2+NsykK9eNohqkfDJ7H10J4Accg==}
+  '@scalar/fastify-api-reference@1.43.15':
+    resolution: {integrity: sha512-v72cWoT32s5Ne071Frmm4rKMsybop5x6b9U/I87KliLGuoacXQIpIuGCvOvIb/nd6ORAUbjDI6q1f5tCtmxCvw==}
     engines: {node: '>=20'}
 
-  '@scalar/helpers@0.2.8':
-    resolution: {integrity: sha512-aXXRF4sCaiGZIRpZ1MUcnl8y0Q9pPG1VXqQMWacVWDh6zQN9cuayTC/TbODzWeldp50sgJ1E8MpHvpeV7CEF9g==}
+  '@scalar/helpers@0.2.9':
+    resolution: {integrity: sha512-Y4ffJF0yELdwZ0BKgonqn3SumIgRn1WKyYCVHD+TDM7qRFChdGRypyt20+efHs26fmJeyBAIIv2laICj5uimiw==}
     engines: {node: '>=20'}
 
-  '@scalar/json-magic@0.9.2':
-    resolution: {integrity: sha512-Oo+AwX+3VtNWmUeCvw7ig+aoWxC1z4YDgA1wpLD8wWUh9eE+txni/7z7Q557da7vY+NPm2r3p1edOrABaiCZ6g==}
+  '@scalar/json-magic@0.9.3':
+    resolution: {integrity: sha512-MwH9UPNWXp1OZE78Rjtr1nRt27B00PQDvRdq1F5Tvp5yE+pxkmLZFBISP19R3Pi8Hzjv+w2otkaPmRN4owSULQ==}
     engines: {node: '>=20'}
 
-  '@scalar/openapi-parser@0.24.3':
-    resolution: {integrity: sha512-k+jR2enWQLVqcCDQYIhvE1wicU0LcWtKk8F+pJCDyKuA2SsnV0rW4mC38AqpgxQ+K9JA9o1PgBmJ4CkdiL1XAA==}
+  '@scalar/openapi-parser@0.24.4':
+    resolution: {integrity: sha512-pBAi+lgwxqSWWTtHXA54weHDupVDi33Ov84T7gByJgPZvabHTQg7rt/u2EoomjZX7ON5Z/lymPO6serdJO2Piw==}
     engines: {node: '>=20'}
 
   '@scalar/openapi-types@0.5.3':
@@ -872,8 +872,8 @@ packages:
     resolution: {integrity: sha512-2xuYLLs0fBadLIk4I1ObjMiCnOyLPEMPf24A1HtHQvhKGDnGlvT63F2rU2Xw8lxCjgHnzveMPnOJEbwIy64RCg==}
     engines: {node: '>=20'}
 
-  '@scalar/types@0.5.9':
-    resolution: {integrity: sha512-aj3Zju0HsyI2SCIPPejRGLsGCfkf5CRv4QLHcZB36uUo5WuzQ/PN4wxJPc5JpT0t+gLNj7lWjv/+RxDR0w57OA==}
+  '@scalar/types@0.5.10':
+    resolution: {integrity: sha512-37qAHQC2J7O+Mt8u0HOZttTQPQ1OEWKWxo9SMbahYKTosL9k1KtTG2F3EB33EkW3WqEVQitkUKrM0+MVM2HeYQ==}
     engines: {node: '>=20'}
 
   '@sinclair/typebox@0.34.48':
@@ -3657,28 +3657,28 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@scalar/core@0.3.33':
+  '@scalar/core@0.3.34':
     dependencies:
-      '@scalar/types': 0.5.9
+      '@scalar/types': 0.5.10
 
-  '@scalar/fastify-api-reference@1.43.14':
+  '@scalar/fastify-api-reference@1.43.15':
     dependencies:
-      '@scalar/core': 0.3.33
-      '@scalar/openapi-parser': 0.24.3
+      '@scalar/core': 0.3.34
+      '@scalar/openapi-parser': 0.24.4
       '@scalar/openapi-types': 0.5.3
       fastify-plugin: 4.5.1
       github-slugger: 2.0.0
 
-  '@scalar/helpers@0.2.8': {}
+  '@scalar/helpers@0.2.9': {}
 
-  '@scalar/json-magic@0.9.2':
+  '@scalar/json-magic@0.9.3':
     dependencies:
-      '@scalar/helpers': 0.2.8
+      '@scalar/helpers': 0.2.9
       yaml: 2.8.2
 
-  '@scalar/openapi-parser@0.24.3':
+  '@scalar/openapi-parser@0.24.4':
     dependencies:
-      '@scalar/json-magic': 0.9.2
+      '@scalar/json-magic': 0.9.3
       '@scalar/openapi-types': 0.5.3
       '@scalar/openapi-upgrader': 0.1.8
       ajv: 8.17.1
@@ -3696,9 +3696,9 @@ snapshots:
     dependencies:
       '@scalar/openapi-types': 0.5.3
 
-  '@scalar/types@0.5.9':
+  '@scalar/types@0.5.10':
     dependencies:
-      '@scalar/helpers': 0.2.8
+      '@scalar/helpers': 0.2.9
       nanoid: 5.1.6
       type-fest: 5.4.1
       zod: 4.3.6
