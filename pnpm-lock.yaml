@@ -9,6 +9,9 @@ catalogs:
     '@types/node':
       specifier: ^24.3.0
       version: 24.10.9
+    better-auth:
+      specifier: ^1.4.6
+      version: 1.4.18
     drizzle-kit:
       specifier: ^0.31.4
       version: 0.31.8
@@ -43,7 +46,7 @@ importers:
         version: 0.11.0
       commander:
         specifier: ^14.0.1
-        version: 14.0.2
+        version: 14.0.3
     devDependencies:
       '@commitlint/cli':
         specifier: 20.3.1
@@ -1331,8 +1334,8 @@ packages:
   colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
 
-  commander@14.0.2:
-    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
+  commander@14.0.3:
+    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
     engines: {node: '>=20'}
 
   comment-parser@1.4.1:
@@ -4144,7 +4147,7 @@ snapshots:
 
   colorette@2.0.20: {}
 
-  commander@14.0.2: {}
+  commander@14.0.3: {}
 
   comment-parser@1.4.1: {}
 
@@ -5149,7 +5152,7 @@ snapshots:
 
   lint-staged@16.2.7:
     dependencies:
-      commander: 14.0.2
+      commander: 14.0.3
       listr2: 9.0.5
       micromatch: 4.0.8
       nano-spawn: 2.0.0
