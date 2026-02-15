@@ -12,6 +12,9 @@ catalogs:
     better-auth:
       specifier: ^1.4.6
       version: 1.4.18
+    drizzle-kit:
+      specifier: ^0.31.4
+      version: 0.31.9
     drizzle-orm:
       specifier: ^0.45.1
       version: 0.45.1
@@ -107,7 +110,7 @@ importers:
         version: 6.0.4
       '@fastify/swagger':
         specifier: ^9.5.2
-        version: 9.6.1
+        version: 9.7.0
       '@fastify/swagger-ui':
         specifier: ^5.2.3
         version: 5.2.5
@@ -759,8 +762,8 @@ packages:
   '@fastify/swagger-ui@5.2.5':
     resolution: {integrity: sha512-ky3I0LAkXKX/prwSDpoQ3kscBKsj2Ha6Gp1/JfgQSqyx0bm9F2bE//XmGVGj2cR9l5hUjZYn60/hqn7e+OLgWQ==}
 
-  '@fastify/swagger@9.6.1':
-    resolution: {integrity: sha512-fKlpJqFMWoi4H3EdUkDaMteEYRCfQMEkK0HJJ0eaf4aRlKd8cbq0pVkOfXDXmtvMTXYcnx3E+l023eFDBsA1HA==}
+  '@fastify/swagger@9.7.0':
+    resolution: {integrity: sha512-Vp1SC1GC2Hrkd3faFILv86BzUNyFz5N4/xdExqtCgkGASOzn/x+eMe4qXIGq7cdT6wif/P/oa6r1Ruqx19paZA==}
 
   '@fastify/type-provider-typebox@6.1.0':
     resolution: {integrity: sha512-k29cOitDRcZhMXVjtRq0+caKxdWoArz7su+dQWGzGWnFG+fSKhevgiZ7nexHWuXOEEQzgJlh6cptIMu69beaTA==}
@@ -3524,7 +3527,7 @@ snapshots:
       rfdc: 1.4.1
       yaml: 2.8.2
 
-  '@fastify/swagger@9.6.1':
+  '@fastify/swagger@9.7.0':
     dependencies:
       fastify-plugin: 5.1.0
       json-schema-resolver: 3.0.0
