@@ -6,9 +6,9 @@ settings:
 
 catalogs:
   default:
-    '@types/node':
-      specifier: ^24.3.0
-      version: 24.10.13
+    better-auth:
+      specifier: ^1.4.6
+      version: 1.4.20
     drizzle-kit:
       specifier: ^0.31.4
       version: 0.31.9
@@ -147,7 +147,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
-        version: 24.10.13
+        version: 24.11.0
       '@types/sinon':
         specifier: ^21.0.0
         version: 21.0.0
@@ -184,7 +184,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
-        version: 24.10.13
+        version: 24.11.0
       '@types/pg':
         specifier: ^8.16.0
         version: 8.16.0
@@ -227,7 +227,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
-        version: 24.10.13
+        version: 24.11.0
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -898,8 +898,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@24.10.13':
-    resolution: {integrity: sha512-oH72nZRfDv9lADUBSo104Aq7gPHpQZc4BTx38r9xf9pg5LfP6EzSyH2n7qFmmxRQXh7YlUXODcYsg6PuTDSxGg==}
+  '@types/node@24.11.0':
+    resolution: {integrity: sha512-fPxQqz4VTgPI/IQ+lj9r0h+fDR66bzoeMGHp8ASee+32OSGIkeASsoZuJixsQoVef1QJbeubcPBxKk22QVoWdw==}
 
   '@types/node@25.2.1':
     resolution: {integrity: sha512-CPrnr8voK8vC6eEtyRzvMpgp3VyVRhgclonE7qYi6P9sXwYb59ucfrnmFBTaP0yUi8Gk4yZg/LlTJULGxvTNsg==}
@@ -3707,7 +3707,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@24.10.13':
+  '@types/node@24.11.0':
     dependencies:
       undici-types: 7.16.0
 
@@ -3717,7 +3717,7 @@ snapshots:
 
   '@types/pg@8.16.0':
     dependencies:
-      '@types/node': 24.10.13
+      '@types/node': 24.11.0
       pg-protocol: 1.10.3
       pg-types: 2.2.0
 
