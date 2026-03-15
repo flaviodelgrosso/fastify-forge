@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    '@types/node':
+      specifier: ^24.3.0
+      version: 24.12.0
     better-auth:
       specifier: ^1.4.6
       version: 1.4.20
@@ -134,7 +137,7 @@ importers:
         version: 1.4.20(drizzle-kit@0.31.9)(drizzle-orm@0.45.1(@types/pg@8.16.0)(kysely@0.28.11)(pg@8.16.3))(pg@8.16.3)
       close-with-grace:
         specifier: ^2.2.0
-        version: 2.4.0
+        version: 2.5.0
       fastify:
         specifier: 'catalog:'
         version: 5.6.2
@@ -1327,8 +1330,8 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
-  close-with-grace@2.4.0:
-    resolution: {integrity: sha512-bzAYS0Kax7I0ejiCFHVshsT9giz6MrOpkdpP1CEGpkDRG3mXVgHZ9QdzVGHRZR0jrAq6JyN1mB4Ty3ILnmzLdg==}
+  close-with-grace@2.5.0:
+    resolution: {integrity: sha512-MewUtZQU6N4YVHIne63zGtjIQzTINgr6lQp2Y0CutaCw2FsdYahW57dH1Wdz+aV5ipbBzEBZD5znwX2NooS+IA==}
 
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
@@ -4126,7 +4129,7 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
-  close-with-grace@2.4.0: {}
+  close-with-grace@2.5.0: {}
 
   color-convert@2.0.1:
     dependencies:
