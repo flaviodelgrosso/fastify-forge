@@ -122,7 +122,7 @@ importers:
         version: 9.0.3
       '@scalar/fastify-api-reference':
         specifier: ^1.38.1
-        version: 1.51.0
+        version: 1.52.0
       '@sinclair/typebox':
         specifier: ^0.34.41
         version: 0.34.49
@@ -1004,12 +1004,16 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@scalar/core@0.4.6':
-    resolution: {integrity: sha512-lIlCUx0O18ei63j7Z7QTAVAuh66sdms9zoDPhpDOzHTVObnb7n0f3J306sT3H9KQsoWKQrEsnKx4LcZLw/TlPw==}
+  '@scalar/client-side-rendering@0.1.0':
+    resolution: {integrity: sha512-SUuLgDmY1mUYOrGB2vpKj2HnYmPibKOewIV0gugv6k/qajE9R88uIj6u0DxAJVOLgihvKdMGyeXsnUs4fTLZYg==}
     engines: {node: '>=22'}
 
-  '@scalar/fastify-api-reference@1.51.0':
-    resolution: {integrity: sha512-XaD1CrZvfppraZ4M6kQqfOKvVQJgVNdABGoNLRCRVZ6y0MX4J/67uIyLLzl29VyC2V+n/t3jArduuZqkFCPkLw==}
+  '@scalar/core@0.5.0':
+    resolution: {integrity: sha512-quPUndgBB1fwUkdIgJiCVA3vR6hyCgMYgca9YPI+RwbAB7/H/1otNEKfLBzLVbNllXlGnY4BxmGSft4fUg49jg==}
+    engines: {node: '>=22'}
+
+  '@scalar/fastify-api-reference@1.52.0':
+    resolution: {integrity: sha512-kj3EUomMcaSjOY2Od6JhlC0pLTy3GKA9fBjpGU01zMGJCBmOBF0wBZwEFcwOGp1mcE8en0ndw2yGh35NgMvWaw==}
     engines: {node: '>=22'}
 
   '@scalar/helpers@0.4.3':
@@ -1032,8 +1036,8 @@ packages:
     resolution: {integrity: sha512-AcrF7BMxKCTHnT82SHbHun6dJO4XC9tS5gD7EJsr/7YwFkx9JtbtZCryJXtqWJ5c7i1v1KH4PRRjDga/hCULTQ==}
     engines: {node: '>=22'}
 
-  '@scalar/types@0.7.6':
-    resolution: {integrity: sha512-n5d7neeGTY/yS36AwAv3FAyCnJbbLjMPwyuEXBLgxHcb5i8DXnNfwy1nzz8jx/EJ88i1zmQ8BuMs+207saHgNA==}
+  '@scalar/types@0.8.0':
+    resolution: {integrity: sha512-3GP0eqe+4XR8MyKOSCTly/VRobT3sKoFBX1ZSuuZAlcBROqzRkBSzQ+kloGWqTR60vP9GAwW7SnHo72MdCP0DQ==}
     engines: {node: '>=22'}
 
   '@simple-libs/child-process-utils@1.0.2':
@@ -3892,13 +3896,18 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@scalar/core@0.4.6':
+  '@scalar/client-side-rendering@0.1.0':
     dependencies:
-      '@scalar/types': 0.7.6
+      '@scalar/types': 0.8.0
 
-  '@scalar/fastify-api-reference@1.51.0':
+  '@scalar/core@0.5.0':
     dependencies:
-      '@scalar/core': 0.4.6
+      '@scalar/client-side-rendering': 0.1.0
+      '@scalar/types': 0.8.0
+
+  '@scalar/fastify-api-reference@1.52.0':
+    dependencies:
+      '@scalar/core': 0.5.0
       '@scalar/openapi-parser': 0.25.8
       '@scalar/openapi-types': 0.7.0
       fastify-plugin: 4.5.1
@@ -3931,7 +3940,7 @@ snapshots:
     dependencies:
       '@scalar/openapi-types': 0.7.0
 
-  '@scalar/types@0.7.6':
+  '@scalar/types@0.8.0':
     dependencies:
       '@scalar/helpers': 0.4.3
       nanoid: 5.1.7
