@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "eslint": "catalog:",
-    "neostandard": "^0.12.2",
+    "neostandard": "^0.13.0",
     "typescript": "catalog:"
   }
 }
