@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "clean": "git clean -xdf dist .turbo node_modules",
+    "clean": "git clean -xdf dist node_modules",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {

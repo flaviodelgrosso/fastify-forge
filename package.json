@@ -19,7 +19,7 @@
     "template",
     "api",
     "server",
-    "turborepo",
+    "nx",
     "monorepo"
   ],
   "repository": {
@@ -27,13 +27,14 @@
     "url": "git+https://github.com/flaviodelgrosso/fastify-forge.git"
   },
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "start": "turbo start",
-    "lint": "turbo lint --",
+    "build": "nx run-many -t build",
+    "dev": "nx run-many -t dev",
+    "start": "nx run-many -t start",
+    "lint": "nx run-many -t lint --",
+    "typecheck": "nx run-many -t typecheck",
     "format": "prettier --write '**/*.{ts,js}'",
-    "test": "turbo test",
-    "clean": "turbo clean && rimraf node_modules .turbo pnpm-lock.yaml",
+    "test": "nx run-many -t test",
+    "clean": "nx run-many -t clean && rimraf node_modules .nx",
     "prepare": "node .husky/install.mjs",
     "syncpack:list": "npx syncpack list-mismatches",
     "syncpack:fix": "npx syncpack fix-mismatches"
@@ -49,15 +50,15 @@
     "dotenv-cli": "^11.0.0",
     "eslint": "catalog:",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.4",
     "prettier": "^3.7.4",
     "prettier-plugin-space-before-function-paren": "^0.0.10",
     "rimraf": "^6.0.1",
-    "turbo": "^2.6.3",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "nx": "22.6.5"
   },
   "engines": {
     "node": ">=24",
     "pnpm": ">=10"
   }
 }
+

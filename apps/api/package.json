@@ -11,7 +11,7 @@
     "lint": "eslint . --max-warnings 0",
     "test": "cross-env NODE_ENV=test c8 --100 node --env-file .env --test test/**/*.test.ts",
     "test:lcov": "cross-env NODE_ENV=test c8 --100 --reporter=lcov node --env-file .env --test test/**/*.test.ts",
-    "clean": "git clean -xdf dist .turbo node_modules"
+    "clean": "git clean -xdf dist node_modules"
   },
   "imports": {
     "#src/*": {

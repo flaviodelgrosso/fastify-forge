@@ -4,7 +4,7 @@ export const config = [
   ...neo({
     ts: true,
     semi: true,
-    ignores: ['.turbo', 'dist', 'node_modules']
+    ignores: ['.nx', 'dist', 'node_modules']
   }),
   {
     rules: {

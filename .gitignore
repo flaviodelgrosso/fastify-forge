@@ -41,3 +41,7 @@ yarn-error.log*
 .env.sentry-build-plugin
 
 cloud-sql-proxy
+
+
+.nx/cache
+.nx/workspace-data
