@@ -1,25 +1,32 @@
 import { strictEqual } from 'node:assert';
 import { test } from 'node:test';
 
-import { buildApp } from '#src/app';
+import Fastify from 'fastify';
+import bootstrap from '../src/app.ts';
+import fp from 'fastify-plugin';
 
 import { getAuthDecorator } from 'fastify-better-auth';
 import sinon from 'sinon';
 
 test("should return 401 for /api/v1 protected route when user isn't logged in", async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/api/v1/protected'
+    url: '/api/v1/protected',
   });
 
   strictEqual(res.statusCode, 401);
-  strictEqual(res.json().message, 'You must be logged in to access this resource.');
+  strictEqual(
+    res.json().message,
+    'You must be logged in to access this resource.',
+  );
 });
 
 test('should return 200 for /api/v1 protected route when user is logged in', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   await fastify.ready();
 
@@ -33,7 +40,7 @@ test('should return 200 for /api/v1 protected route when user is logged in', asy
       expiresAt: new Date(Date.now() + 1000 * 60 * 60),
       token: 'test-token',
       ipAddress: '127.0.0.1',
-      userAgent: 'test-agent'
+      userAgent: 'test-agent',
     },
     user: {
       id: '1',
@@ -42,19 +49,21 @@ test('should return 200 for /api/v1 protected route when user is logged in', asy
       emailVerified: true,
       createdAt: new Date(),
       updatedAt: new Date(),
-      banned: false
-    }
+      banned: false,
+    },
   };
 
   const authInstance = getAuthDecorator(fastify);
-  const getSessionStub = sinon.stub(authInstance.api, 'getSession').resolves(mockSession);
+  const getSessionStub = sinon
+    .stub(authInstance.api, 'getSession')
+    .resolves(mockSession);
 
   const res = await fastify.inject({
     method: 'GET',
     url: '/api/v1/protected',
     headers: {
-      Authorization: 'Bearer test'
-    }
+      Authorization: 'Bearer test',
+    },
   });
 
   strictEqual(res.statusCode, 200);

@@ -55,6 +55,9 @@ catalogs:
     fastify:
       specifier: ^5.8.5
       version: 5.8.5
+    fastify-better-auth:
+      specifier: ^1.2.0
+      version: 1.2.0
     fastify-plugin:
       specifier: ^5.0.1
       version: 5.1.0
@@ -207,7 +210,7 @@ importers:
         specifier: catalog:fastify
         version: 5.8.5
       fastify-better-auth:
-        specifier: ^1.2.0
+        specifier: catalog:fastify
         version: 1.2.0(better-auth@1.4.20(drizzle-kit@0.31.10)(drizzle-orm@0.45.2(@types/pg@8.20.0)(kysely@0.28.11)(pg@8.20.0))(pg@8.20.0))(fastify@5.8.5)
       fastify-plugin:
         specifier: catalog:fastify

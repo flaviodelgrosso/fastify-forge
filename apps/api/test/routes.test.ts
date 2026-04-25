@@ -1,31 +1,33 @@
 import { deepStrictEqual, strictEqual } from 'node:assert';
 import { test } from 'node:test';
 
-import { buildApp } from '#src/app';
-
 import Fastify from 'fastify';
+import bootstrap from '../src/app.ts';
+import fp from 'fastify-plugin';
 
 test('should return 200 for /GET route', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/'
+    url: '/',
   });
 
   strictEqual(res.statusCode, 200);
 });
 
 test('should return 200 for /POST route', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   const res = await fastify.inject({
     method: 'POST',
     url: '/',
     payload: JSON.stringify({ name: 'world' }),
     headers: {
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+    },
   });
 
   strictEqual(res.statusCode, 200);
@@ -33,11 +35,12 @@ test('should return 200 for /POST route', async () => {
 });
 
 test('should return 200 for /health route', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/health'
+    url: '/health',
   });
 
   strictEqual(res.statusCode, 200);
@@ -45,7 +48,8 @@ test('should return 200 for /health route', async () => {
 });
 
 test('should handle errors correctly', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   fastify.get('/error', async () => {
     throw new Error('Test error');
@@ -53,14 +57,15 @@ test('should handle errors correctly', async () => {
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/error'
+    url: '/error',
   });
 
   strictEqual(res.statusCode, 500);
 });
 
 test('should handle FST_ERR_BAD_STATUS_CODE with status code >= 500', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   fastify.get('/bad-status-500', async () => {
     // Create a proper FST_ERR_BAD_STATUS_CODE instance
@@ -71,7 +76,7 @@ test('should handle FST_ERR_BAD_STATUS_CODE with status code >= 500', async () =
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/bad-status-500'
+    url: '/bad-status-500',
   });
 
   strictEqual(res.statusCode, 502);
@@ -80,7 +85,8 @@ test('should handle FST_ERR_BAD_STATUS_CODE with status code >= 500', async () =
 });
 
 test('should handle FST_ERR_BAD_STATUS_CODE with status code < 500', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   fastify.get('/bad-status-400', async () => {
     // Create a proper FST_ERR_BAD_STATUS_CODE instance with status < 500
@@ -92,7 +98,7 @@ test('should handle FST_ERR_BAD_STATUS_CODE with status code < 500', async () =>
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/bad-status-400'
+    url: '/bad-status-400',
   });
 
   strictEqual(res.statusCode, 400);
@@ -100,7 +106,8 @@ test('should handle FST_ERR_BAD_STATUS_CODE with status code < 500', async () =>
 });
 
 test('should handle FST_ERR_BAD_STATUS_CODE without status code', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   fastify.get('/bad-status-undefined', async () => {
     // Create FST_ERR_BAD_STATUS_CODE without statusCode
@@ -112,7 +119,7 @@ test('should handle FST_ERR_BAD_STATUS_CODE without status code', async () => {
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/bad-status-undefined'
+    url: '/bad-status-undefined',
   });
 
   strictEqual(res.statusCode, 500);
@@ -120,11 +127,12 @@ test('should handle FST_ERR_BAD_STATUS_CODE without status code', async () => {
 });
 
 test('should return 404 for unknown routes', async () => {
-  const fastify = await buildApp();
+  const fastify = Fastify();
+  fastify.register(fp(bootstrap));
 
   const res = await fastify.inject({
     method: 'GET',
-    url: '/unknown'
+    url: '/unknown',
   });
 
   strictEqual(res.statusCode, 404);
