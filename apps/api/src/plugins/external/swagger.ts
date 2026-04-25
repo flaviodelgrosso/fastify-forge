@@ -1,28 +1,20 @@
-import Swagger from '@fastify/swagger';
-import ScalarApiReference from '@scalar/fastify-api-reference';
 import fp from 'fastify-plugin';
+import fastifySwaggerUi from '@fastify/swagger-ui';
+import fastifySwagger from '@fastify/swagger';
 
-import type { FastifyInstance } from 'fastify';
-
-async function swaggerPlugin (fastify: FastifyInstance) {
-  await fastify.register(Swagger, {
+export default fp(async function (fastify) {
+  await fastify.register(fastifySwagger, {
+    hideUntagged: true,
     openapi: {
-      openapi: '3.1.1',
       info: {
         title: 'Fastify Forge API',
         description: 'API Documentation for Fastify Forge',
-        version: '1.0.0'
-      }
-    }
+        version: '0.0.0',
+      },
+    },
   });
 
-  await fastify.register(ScalarApiReference, {
-    routePrefix: '/api/docs'
+  await fastify.register(fastifySwaggerUi, {
+    routePrefix: '/api/docs',
   });
-
-  fastify.log.info('API Reference is available at /api/docs');
-}
-
-export default fp(swaggerPlugin, {
-  name: 'swagger-plugin'
 });

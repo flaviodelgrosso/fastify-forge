@@ -2,62 +2,57 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [2.2.3](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.2...v2.2.3) (2025-12-14)
+## [3.0.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.3...v3.0.0) (2026-04-25)
 
+- BREAKING CHANGE: replace Turborepo with Nx for monorepo management
+
+### [2.2.3](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.2...v2.2.3) (2025-12-14)
 
 ### Bug Fixes
 
-* improve error handler check on FST_ERR_BAD_STATUS_CODE instance ([9e731b0](https://github.com/flaviodelgrosso/fastify-forge/commit/9e731b0f74a66c2219bb6caad1a69436625516eb))
+- improve error handler check on FST_ERR_BAD_STATUS_CODE instance ([9e731b0](https://github.com/flaviodelgrosso/fastify-forge/commit/9e731b0f74a66c2219bb6caad1a69436625516eb))
 
 ### [2.2.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.1...v2.2.2) (2025-12-13)
 
 ### [2.2.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.0...v2.2.1) (2025-10-14)
 
-
 ### Bug Fixes
 
-* add node conditions flag in dev script for correct resolution ([015d6cd](https://github.com/flaviodelgrosso/fastify-forge/commit/015d6cd6d6c42033e766588b4bf77059e0fe5d0b))
+- add node conditions flag in dev script for correct resolution ([015d6cd](https://github.com/flaviodelgrosso/fastify-forge/commit/015d6cd6d6c42033e766588b4bf77059e0fe5d0b))
 
 ## [2.2.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.1.0...v2.2.0) (2025-10-14)
 
-
 ### Features
 
-* add @fastify/env plugin ([2283e54](https://github.com/flaviodelgrosso/fastify-forge/commit/2283e545cad0137b73b53560637abfef72063f89))
-
+- add @fastify/env plugin ([2283e54](https://github.com/flaviodelgrosso/fastify-forge/commit/2283e545cad0137b73b53560637abfef72063f89))
 
 ### Bug Fixes
 
-* imports fields in api and root package.json files ([d15bfbc](https://github.com/flaviodelgrosso/fastify-forge/commit/d15bfbcb23b706a7fb9ee2cd8c30a14da79c2c4d))
+- imports fields in api and root package.json files ([d15bfbc](https://github.com/flaviodelgrosso/fastify-forge/commit/d15bfbcb23b706a7fb9ee2cd8c30a14da79c2c4d))
 
 ## [2.1.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.0.0...v2.1.0) (2025-10-12)
 
-
 ### Features
 
-* add timeouts options ([86b5afa](https://github.com/flaviodelgrosso/fastify-forge/commit/86b5afabe4b1a0e11451f4126c3ca154ebee059d))
-
+- add timeouts options ([86b5afa](https://github.com/flaviodelgrosso/fastify-forge/commit/86b5afabe4b1a0e11451f4126c3ca154ebee059d))
 
 ### Bug Fixes
 
-* swagger plugin ([cca35d6](https://github.com/flaviodelgrosso/fastify-forge/commit/cca35d69eb032d29c1aaa703b522574aa34dce05))
-
+- swagger plugin ([cca35d6](https://github.com/flaviodelgrosso/fastify-forge/commit/cca35d69eb032d29c1aaa703b522574aa34dce05))
 
 ### Documentation
 
-* update README.md ([7779b47](https://github.com/flaviodelgrosso/fastify-forge/commit/7779b47beed9e081d250d0134fc722412f312735))
+- update README.md ([7779b47](https://github.com/flaviodelgrosso/fastify-forge/commit/7779b47beed9e081d250d0134fc722412f312735))
 
 ## [2.0.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.5...v2.0.0) (2025-10-10)
 
-
 ### Features
 
-* convert to monorepo with Turborepo ([f634989](https://github.com/flaviodelgrosso/fastify-forge/commit/f6349894c2a8ee8cbca781512de841c4087516d0))
-
+- convert to monorepo with Turborepo ([f634989](https://github.com/flaviodelgrosso/fastify-forge/commit/f6349894c2a8ee8cbca781512de841c4087516d0))
 
 ### Bug Fixes
 
-* update prepareEnv function to correctly reference the .env.example path ([93aa382](https://github.com/flaviodelgrosso/fastify-forge/commit/93aa38224c6b6c23f7793d292fd8482dc4354ea4))
+- update prepareEnv function to correctly reference the .env.example path ([93aa382](https://github.com/flaviodelgrosso/fastify-forge/commit/93aa38224c6b6c23f7793d292fd8482dc4354ea4))
 
 ### [1.4.5](https://github.com/flaviodelgrosso/fastify-forge/compare/v1.4.4...v1.4.5) (2025-10-02)
 
