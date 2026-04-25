@@ -1,6 +1,6 @@
-import fp from 'fastify-plugin';
-import fastifySwaggerUi from '@fastify/swagger-ui';
 import fastifySwagger from '@fastify/swagger';
+import fastifySwaggerUi from '@fastify/swagger-ui';
+import fp from 'fastify-plugin';
 
 export default fp(async function (fastify) {
   await fastify.register(fastifySwagger, {

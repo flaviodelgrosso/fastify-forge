@@ -16,6 +16,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["fastify-forge"]
+    "customConditions": ["fastify-forge"],
+    "verbatimModuleSyntax": true
   }
 }

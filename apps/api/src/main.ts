@@ -1,9 +1,9 @@
-import bootstrap from '#/app.js';
-
-import fp from 'fastify-plugin';
-import Fastify from 'fastify';
 import { logger } from '@fastify-forge/logger';
 import closeWithGrace from 'close-with-grace';
+import Fastify from 'fastify';
+import fp from 'fastify-plugin';
+
+import bootstrap from '#/app.js';
 
 async function startServer() {
   const app = Fastify({

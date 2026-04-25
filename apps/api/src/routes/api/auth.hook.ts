@@ -1,8 +1,7 @@
+import { fromNodeHeaders } from 'better-auth/node';
 import { getAuthDecorator } from 'fastify-better-auth';
 
 import type auth from '#/auth.js';
-import { fromNodeHeaders } from 'better-auth/node';
-
 import type { FastifyInstance } from 'fastify';
 
 async function authHook(fastify: FastifyInstance) {
