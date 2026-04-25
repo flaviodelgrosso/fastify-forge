@@ -1,1 +1,1 @@
-nx affected -t lint typecheck --base=HEAD
+pnpm pre-commit

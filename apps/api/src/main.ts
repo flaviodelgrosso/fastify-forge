@@ -1,11 +1,12 @@
-import { buildApp } from '#src/app';
+import bootstrap from '#/app.js';
 
-import { ajvFilePlugin } from '@fastify/multipart';
-import { logger } from '@workspace/logger';
+import fp from 'fastify-plugin';
+import Fastify from 'fastify';
+import { logger } from '@fastify-forge/logger';
 import closeWithGrace from 'close-with-grace';
 
-async function startServer () {
-  const app = await buildApp({
+async function startServer() {
+  const app = Fastify({
     connectionTimeout: 120_000,
     // 1 minute: suitable for most payloads, including moderate file uploads
     requestTimeout: 60_000,
@@ -13,14 +14,12 @@ async function startServer () {
     keepAliveTimeout: 10_000,
     http: {
       // 15 seconds: prevents slow clients from holding connections too long
-      headersTimeout: 15_000
+      headersTimeout: 15_000,
     },
     loggerInstance: logger,
-    ajv: {
-      // Adds the file plugin to help @fastify/swagger schema generation
-      plugins: [ajvFilePlugin]
-    }
   });
+
+  app.register(fp(bootstrap));
 
   closeWithGrace(async ({ signal, err }) => {
     if (err) {

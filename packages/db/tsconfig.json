@@ -1,11 +1,10 @@
 {
-  "extends": "@workspace/typescript-config/node.json",
-  "compilerOptions": {
-    "rootDir": "."
-  },
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts",
-    "drizzle.config.ts"
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    }
   ]
 }

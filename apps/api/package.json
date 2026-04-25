@@ -5,20 +5,12 @@
   "private": true,
   "main": "./src/server.ts",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node --conditions source --env-file .env --watch src/server.ts",
-    "start": "cross-env NODE_ENV=production node --env-file .env dist/server.js",
-    "build": "tsc -p tsconfig.build.json",
-    "lint": "eslint . --max-warnings 0",
     "test": "cross-env NODE_ENV=test c8 --100 node --env-file .env --test test/**/*.test.ts",
     "test:lcov": "cross-env NODE_ENV=test c8 --100 --reporter=lcov node --env-file .env --test test/**/*.test.ts",
     "clean": "git clean -xdf dist node_modules"
   },
   "imports": {
-    "#src/*": {
-      "source": "./src/*.ts",
-      "types": "./src/*.ts",
-      "default": "./dist/*.js"
-    }
+    "#/*": "./dist/*"
   },
   "dependencies": {
     "@fastify/autoload": "^6.3.1",
@@ -32,25 +24,19 @@
     "@fastify/swagger-ui": "^5.2.3",
     "@fastify/type-provider-typebox": "^6.0.0",
     "@fastify/under-pressure": "^9.0.3",
-    "@scalar/fastify-api-reference": "^1.38.1",
     "@sinclair/typebox": "^0.34.41",
-    "@workspace/db": "workspace:",
-    "@workspace/logger": "workspace:",
+    "@fastify-forge/db": "workspace:",
+    "@fastify-forge/logger": "workspace:",
     "better-auth": "catalog:",
     "close-with-grace": "^2.2.0",
-    "fastify": "catalog:",
+    "fastify": "catalog:fastify",
     "fastify-better-auth": "^1.2.0",
-    "fastify-plugin": "catalog:"
+    "fastify-plugin": "catalog:fastify"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
     "@types/sinon": "^21.0.0",
-    "@workspace/eslint-config": "workspace:",
-    "@workspace/typescript-config": "workspace:",
     "c8": "^10.1.3",
     "cross-env": "^10.0.0",
-    "eslint": "catalog:",
-    "sinon": "^21.0.0",
-    "typescript": "catalog:"
+    "sinon": "^21.0.0"
   }
 }

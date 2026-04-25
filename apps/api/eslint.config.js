@@ -1,4 +1,3 @@
-import { config } from '@workspace/eslint-config/neo';
+import baseConfig from '../../eslint.config.js';
 
-/** @type {import("eslint").Linter.Config[]} */
-export default config;
+export default [...baseConfig];

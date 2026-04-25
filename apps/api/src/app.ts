@@ -1,15 +1,17 @@
 import path from 'node:path';
 
 import FastifyAutoLoad from '@fastify/autoload';
-import Fastify, { type FastifyHttpOptions, type RawServerDefault } from 'fastify';
+import Fastify, { FastifyInstance, FastifyPluginOptions } from 'fastify';
 
-export async function buildApp<S extends RawServerDefault> (options?: FastifyHttpOptions<S>) {
-  const app = Fastify(options);
-
+export default async function bootstrap(
+  app: FastifyInstance,
+  opts: FastifyPluginOptions,
+) {
   // Auto-load plugins
   await app.register(FastifyAutoLoad, {
     dir: path.join(import.meta.dirname, 'plugins'),
-    dirNameRoutePrefix: false
+    dirNameRoutePrefix: false,
+    options: { ...opts },
   });
 
   // Auto-load routes
@@ -17,7 +19,8 @@ export async function buildApp<S extends RawServerDefault> (options?: FastifyHtt
     dir: path.join(import.meta.dirname, 'routes'),
     autoHooks: true,
     autoHooksPattern: /\.hook(?:\.ts|\.js|\.cjs|\.mjs)$/i,
-    cascadeHooks: true
+    cascadeHooks: true,
+    options: { ...opts },
   });
 
   // Set error handler
@@ -30,10 +33,10 @@ export async function buildApp<S extends RawServerDefault> (options?: FastifyHtt
             method: request.method,
             url: request.url,
             query: request.query,
-            params: request.params
-          }
+            params: request.params,
+          },
         },
-        'Unhandled error occurred'
+        'Unhandled error occurred',
       );
 
       reply.code(err.statusCode ?? 500);
@@ -54,8 +57,8 @@ export async function buildApp<S extends RawServerDefault> (options?: FastifyHtt
     {
       preHandler: app.rateLimit({
         max: 4,
-        timeWindow: 500
-      })
+        timeWindow: 500,
+      }),
     },
     (request, reply) => {
       request.log.warn(
@@ -64,17 +67,15 @@ export async function buildApp<S extends RawServerDefault> (options?: FastifyHtt
             method: request.method,
             url: request.url,
             query: request.query,
-            params: request.params
-          }
+            params: request.params,
+          },
         },
-        'Resource not found'
+        'Resource not found',
       );
 
       reply.code(404);
 
       return { message: 'Not Found' };
-    }
+    },
   );
-
-  return app;
 }

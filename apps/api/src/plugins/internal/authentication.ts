@@ -1,9 +1,11 @@
-import auth from '#src/auth';
+import auth from '#/auth.js';
 
-import FastifyBetterAuth, { type FastifyBetterAuthOptions } from 'fastify-better-auth';
+import FastifyBetterAuth, {
+  type FastifyBetterAuthOptions,
+} from 'fastify-better-auth';
 
 export const autoConfig: FastifyBetterAuthOptions = {
-  auth
+  auth,
 };
 
 export default FastifyBetterAuth;
