@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
-  "main": "./src/server.ts",
+  "main": "./src/main.ts",
   "scripts": {
     "clean": "git clean -xdf dist node_modules"
   },
