@@ -54,7 +54,7 @@
     "@nx/esbuild": "22.6.5",
     "@nx/eslint": "22.6.5",
     "@nx/eslint-plugin": "22.6.5",
-    "@nx/js": "22.6.5",
+    "@nx/js": "22.7.0",
     "@nx/node": "22.6.5",
     "@nx/workspace": "22.6.5",
     "@swc-node/register": "~1.11.1",

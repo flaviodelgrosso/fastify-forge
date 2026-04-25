@@ -5,8 +5,6 @@
   "private": true,
   "main": "./src/server.ts",
   "scripts": {
-    "test": "cross-env NODE_ENV=test c8 --100 node --env-file .env --test test/**/*.test.ts",
-    "test:lcov": "cross-env NODE_ENV=test c8 --100 --reporter=lcov node --env-file .env --test test/**/*.test.ts",
     "clean": "git clean -xdf dist node_modules"
   },
   "imports": {
@@ -32,11 +30,5 @@
     "fastify": "catalog:fastify",
     "fastify-better-auth": "catalog:fastify",
     "fastify-plugin": "catalog:fastify"
-  },
-  "devDependencies": {
-    "@types/sinon": "^21.0.0",
-    "c8": "^10.1.3",
-    "cross-env": "^10.0.0",
-    "sinon": "^21.0.0"
   }
 }

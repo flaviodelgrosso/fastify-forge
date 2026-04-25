@@ -1,7 +1,10 @@
 import path from 'node:path';
 
 import FastifyAutoLoad from '@fastify/autoload';
-import Fastify, { FastifyInstance, FastifyPluginOptions } from 'fastify';
+import Fastify, {
+  type FastifyInstance,
+  type FastifyPluginOptions,
+} from 'fastify';
 
 export default async function bootstrap(
   app: FastifyInstance,

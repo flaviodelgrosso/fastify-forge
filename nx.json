@@ -8,7 +8,12 @@
   "namedInputs": {
     "sharedGlobals": ["{workspaceRoot}/**/.env.*local"],
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "production": ["default", "!{projectRoot}/eslint.config.js"]
+    "production": [
+      "default",
+      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json"
+    ]
   },
   "plugins": [
     {
@@ -53,6 +58,9 @@
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
     }
   }
 }
