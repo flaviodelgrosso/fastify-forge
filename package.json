@@ -35,8 +35,6 @@
     "format": "prettier --write '**/*.{js,mjs,json,ts,md}'",
     "clean": "nx run-many -t clean && rimraf node_modules .nx",
     "pre-commit": "nx affected -t lint typecheck --base=HEAD",
-    "version": "changeset version",
-    "release": "changeset tag",
     "prepare": "node .husky/install.mjs",
     "syncpack:list": "npx syncpack list-mismatches",
     "syncpack:fix": "npx syncpack fix-mismatches"
