@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v3.0.1...v3.0.2) (2026-05-08)
+
+
+### Features
+
+* add ajv compiler options in fastify setup ([ae15b17](https://github.com/flaviodelgrosso/fastify-forge/commit/ae15b173f9ee435547866f0b258d7d64a915403c))
+
+
+### Bug Fixes
+
+* set swagger route in rate limit allow list ([d0f1d39](https://github.com/flaviodelgrosso/fastify-forge/commit/d0f1d398b8ff43588c23fe01d7a29cc7c0af1d2a))
+
 ### [3.0.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.3...v3.0.1) (2026-04-25)
 
 ### Features
