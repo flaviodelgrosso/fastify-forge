@@ -31,7 +31,7 @@ Built on [Fastify 5](https://fastify.dev) — one of the fastest HTTP frameworks
 | 🔐 **Authentication**    | [Better Auth](https://www.better-auth.com) with email/password, admin plugin, session caching & cookie management      |
 | 🗄️ **Database**          | [Drizzle ORM](https://orm.drizzle.team) + PostgreSQL 17 with pre-built `users`, `sessions` & `accounts` schema         |
 | ✅ **Validation**        | End-to-end type-safe schemas via [TypeBox](https://github.com/sinclairzx81/typebox) + `@fastify/type-provider-typebox` |
-| 📖 **OpenAPI**           | Swagger UI at `/api/docs` + Better Auth's OpenAPI integration, auto-generated from route schemas                       |
+| 📖 **OpenAPI**           | Swagger UI at `/docs` + Better Auth's OpenAPI integration, auto-generated from route schemas                           |
 | 🛡️ **Security**          | `@fastify/helmet`, `@fastify/cors`, `@fastify/rate-limit` (with 404-route scan protection)                             |
 | 📁 **Auto-loading**      | Plugin & route discovery via `@fastify/autoload` — drop a file, it's registered                                        |
 | 🪝 **Route Hooks**       | Cascading `auth.hook.ts` pattern keeps authentication logic out of route handlers                                      |
@@ -243,7 +243,7 @@ Authentication is powered by [Better Auth](https://www.better-auth.com) with the
 - **Email & password** sign-up / sign-in
 - **Session caching** (5-minute cookie cache) to reduce database hits
 - **Admin plugin** for user management endpoints
-- **OpenAPI integration** — auth routes appear in the Swagger UI at `/api/docs`
+- **OpenAPI integration** — auth routes appear in the Swagger UI at `/docs`
 - **1-week session expiry** with daily refresh
 
 ```ts
@@ -258,7 +258,7 @@ Authentication is powered by [Better Auth](https://www.better-auth.com) with the
 
 ## 📖 API Documentation
 
-Swagger UI is served at **`/api/docs`** and is automatically populated from TypeBox schemas on your route definitions. Add a `schema` to any route and it appears instantly:
+Swagger UI is served at **`/docs`** and is automatically populated from TypeBox schemas on your route definitions. Add a `schema` to any route and it appears instantly:
 
 ```ts
 app.route({
