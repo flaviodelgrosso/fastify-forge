@@ -16,7 +16,13 @@ async function startServer() {
       // 15 seconds: prevents slow clients from holding connections too long
       headersTimeout: 15_000
     },
-    loggerInstance: logger
+    loggerInstance: logger,
+    ajv: {
+      customOptions: {
+        coerceTypes: 'array', // change type of data to match type keyword
+        removeAdditional: 'all' // Remove additional body properties
+      }
+    }
   });
 
   app.register(fp(bootstrap));
