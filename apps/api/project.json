@@ -36,10 +36,7 @@
       "dependsOn": ["build"],
       "cache": true,
       "executor": "@nx/js:prune-lockfile",
-      "outputs": [
-        "{projectRoot}/dist/package.json",
-        "{projectRoot}/dist/package-lock.json"
-      ],
+      "outputs": ["{projectRoot}/dist/package.json", "{projectRoot}/dist/package-lock.json"],
       "options": {
         "buildTarget": "build"
       }

@@ -14,9 +14,9 @@ async function startServer() {
     keepAliveTimeout: 10_000,
     http: {
       // 15 seconds: prevents slow clients from holding connections too long
-      headersTimeout: 15_000,
+      headersTimeout: 15_000
     },
-    loggerInstance: logger,
+    loggerInstance: logger
   });
 
   app.register(fp(bootstrap));

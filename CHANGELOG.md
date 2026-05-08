@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [3.0.1](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.3...v3.0.1) (2026-04-25)
 
-
 ### Features
 
-* add perfectionist eslint plugin and use verbatimModuleSyntax ([f83b525](https://github.com/flaviodelgrosso/fastify-forge/commit/f83b5253d4a8441e4bf01a3e05b2167f04a2a328))
+- add perfectionist eslint plugin and use verbatimModuleSyntax ([f83b525](https://github.com/flaviodelgrosso/fastify-forge/commit/f83b5253d4a8441e4bf01a3e05b2167f04a2a328))
 
 ## [3.0.0](https://github.com/flaviodelgrosso/fastify-forge/compare/v2.2.3...v3.0.0) (2026-04-25)
 

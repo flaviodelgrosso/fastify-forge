@@ -25,22 +25,22 @@ Built on [Fastify 5](https://fastify.dev) — one of the fastest HTTP frameworks
 
 ## ✨ Features
 
-| Category | What's included |
-|---|---|
-| 🚀 **Performance** | Fastify 5 + Pino structured logging + `@fastify/under-pressure` overload protection |
-| 🔐 **Authentication** | [Better Auth](https://www.better-auth.com) with email/password, admin plugin, session caching & cookie management |
-| 🗄️ **Database** | [Drizzle ORM](https://orm.drizzle.team) + PostgreSQL 17 with pre-built `users`, `sessions` & `accounts` schema |
-| ✅ **Validation** | End-to-end type-safe schemas via [TypeBox](https://github.com/sinclairzx81/typebox) + `@fastify/type-provider-typebox` |
-| 📖 **OpenAPI** | Swagger UI at `/api/docs` + Better Auth's OpenAPI integration, auto-generated from route schemas |
-| 🛡️ **Security** | `@fastify/helmet`, `@fastify/cors`, `@fastify/rate-limit` (with 404-route scan protection) |
-| 📁 **Auto-loading** | Plugin & route discovery via `@fastify/autoload` — drop a file, it's registered |
-| 🪝 **Route Hooks** | Cascading `auth.hook.ts` pattern keeps authentication logic out of route handlers |
-| ⚙️ **Config** | Type-safe environment variables via `@fastify/env` + TypeBox schema |
-| 🐳 **Docker** | PostgreSQL 17 via `docker-compose.yaml` with health checks and persistent volumes |
-| 🔄 **Graceful shutdown** | `close-with-grace` ensures in-flight requests complete before the server exits |
-| 🏗️ **Monorepo** | [Nx](https://nx.dev) workspace with affected-only CI, build caching, and Docker targets |
-| 🎨 **DX** | Husky, commitlint (Conventional Commits), Prettier, ESLint 9 flat config, Changesets, syncpack |
-| 🛠️ **CLI** | Interactive scaffolder — `npx fastify-forge` to clone, configure, and initialise a new project |
+| Category                 | What's included                                                                                                        |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| 🚀 **Performance**       | Fastify 5 + Pino structured logging + `@fastify/under-pressure` overload protection                                    |
+| 🔐 **Authentication**    | [Better Auth](https://www.better-auth.com) with email/password, admin plugin, session caching & cookie management      |
+| 🗄️ **Database**          | [Drizzle ORM](https://orm.drizzle.team) + PostgreSQL 17 with pre-built `users`, `sessions` & `accounts` schema         |
+| ✅ **Validation**        | End-to-end type-safe schemas via [TypeBox](https://github.com/sinclairzx81/typebox) + `@fastify/type-provider-typebox` |
+| 📖 **OpenAPI**           | Swagger UI at `/api/docs` + Better Auth's OpenAPI integration, auto-generated from route schemas                       |
+| 🛡️ **Security**          | `@fastify/helmet`, `@fastify/cors`, `@fastify/rate-limit` (with 404-route scan protection)                             |
+| 📁 **Auto-loading**      | Plugin & route discovery via `@fastify/autoload` — drop a file, it's registered                                        |
+| 🪝 **Route Hooks**       | Cascading `auth.hook.ts` pattern keeps authentication logic out of route handlers                                      |
+| ⚙️ **Config**            | Type-safe environment variables via `@fastify/env` + TypeBox schema                                                    |
+| 🐳 **Docker**            | PostgreSQL 17 via `docker-compose.yaml` with health checks and persistent volumes                                      |
+| 🔄 **Graceful shutdown** | `close-with-grace` ensures in-flight requests complete before the server exits                                         |
+| 🏗️ **Monorepo**          | [Nx](https://nx.dev) workspace with affected-only CI, build caching, and Docker targets                                |
+| 🎨 **DX**                | Husky, commitlint (Conventional Commits), Prettier, ESLint 9 flat config, Changesets, syncpack                         |
+| 🛠️ **CLI**               | Interactive scaffolder — `npx fastify-forge` to clone, configure, and initialise a new project                         |
 
 ---
 
@@ -48,18 +48,18 @@ Built on [Fastify 5](https://fastify.dev) — one of the fastest HTTP frameworks
 
 <div align="center">
 
-| Layer | Technology |
-|---|---|
-| Runtime | Node.js ≥ 24 |
-| Framework | Fastify 5 |
-| Language | TypeScript 5 |
-| ORM | Drizzle ORM |
-| Database | PostgreSQL 17 |
-| Auth | Better Auth |
-| Logging | Pino + pino-pretty |
-| Validation | TypeBox |
-| Monorepo | Nx |
-| Package manager | pnpm 10 |
+| Layer           | Technology         |
+| --------------- | ------------------ |
+| Runtime         | Node.js ≥ 24       |
+| Framework       | Fastify 5          |
+| Language        | TypeScript 5       |
+| ORM             | Drizzle ORM        |
+| Database        | PostgreSQL 17      |
+| Auth            | Better Auth        |
+| Logging         | Pino + pino-pretty |
+| Validation      | TypeBox            |
+| Monorepo        | Nx                 |
+| Package manager | pnpm 10            |
 
 </div>
 
@@ -74,6 +74,7 @@ npx fastify-forge --name my-api
 ```
 
 The interactive CLI will:
+
 1. Clone the template into `./my-api`
 2. Strip git history and set up a fresh repo
 3. Copy `.env.example` → `.env`
@@ -99,17 +100,17 @@ Copy the example file and fill in your values:
 cp apps/api/.env.example apps/api/.env
 ```
 
-| Variable | Description | Default |
-|---|---|---|
-| `HOST` | Server bind address | `localhost` |
-| `PORT` | Server port | `8080` |
-| `LOG_LEVEL` | Pino log level (`trace` \| `debug` \| `info` \| `warn` \| `error`) | `info` |
-| `POSTGRES_HOST` | PostgreSQL host | — |
-| `POSTGRES_PORT` | PostgreSQL port | `5432` |
-| `POSTGRES_USER` | PostgreSQL user | — |
-| `POSTGRES_PASSWORD` | PostgreSQL password | — |
-| `POSTGRES_DB` | PostgreSQL database name | — |
-| `BETTER_AUTH_SECRET` | Secret key for Better Auth (min 32 chars) | — |
+| Variable             | Description                                                        | Default     |
+| -------------------- | ------------------------------------------------------------------ | ----------- |
+| `HOST`               | Server bind address                                                | `localhost` |
+| `PORT`               | Server port                                                        | `8080`      |
+| `LOG_LEVEL`          | Pino log level (`trace` \| `debug` \| `info` \| `warn` \| `error`) | `info`      |
+| `POSTGRES_HOST`      | PostgreSQL host                                                    | —           |
+| `POSTGRES_PORT`      | PostgreSQL port                                                    | `5432`      |
+| `POSTGRES_USER`      | PostgreSQL user                                                    | —           |
+| `POSTGRES_PASSWORD`  | PostgreSQL password                                                | —           |
+| `POSTGRES_DB`        | PostgreSQL database name                                           | —           |
+| `BETTER_AUTH_SECRET` | Secret key for Better Auth (min 32 chars)                          | —           |
 
 ### 2. Start the database
 
@@ -188,12 +189,14 @@ Plugins are auto-discovered from the `plugins/` directory via `@fastify/autoload
 
 ```ts
 // apps/api/src/plugins/external/my-plugin.ts
-import fp from 'fastify-plugin'
-import myPlugin from 'fastify-my-plugin'
+import fp from 'fastify-plugin';
+import myPlugin from 'fastify-my-plugin';
 
 export default fp(async (fastify) => {
-  await fastify.register(myPlugin, { /* options */ })
-})
+  await fastify.register(myPlugin, {
+    /* options */
+  });
+});
 ```
 
 ### Route hooks & authentication
@@ -264,10 +267,10 @@ app.route({
   schema: {
     tags: ['Users'],
     params: Type.Object({ id: Type.String({ format: 'uuid' }) }),
-    response: { 200: UserSchema },
+    response: { 200: UserSchema }
   },
-  handler: async (req) => getUserById(req.params.id),
-})
+  handler: async (req) => getUserById(req.params.id)
+});
 ```
 
 ---
@@ -276,15 +279,15 @@ app.route({
 
 Run these from the workspace root:
 
-| Command | Description |
-|---|---|
-| `pnpm start` | Start all apps in parallel |
-| `pnpm build` | Build all packages and apps |
-| `pnpm lint` | Lint all projects |
-| `pnpm typecheck` | Type-check all projects |
-| `pnpm test` | Run all tests |
-| `pnpm format` | Format all files with Prettier |
-| `pnpm clean` | Remove all build artifacts and `node_modules` |
+| Command          | Description                                   |
+| ---------------- | --------------------------------------------- |
+| `pnpm start`     | Start all apps in parallel                    |
+| `pnpm build`     | Build all packages and apps                   |
+| `pnpm lint`      | Lint all projects                             |
+| `pnpm typecheck` | Type-check all projects                       |
+| `pnpm test`      | Run all tests                                 |
+| `pnpm format`    | Format all files with Prettier                |
+| `pnpm clean`     | Remove all build artifacts and `node_modules` |
 
 Nx only re-runs tasks for projects affected by your changes, keeping feedback loops fast.
 
@@ -296,10 +299,10 @@ Nx only re-runs tasks for projects affected by your changes, keeping feedback lo
 npx fastify-forge [options]
 ```
 
-| Flag | Description |
-|---|---|
+| Flag            | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
 | `--name <name>` | Project name / directory (prompted interactively if omitted) |
-| `--no-git` | Skip git repository initialisation |
+| `--no-git`      | Skip git repository initialisation                           |
 
 ---
 

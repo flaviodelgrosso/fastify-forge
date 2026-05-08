@@ -9,7 +9,7 @@ export const pool = new pg.Pool({
   database: process.env.POSTGRES_DB,
   user: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
-  max: 10,
+  max: 10
 });
 
 export const db = drizzle({ client: pool, schema });

@@ -6,7 +6,7 @@ export default [
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
   {
-    ignores: ['**/dist', '**/out-tsc', '**/vitest.config.*.timestamp*'],
+    ignores: ['**/dist', '**/out-tsc', '**/vitest.config.*.timestamp*']
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
@@ -18,27 +18,18 @@ export default [
           depConstraints: [
             {
               onlyDependOnLibsWithTags: ['*'],
-              sourceTag: '*',
-            },
+              sourceTag: '*'
+            }
           ],
-          enforceBuildableLibDependency: true,
-        },
-      ],
-    },
+          enforceBuildableLibDependency: true
+        }
+      ]
+    }
   },
   {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.cts',
-      '**/*.mts',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
-    ],
+    files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts', '**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
     plugins: {
-      perfectionist,
+      perfectionist
     },
     rules: {
       'no-console': ['warn'],
@@ -48,16 +39,9 @@ export default [
           type: 'alphabetical',
           order: 'asc',
           newlinesBetween: 1,
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            ['parent', 'sibling', 'index'],
-            'side-effect',
-            'type',
-          ],
-        },
-      ],
-    },
-  },
+          groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index'], 'side-effect', 'type']
+        }
+      ]
+    }
+  }
 ];

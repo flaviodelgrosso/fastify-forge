@@ -11,5 +11,5 @@ async function dbPlugin(fastify: FastifyInstance) {
 }
 
 export default fp(dbPlugin, {
-  name: 'db-plugin',
+  name: 'db-plugin'
 });

@@ -4,7 +4,7 @@ import { confirm, intro, log, outro, spinner } from '@clack/prompts';
 
 import { cleanUpRepo, cloneRepo, getName, initializeGit, installDependencies, prepareEnv } from './utils.js';
 
-export async function create (options) {
+export async function create(options) {
   try {
     intro('Welcome to Fastify Forge!');
 

@@ -10,7 +10,7 @@ async function authHook(fastify: FastifyInstance) {
   fastify.addHook('onRequest', async (req, res) => {
     const authOptions = getAuthDecorator<typeof auth.options>(fastify);
     const session = await authOptions.api.getSession({
-      headers: fromNodeHeaders(req.headers),
+      headers: fromNodeHeaders(req.headers)
     });
 
     if (!session?.user) {

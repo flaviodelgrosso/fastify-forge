@@ -1,20 +1,14 @@
 import path from 'node:path';
 
 import FastifyAutoLoad from '@fastify/autoload';
-import Fastify, {
-  type FastifyInstance,
-  type FastifyPluginOptions,
-} from 'fastify';
+import Fastify, { type FastifyInstance, type FastifyPluginOptions } from 'fastify';
 
-export default async function bootstrap(
-  app: FastifyInstance,
-  opts: FastifyPluginOptions,
-) {
+export default async function bootstrap(app: FastifyInstance, opts: FastifyPluginOptions) {
   // Auto-load plugins
   await app.register(FastifyAutoLoad, {
     dir: path.join(import.meta.dirname, 'plugins'),
     dirNameRoutePrefix: false,
-    options: { ...opts },
+    options: { ...opts }
   });
 
   // Auto-load routes
@@ -23,7 +17,7 @@ export default async function bootstrap(
     autoHooks: true,
     autoHooksPattern: /\.hook(?:\.ts|\.js|\.cjs|\.mjs)$/i,
     cascadeHooks: true,
-    options: { ...opts },
+    options: { ...opts }
   });
 
   // Set error handler
@@ -36,10 +30,10 @@ export default async function bootstrap(
             method: request.method,
             url: request.url,
             query: request.query,
-            params: request.params,
-          },
+            params: request.params
+          }
         },
-        'Unhandled error occurred',
+        'Unhandled error occurred'
       );
 
       reply.code(err.statusCode ?? 500);
@@ -60,8 +54,8 @@ export default async function bootstrap(
     {
       preHandler: app.rateLimit({
         max: 4,
-        timeWindow: 500,
-      }),
+        timeWindow: 500
+      })
     },
     (request, reply) => {
       request.log.warn(
@@ -70,15 +64,15 @@ export default async function bootstrap(
             method: request.method,
             url: request.url,
             query: request.query,
-            params: request.params,
-          },
+            params: request.params
+          }
         },
-        'Resource not found',
+        'Resource not found'
       );
 
       reply.code(404);
 
       return { message: 'Not Found' };
-    },
+    }
   );
 }
