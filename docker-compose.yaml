@@ -1,7 +1,7 @@
 services:
 
   pgsql:
-    image: postgres:17.2-alpine
+    image: postgres:17.10-alpine
     ports:
       - ${POSTGRES_PORT}:5432
     environment:
