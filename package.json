@@ -4,7 +4,7 @@
   "author": "Flavio Del Grosso",
   "license": "MIT",
   "description": "🚀 Fastify monorepo template for building scalable, high-performance Node.js web applications with ease",
-  "packageManager": "pnpm@10.34.3",
+  "packageManager": "pnpm@10.34.4",
   "type": "module",
   "homepage": "https://github.com/flaviodelgrosso/fastify-forge#readme",
   "bin": {
