@@ -7,14 +7,9 @@ catalog:
   drizzle-kit: ^0.31.4
   drizzle-orm: ^0.45.1
   typescript: ^5.9.3
-  zod: '^4.3.6'
 
 catalogs:
-  node:
-    '@types/node': ^24.3.0
-    pino: '^10.0.0'
-    pino-pretty: '^13.1.1'
-
+  
   fastify:
     '@fastify/autoload': ^6.3.1
     '@fastify/cors': ^11.2.0
@@ -30,6 +25,10 @@ catalogs:
     fastify: '^5.8.5'
     fastify-better-auth: ^1.2.0
     fastify-plugin: '^5.0.1'
+  node:
+    '@types/node': ^24.3.0
+    pino: '^10.0.0'
+    pino-pretty: '^13.1.1'
 
 cleanupUnusedCatalogs: true
 linkWorkspacePackages: true
