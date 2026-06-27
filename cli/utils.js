@@ -5,13 +5,20 @@ import { promisify } from 'node:util';
 
 import { cancel, isCancel, text } from '@clack/prompts';
 
+import packageJson from '../package.json' with { type: 'json' };
+
 const execAsync = promisify(exec);
 const execOptions = { stdio: 'ignore' };
 
+const repoUrl = 'https://github.com/flaviodelgrosso/fastify-forge.git';
+const repoRef = `v${packageJson.version}`;
+
+export function getCloneCommand(name) {
+  return `git clone --depth=1 --branch=${repoRef} ${repoUrl} ${name}`;
+}
+
 export async function cloneRepo(name) {
-  const repoUrl = 'https://github.com/flaviodelgrosso/fastify-forge.git';
-  const cloneCommand = `git clone --depth=1 --branch=master ${repoUrl} ${name}`;
-  await execAsync(cloneCommand, execOptions);
+  await execAsync(getCloneCommand(name), execOptions);
 }
 
 export async function getName() {
