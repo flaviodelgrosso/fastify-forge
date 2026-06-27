@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.3](https://github.com/flaviodelgrosso/fastify-forge/compare/v3.0.2...v3.0.3) (2026-06-27)
+
+
+### Bug Fixes
+
+* download template exact version published tag and not from HEAD ([7523348](https://github.com/flaviodelgrosso/fastify-forge/commit/75233487f2e2e84cde7fdb33c9edffe34ebb7bcf))
+* pnpm-workspace deps ([591044e](https://github.com/flaviodelgrosso/fastify-forge/commit/591044e19966e6bc1a0c513fb5be347ee380f19d))
+
 ### [3.0.2](https://github.com/flaviodelgrosso/fastify-forge/compare/v3.0.1...v3.0.2) (2026-05-08)
 
 
