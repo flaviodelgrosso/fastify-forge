@@ -3,7 +3,7 @@ packages:
   - 'packages/*'
 
 catalog:
-  better-auth: 1.4.6
+  better-auth: 1.6.25
   drizzle-kit: ^0.31.4
   drizzle-orm: ^0.45.1
   typescript: ^5.9.3
