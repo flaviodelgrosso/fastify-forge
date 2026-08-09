@@ -55,7 +55,7 @@
     "@nx/js": "22.7.8",
     "@nx/node": "22.7.8",
     "@nx/workspace": "22.7.8",
-    "@swc-node/register": "~1.11.1",
+    "@swc-node/register": "~1.12.0",
     "@swc/core": "~1.15.5",
     "@swc/helpers": "~0.5.18",
     "@types/node": "catalog:node",
