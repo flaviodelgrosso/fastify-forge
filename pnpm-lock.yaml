@@ -22,12 +22,12 @@ catalogs:
     '@fastify/autoload':
       specifier: ^6.3.1
       version: 6.5.1
+    '@fastify/cors':
+      specifier: ^11.2.0
+      version: 11.3.1
     '@fastify/env':
       specifier: ^5.0.3
       version: 5.0.3
-    '@fastify/helmet':
-      specifier: ^13.0.2
-      version: 13.1.1
     '@fastify/multipart':
       specifier: ^9.2.1
       version: 9.4.0
@@ -175,7 +175,7 @@ importers:
         version: 5.0.3
       '@fastify/helmet':
         specifier: catalog:fastify
-        version: 13.1.1
+        version: 13.1.2
       '@fastify/multipart':
         specifier: catalog:fastify
         version: 9.4.0
@@ -1582,8 +1582,8 @@ packages:
   '@fastify/forwarded@3.0.2':
     resolution: {integrity: sha512-NE8HgKLgYejV9lDpqkEFaDKMLYelJBVfHekhB0UKvX0ghagXRJqg68feg8er1NPXxG4N9i6vPxzt8E+3wHfcmA==}
 
-  '@fastify/helmet@13.1.1':
-    resolution: {integrity: sha512-bSat5DTq8geASv8G6P0KW1UbltZ+xGD/zyd9S72pT7ogAHehcsWL85GdjMRCjDsExJvaEvgEZ52qU/2HXirVCw==}
+  '@fastify/helmet@13.1.2':
+    resolution: {integrity: sha512-fXTultrEFW9bczr3jcffZD7NLlsTYa8eCCzVFsJvLIVO7SUiY/VWp18qCJbf2N9AXIEzIC11NYlNB3BlzBEZeg==}
 
   '@fastify/merge-json-schemas@0.2.1':
     resolution: {integrity: sha512-OA3KGBCy6KtIvLf8DINC5880o5iBlDX4SxzLQS8HorJAbqluzLRn80UXU0bxZn7UOFhFgpRJDasfwn9nG4FG4A==}
@@ -6239,9 +6239,9 @@ snapshots:
 
   '@fastify/forwarded@3.0.2': {}
 
-  '@fastify/helmet@13.1.1':
+  '@fastify/helmet@13.1.2':
     dependencies:
-      fastify-plugin: 6.0.0
+      fastify-plugin: 6.0.1
       helmet: 8.3.0
 
   '@fastify/merge-json-schemas@0.2.1':
