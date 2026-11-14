@@ -22,9 +22,6 @@ catalogs:
     '@fastify/autoload':
       specifier: ^6.3.1
       version: 6.5.1
-    '@fastify/cors':
-      specifier: ^11.2.0
-      version: 11.4.1
     '@fastify/env':
       specifier: ^5.0.3
       version: 5.0.3
@@ -172,7 +169,7 @@ importers:
         version: 6.5.1
       '@fastify/cors':
         specifier: catalog:fastify
-        version: 11.4.1
+        version: 11.4.3
       '@fastify/env':
         specifier: catalog:fastify
         version: 5.0.3
@@ -1558,8 +1555,8 @@ packages:
   '@fastify/busboy@3.2.5':
     resolution: {integrity: sha512-y8MTAeBlEQUNVnskmZQwpseZN3EgCksQNOULlfxWY6o6VEqh01+oExMgbM7gN6YLQ8pNDYeweNPKJRt8jQm2ZQ==}
 
-  '@fastify/cors@11.4.1':
-    resolution: {integrity: sha512-WuPATGGyc3YzpOfumovBJ4xC2RPBBFyDFElwldFRBCgM2G27xH9DnXTho9+nc2Ho6gLD1hKTetdOntR+G38+7A==}
+  '@fastify/cors@11.4.3':
+    resolution: {integrity: sha512-6NNFNR1i9t1oG1WlQftwc2ugElFm4cG75ylYyGNiKKiyxlVGueneup9MQ9Nd3eI4lT6kVOJaxV1Jqa727/E4jg==}
 
   '@fastify/deepmerge@3.2.4':
     resolution: {integrity: sha512-kc8GQq5gX9RRhw0rov3DMrN8wS8yRlxJRdDzsYwwdBV/wazuVgc/1K7CKL90tlvu3RlHan6Y0R0aE3nJtBz2eQ==}
@@ -6208,7 +6205,7 @@ snapshots:
 
   '@fastify/busboy@3.2.5': {}
 
-  '@fastify/cors@11.4.1':
+  '@fastify/cors@11.4.3':
     dependencies:
       fastify-plugin: 6.0.1
       toad-cache: 3.7.4
