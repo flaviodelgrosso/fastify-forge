@@ -22,6 +22,9 @@ catalogs:
     '@fastify/autoload':
       specifier: ^6.3.1
       version: 6.5.1
+    '@fastify/cors':
+      specifier: ^11.2.0
+      version: 11.4.3
     '@fastify/env':
       specifier: ^5.0.3
       version: 5.0.3
@@ -34,9 +37,6 @@ catalogs:
     '@fastify/rate-limit':
       specifier: ^10.3.0
       version: 10.3.0
-    '@fastify/sensible':
-      specifier: ^6.0.3
-      version: 6.0.7
     '@fastify/swagger':
       specifier: ^9.5.2
       version: 9.9.3
@@ -184,7 +184,7 @@ importers:
         version: 10.3.0
       '@fastify/sensible':
         specifier: catalog:fastify
-        version: 6.0.7
+        version: 6.0.8
       '@fastify/swagger':
         specifier: catalog:fastify
         version: 9.9.3
@@ -1591,8 +1591,8 @@ packages:
   '@fastify/send@4.2.1':
     resolution: {integrity: sha512-zOB8L9z444PnGbd1Nd7gNXPz/7bnDR8Z4KNTNSwLVQuE3cTGsU9qUj1N4SjXKK0Tq4cauZYTwB+tqvlqosuKsw==}
 
-  '@fastify/sensible@6.0.7':
-    resolution: {integrity: sha512-e4+bJEcAPGdKsIljulWtEKeECuYGLkVTB1dgWh19m2u4ttETS/5EWZhw6KPXlgi6ZiSet5IqYrcMRMrRub0Hrg==}
+  '@fastify/sensible@6.0.8':
+    resolution: {integrity: sha512-hc/q+esn+I0djWva/zplEOplZ8SECJBQ0Dx1/qUeOwITR+PTPcuLHNhgJf0fhZ+82Z6En5YhpQxqwIYXWIzerw==}
 
   '@fastify/static@9.3.0':
     resolution: {integrity: sha512-9YMYRpCOtMBrqKYWcqiw7ykOrn4D0jogHpJrFS0KGeSuOwzKMM5/mjj7B0CFLVoQ6htqKYw//Zs7APn9DBq05w==}
@@ -6261,7 +6261,7 @@ snapshots:
       http-errors: 2.0.1
       mime: 3.0.0
 
-  '@fastify/sensible@6.0.7':
+  '@fastify/sensible@6.0.8':
     dependencies:
       '@lukeed/ms': 2.0.2
       dequal: 2.0.3
