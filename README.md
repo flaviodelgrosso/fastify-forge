@@ -1,3 +1,5 @@
+
+
 <div align="center">
 
 # ⚡ Fastify Forge
@@ -103,7 +105,7 @@ cp apps/api/.env.example apps/api/.env
 | Variable             | Description                                                        | Default     |
 | -------------------- | ------------------------------------------------------------------ | ----------- |
 | `HOST`               | Server bind address                                                | `localhost` |
-| `PORT`               | Server port                                                        | `8080`      |
+| `PORT`               | Server port                                                        | `3000`      |
 | `LOG_LEVEL`          | Pino log level (`trace` \| `debug` \| `info` \| `warn` \| `error`) | `info`      |
 | `POSTGRES_HOST`      | PostgreSQL host                                                    | —           |
 | `POSTGRES_PORT`      | PostgreSQL port                                                    | `5432`      |
@@ -130,7 +132,7 @@ pnpm --filter @fastify-forge/db db:push
 pnpm start
 ```
 
-The API is now running at `http://localhost:8080` 🎉
+The API is now running at `http://localhost:3000` 🎉
 
 ---
 
