@@ -40,15 +40,15 @@ catalogs:
     '@fastify/sensible':
       specifier: ^6.0.3
       version: 6.0.8
+    '@fastify/swagger':
+      specifier: ^9.5.2
+      version: 9.9.5
     '@fastify/swagger-ui':
       specifier: ^5.2.3
       version: 5.2.6
     '@fastify/type-provider-typebox':
       specifier: ^6.0.0
       version: 6.3.0
-    '@fastify/under-pressure':
-      specifier: ^9.0.3
-      version: 9.2.1
     fastify:
       specifier: ^5.8.5
       version: 5.12.8
@@ -196,7 +196,7 @@ importers:
         version: 6.3.0(ajv-formats@3.0.1(ajv@8.20.0))(typebox@1.4.7)
       '@fastify/under-pressure':
         specifier: catalog:fastify
-        version: 9.2.1
+        version: 9.2.2
       '@sinclair/typebox':
         specifier: ^0.34.41
         version: 0.34.52
@@ -1567,6 +1567,9 @@ packages:
   '@fastify/error@4.2.1':
     resolution: {integrity: sha512-MYBumuIwP+5MIpXSyKm6/o1Eigcoij186lWUssX3LH5U8KWqU0ktZhzC4CErIX9EJeQeRGI+zJZQWakBlFbUcg==}
 
+  '@fastify/error@4.3.0':
+    resolution: {integrity: sha512-mtIdc4R7HnUMOuUDQgnJkEF+Omr2p3JrSSJ44+RME/eAQ5TqdDy5MvXAjze/RyVHhJckuJKkXnMhKfPmFMKqyA==}
+
   '@fastify/fast-json-stringify-compiler@5.2.0':
     resolution: {integrity: sha512-LPTVA0w4oPITWHAvox9NgI1rDSrjUnjxX6QN5MCb9FY+HqvDsUmgLucbj9eQakqC8lYwO7UgkDPHEQLJNl9vtg==}
 
@@ -1609,8 +1612,8 @@ packages:
       ajv-formats: ^3.0.1
       typebox: ^1.1.14
 
-  '@fastify/under-pressure@9.2.1':
-    resolution: {integrity: sha512-eScrraL3PXJwWAfnpYVVDkctvl/RiQCnRahmsBS+ZhcQ6fy54beMc9Kom4NhlU4aYNgsl3J3ps4KBTndzHUkLQ==}
+  '@fastify/under-pressure@9.2.2':
+    resolution: {integrity: sha512-89/mvl3fWehCzJMs0o5hYl0kKovH222nSaW/w3T5Uutd/996zLvE75LT46sGSJRCucqhQKecgLc6Qwb88R4u2A==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -6220,6 +6223,8 @@ snapshots:
 
   '@fastify/error@4.2.1': {}
 
+  '@fastify/error@4.3.0': {}
+
   '@fastify/fast-json-stringify-compiler@5.2.0':
     dependencies:
       fast-json-stringify: 7.3.6
@@ -6304,9 +6309,9 @@ snapshots:
       ajv-formats: 3.0.1(ajv@8.20.0)
       typebox: 1.4.7
 
-  '@fastify/under-pressure@9.2.1':
+  '@fastify/under-pressure@9.2.2':
     dependencies:
-      '@fastify/error': 4.2.1
+      '@fastify/error': 4.3.0
       fastify-plugin: 6.0.1
 
   '@humanfs/core@0.19.2':
